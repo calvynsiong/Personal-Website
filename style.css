@@ -1,4 +1,25 @@
-*{
+h1 {
+    color: blue;
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* {
   margin: 0;
   padding: 0;
   font-family: 'Verdana', sans-serif;
@@ -136,12 +157,12 @@ height: 70%;
     
 }
 
-#menuBtn img{
+/* #menuBtn img{
     width: 50px;       
 }
 /*Introduction*/
 
-#Introduction{
+/* #Introduction{
     width: 100%;
     padding: 50px 0;
     background: #ffc3a0;
@@ -421,7 +442,7 @@ height: 70%;
      
     margin: -200px 0 0 -50px;  
     display: block;
-}
+} */ 
 
 
 
@@ -520,7 +541,7 @@ height: 70%;
         margin: 0;
     }
 */
-    
+/*     
     
     .banner-btn a{
       
@@ -543,11 +564,9 @@ height: 70%;
       z-index:1;
       transition: 0.5s;
  
-}
+} */
 
 
-}
-    
 
  
- */
+
