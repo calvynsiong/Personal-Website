@@ -1,28 +1,83 @@
-h1 {
-    color: blue;
-    font-size: 3rem;
+:root {
+	--grad1: linear-gradient(
+		to right top,
+		#cf7c22,
+		#d66f16,
+		#de5f0e,
+		#e54b0d,
+		#ed2f13
+	);
+	--clr1: #cf7c22;
+	--clr2: #d66f16;
+	--clr3: #de5f0e;
+	--clr4: #e54b0d;
+	--clr5: #ed2f13;
+	--def-font: Monstserrat, sans-serif;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: var(--def-font);
+	box-sizing: border-box;
+}
 
+.primary-nav {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1 1 auto;
+	width: 95vw;
+	background: white;
+	padding: 2rem;
+	justify-content: right;
 
+	a {
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		margin-right: 1em;
+	}
 
+	.nav-list {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1 1 auto;
+		justify-content: right;
+		/* background-color: red; */
+		padding: 1rem;
+	}
 
+	a[href^='./H'] {
+		color: var(--clr1);
+	}
+	a[href^='./E'] {
+		color: var(--clr2);
+	}
+	a[href^='./R'] {
+		color: var(--clr3);
+	}
+	a[href^='./P'] {
+		color: var(--clr4);
+	}
+	a[href^='./C'] {
+		color: var(--clr5);
+	}
 
+	a:hover {
+		color: black;
+		border-bottom: solid black 0.2em;
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
-/* {
+/* 
+ * {
   margin: 0;
   padding: 0;
-  font-family: 'Verdana', sans-serif;
+  font-family: 'Montserrat', sans-serif;
    
 }
 
@@ -157,12 +212,12 @@ height: 70%;
     
 }
 
-/* #menuBtn img{
+ #menuBtn img{
     width: 50px;       
 }
-/*Introduction*/
+Introduction
 
-/* #Introduction{
+ #Introduction{
     width: 100%;
     padding: 50px 0;
     background: #ffc3a0;
@@ -439,14 +494,12 @@ height: 70%;
 #r3:checked ~ #controls label:nth-child(2) {
     background: url(https://www.flaticon.com/svg/vstatic/svg/854/854183.svg?token=exp=1617734784~hmac=5f517d94deb2d2cb8ce32bc37241c897) no-repeat; 
     float:left;
-     
     margin: -200px 0 0 -50px;  
     display: block;
-} */ 
+}  
+ */
 
-
-
-/* 
+/*  
 
 @media screen and (max-width: 1200px, min-width: 700px){
     
@@ -526,7 +579,7 @@ height: 70%;
         margin-left: 10px;
         
     }
-/*
+
 
     #r1:checked ~ #controls label:nth-child(2),
     #r2:checked ~ #controls label:nth-child(3),
@@ -540,8 +593,8 @@ height: 70%;
     #r3:checked ~ #controls label:nth-last-child(2) {
         margin: 0;
     }
-*/
-/*     
+
+  
     
     .banner-btn a{
       
@@ -564,9 +617,6 @@ height: 70%;
       z-index:1;
       transition: 0.5s;
  
-} */
+} 
 
-
-
- 
-
+ */

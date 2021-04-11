@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width = xdevice-width", "initial-scale=1">
-    <title>Calvyn Siong's personal website</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <h1>default browser styles</h1>
-    <h2>Google Dev Tools</h2>
-    <!-- <script src="script.js"></script>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width = xdevice-width", "initial-scale =
+		1.0">
+		<title>Calvyn Siong's personal website</title>
+		<link href="style.scss" rel="stylesheet" type="text/css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<nav class="primary-nav">
+			<ul class="nav-list">
+				<li><a href="./H">Home</a></li>
+				<li><a href="./E">Experiences</a></li>
+				<li><a href="./R">Resume</a></li>
+				<li><a href="./P">Personal interests</a></li>
+				<li><a href="./C">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- 
+  
+<script src="script.js"></script>
     <section id="banner">
       <div class="banner-text">
         <h1>Welcome to my personal website</h1>
@@ -26,10 +41,10 @@
     <div class="container">
       <div id="topNav">
         <img
-          src="https://brand.mcmaster.ca/app/uploads/2019/04/mcm-bw-rev.png"
+          src="./webimages/Mcmaster.png"
           class="McMasterlogo"
         />
-        <a href="#"> Home </a>
+          <a href="#"> Home </a>
         <a href="#">Introduction </a>
         <a href="#">Experiences </a>
         <a href="#">Resume </a>
@@ -40,7 +55,7 @@
 
     <div id="menuBtn">
       <img
-        src="https://static.thenounproject.com/png/356889-200.png"
+        src="./webimages/menu.png"
         id="menu"
       />
     </div>
@@ -84,13 +99,15 @@
         </div>
         <div class="Intro-img">
           <img
-            src="https://media-exp1.licdn.com/dms/image/C4E03AQFdQpEIlJ4z3A/profile-displayphoto-shrink_800_800/0/1598295418015?e=1620259200&v=beta&t=bdi4rvO5n_G9e8reKw5--pIy2YcLK2FiRWgAmuvUSK0"
+            src="./webimages/personalphoto.jpg"
           />
         </div>
       </div>
     </section>
 
-     Experiences <p>Part Time supervisor at Tim Hortons</p> <p>Licensed to Learn and Tutoring Expert tutor</p> <p>Social Justice Club President</p>
+<!-- Experiences  -->
+
+		<!--      <p>Part Time supervisor at Tim Hortons</p> <p>Licensed to Learn and Tutoring Expert tutor</p> <p>Social Justice Club President</p>
     <section id="Experiences">
       <div class="Experiences-title-text">
         <h1>Experiences</h1>
@@ -147,22 +164,18 @@
           <label for="r2"></label>
           <label for="r3"></label>
         </div>
-      </div>
-    </section>
-
-     
-                    <img src = https://i2.wp.com/cavesocial.com/wp-content/uploads/2019/10/thortonsblog1.png?fit>
-                   </div>
+      </div> -->
+		<!--  </section>
+              <img src = "./webimages/timmies.png">
+              </div>
+                <div class = "slide">
+                    <img src = "./webimages/tutor.png">
+                </div>
 
                 <div class = "slide">
-                    <img src = https://websitesca.sfo2.digitaloceanspaces.com/directory-logo/logo-r1MjAU6_HX>
-                   </div>
+                    <img src = "./webimages/SJC.webp">
 
-                <div class = "slide">
-                    <img src = https://marvel-b1-cdn.bc0a.com/f00000000026007/resilienteducator.com/wp-content/uploads/sites/34/2015/05/Teaching-Social-Justice-in-Theory-and-Practice-2.jpg>
--->
-
-    <!-- <script>
+    <script>
       var menuBtn = document.getElementById("menuBtn");
       var topNav = document.getElementById("topNav");
       var menu = document.getElementById("menu");
@@ -170,14 +183,14 @@
       menuBtn.onclick = function () {
         if (topNav.style.top == "0px") {
           topNav.style.top = "-70px";
-          menu.src = "https://static.thenounproject.com/png/356889-200.png";
+          menu.src = "./webimages/menu.png";
         } else {
           topNav.style.top = "0px";
           menu.src =
-            "https://cdn.iconscout.com/icon/free/png-256/close-1912235-1617704.png";
+            "./webimages/close.webp";
         }
-      }; -->
-    <!-- //    var prevScrollpos = window.pageYOffset;
+      }; 
+     //    var prevScrollpos = window.pageYOffset;
       //    window.onscroll = function(){
       //
       //    var currentScrollpos =  window.pageYOffset;
@@ -195,6 +208,6 @@
       //     prevScrollpos = currentScrollpos;
       //    }
       //
-    </script> -->
-  </body>
+    </script>  -->
+	</body>
 </html>
