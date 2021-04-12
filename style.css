@@ -7,6 +7,7 @@
 		#e54b0d,
 		#ed2f13
 	);
+    --greygrad: linear-gradient(rgba(0,0,0,.8), #ffffff94) ;
 	--clr1: #cf7c22;
 	--clr2: #d66f16;
 	--clr3: #de5f0e;
@@ -22,9 +23,23 @@
 body {
 	font-family: var(--def-font);
 	box-sizing: border-box;
+	/* display: flex; */
 }
 
-.primary-nav {
+
+
+/* .banner {
+    background: var(--greygrad),  url(./webimages/malaysia.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+} */
+
+.bar {
+    background: var(--greygrad), url(./webimages/SJC.webp) center/cover fixed;
+}
+
+/* .primary-nav {
 	display: flex;
 	flex-wrap: wrap;
 	flex: 1 1 auto;
@@ -32,46 +47,45 @@ body {
 	background: white;
 	padding: 2rem;
 	justify-content: right;
-
-	a {
-		text-decoration: none;
-		font-weight: 600;
-		font-size: 1.2rem;
-		text-transform: uppercase;
-		margin-right: 1em;
-	}
-
-	.nav-list {
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		flex: 1 1 auto;
-		justify-content: right;
-		/* background-color: red; */
-		padding: 1rem;
-	}
-
-	a[href^='./H'] {
-		color: var(--clr1);
-	}
-	a[href^='./E'] {
-		color: var(--clr2);
-	}
-	a[href^='./R'] {
-		color: var(--clr3);
-	}
-	a[href^='./P'] {
-		color: var(--clr4);
-	}
-	a[href^='./C'] {
-		color: var(--clr5);
-	}
-
-	a:hover {
-		color: black;
-		border-bottom: solid black 0.2em;
-	}
 }
+
+.primary-nav a {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	margin-right: 1em;
+}
+
+.nav-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1 1 auto;
+	justify-content: right;
+	padding: 1rem;
+}
+
+.primary-nav a[href^='./H'] {
+	color: var(--clr1);
+}
+.primary-nav a[href^='./E'] {
+	color: var(--clr2);
+}
+.primary-nav a[href^='./R'] {
+	color: var(--clr3);
+}
+.primary-nav a[href^='./P'] {
+	color: var(--clr4);
+}
+.primary-nav a[href^='./C'] {
+	color: var(--clr5);
+}
+
+.primary-nav a:hover {
+	color: black;
+	border-bottom: solid black 0.2em;
+} */
 
 /* 
  * {
