@@ -1,13 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal website</title>
-    <link rel="stylesheet" href="scss/main.scss">
-</head>
-<body>
-    <h1>Hello world</h1>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Personal website</title>
+		<link rel="stylesheet" href="scss/main.scss" />
+	</head>
+	<body>
+		<div class="transition">transition</div>
+		x<div class="animation">animation</div>
+
+		<!-- 		<script src="script.js"></script>
+		<section id="banner">
+			<div class="banner-text">
+				<h1>Welcome to my personal website</h1>
+				<p>
+					My name is Calvyn Siong and I am a first year engineering student,
+					looking to learn new things.
+				</p>
+				<div class="banner-btn">
+					<a href="#"><span></span> Personal first year project portfolio </a>
+				</div>
+			</div>
+		</section>
+
+		<div class="container">
+			<div id="topNav">
+				<img src="./webimages/Mcmaster.png" class="McMasterlogo" />
+				<a href="#"> Home </a>
+				<a href="#">Introduction </a>
+				<a href="#">Experiences </a>
+				<a href="#">Resume </a>
+				<a href="#">Personal interests </a>
+				<a href="#">Contact info </a>
+			</div>
+		</div>
+
+		<div id="menuBtn">
+			<img src="./webimages/menu.png" id="menu" />
+		</div>
+
+		Introduction
+
+		<section id="Introduction">
+			<div class="title-text">
+				<p>Introduction</p>
+				<h1>Who Am I?</h1>
+			</div>
+			<div class="Intro-box">
+				<div class="Intro">
+					<h2>Background</h2>
+					<p>
+						Hi! My name is Calvyn and I was born in Kuala Lumpur, Malaysia and I
+						am from a Chinese descent. Personally, I believe that
+						self-discipline and curiosity are the biggest factors of self
+						progress. This website is a personal project of mine where I
+						regularly tried to apply my knowledge of
+						<span style="font-weight: 900"> HTML, CSS and Javascript</span> into
+						practice.
+					</p>
+
+					<h2>Academic Interests</h2>
+
+					<p>
+						I am currently studing in McMaster University, and my goal is to
+						specialize in Electrical Engineering. This aligns with my interest
+						with embedded hardware and technology, as well as similar interests
+						in the future of sustainable energy sources and its possible
+						widespread applications in the future.
+					</p>
+					<h2>Goals</h2>
+					<p>
+						I hope to learn many important and relevant skills which would be
+						critical to my career development. As a student in McMaster
+						University, I look forward to being more involved in my community!
+					</p>
+				</div>
+				<div class="Intro-img">
+					<img src="./webimages/personalphoto.jpg" />
+				</div>
+			</div>
+		</section>
+
+		<p>Part Time supervisor at Tim Hortons</p>
+		<p>Licensed to Learn and Tutoring Expert tutor</p>
+		<p>Social Justice Club President</p>
+		<section id="Experiences">
+			<div class="Experiences-title-text">
+				<h1>Experiences</h1>
+			</div>
+
+			<div id="slider">
+				<input type="radio" name="slider" id="r1" checked />
+				<input type="radio" name="slider" id="r2" checked />
+				<input type="radio" name="slider" id="r3" checked />
+				<div id="slides">
+					<div id="overflow">
+						<div class="inner">
+							<div class="slide slide1">
+								<div class="slide-content">
+									<h2>Part time supervisor (2018-2020)</h2>
+									<p>
+										I was responsible for logging inventory, coordinating
+										different team members for different tasks while communicate
+										effectively and efficiently
+									</p>
+								</div>
+							</div>
+							<div class="slide slide2">
+								<div class="slide-content">
+									<h2>Tutor (2017-present)</h2>
+									<p>
+										Experienced in tutoring high school students from Grade 9 -
+										12 in subjects such as Chemistry, English and Mathematics
+									</p>
+								</div>
+							</div>
+							<div class="slide slide3">
+								<div class="slide-content">
+									<h2>Social Justice Club Leader (2017-2020)</h2>
+									<p>
+										Gained leadership experience by managing different club
+										members while leading discussions. I also had the
+										opportunity to volunteer with Food For Life Canada, where I
+										helped prepared and provide fresh food and produce for
+										residents within a co-op housing facility.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="controls">
+					<label for="r1"></label>
+					<label for="r2"></label>
+					<label for="r3"></label>
+				</div>
+				<div id="bullets">
+					<label for="r1"></label>
+					<label for="r2"></label>
+					<label for="r3"></label>
+				</div>
+			</div>
+		</section>
+
+		<div class="slide">
+			<img src="./webimages/timmies.png" />
+		</div>
+
+		<div class="slide">
+			<img src="./webimages/tutor.png" />
+		</div>
+
+		<div class="slide">
+			<img src="./webimages/SJC.webp" />
+		</div>
+ -->
+		<!-- 
+  <script>
+      var menuBtn = document.getElementById("menuBtn");
+      var topNav = document.getElementById("topNav");
+      var menu = document.getElementById("menu");
+
+      menuBtn.onclick = function () {
+        if (topNav.style.top == "0px") {
+          topNav.style.top = "-70px";
+          menu.src = "./webimages/menu.png";
+        } else {
+          topNav.style.top = "0px";
+          menu.src =
+            "./webimages/close.webp";
+        }
+      }; 
+     //    var prevScrollpos = window.pageYOffset;
+      //    window.onscroll = function(){
+      //
+      //    var currentScrollpos =  window.pageYOffset;
+      //    if (prevScrollpos > currentScrollpos){
+      //        document.getElementById("topNav").style.top = "0px";
+      //        menu.src =
+      //            "https://cdn.iconscout.com/icon/free/png-256/close-1912235-1617704.png"
+      //
+      //    } else {
+      //        document.getElementById("topNav").style.top = "-70px";
+      //        menu.src = "https://static.thenounproject.com/png/356889-200.png";
+      //
+      //    }
+      //
+      //     prevScrollpos = currentScrollpos;
+      //    }
+      // -->
+	</body>
 </html>
