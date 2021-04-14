@@ -1,0 +1,12 @@
+@mixin flexcenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 60vw;
+    flex-flow: $direction wrap;
+}
+
+@mixin test-border {
+    border: .5rem solid black;
+
+}
