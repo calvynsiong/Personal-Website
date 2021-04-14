@@ -9,23 +9,6 @@
   font-size: 10px;
 }
 
-div {
-  width: 20rem;
-  height: 20rem;
-  margin: 1rem;
-  color: white;
-  border: 0.5rem solid black;
-}
-
-.transition {
-  background: red;
-  transition: all 2s linear;
-}
-.transition:hover {
-  background: green;
-  transform: translateX(10rem);
-}
-
 .animation {
   background: pink;
   animation: move 2s 1;
