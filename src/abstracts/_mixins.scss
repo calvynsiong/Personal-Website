@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 1 100%;
+    flex: 1 1 50%;
     flex-flow: $direction wrap;
 }
 
 @mixin test-border {
-    border: .5rem solid black;
+    border: .3rem solid black;
 
 }

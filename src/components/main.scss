@@ -1,35 +1,8 @@
-@use 'src/abstracts' as *;
+@use 'src/abstracts'as *;
 
 
 
 
-
-
-.animation {
-    background: pink;
-    animation: move 2s 1;
-    animation-fill-mode: backwards;
-}
-
-@keyframes move {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.25;
-        transform: translateX(30rem);
-    }
-    
-    50% {
-        opacity: 1;
-        transform: translateX(-10rem);
-    }
-    100% {
-        opacity: 0.5;
-        transform: translateX(2rem);
-
-    }
-}
 
 
 
