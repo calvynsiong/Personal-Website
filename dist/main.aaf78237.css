@@ -9,6 +9,12 @@
   font-size: 10px;
 }
 
+h1 {
+  color: #cf7c22;
+  font-size: 3rem;
+  border: 0.3rem solid black;
+}
+
 /* .primary-nav {
     display: flex;
 	flex-wrap: wrap;

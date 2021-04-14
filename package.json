@@ -1,16 +1,25 @@
 {
   "name": "New_website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/website.html",
-    "build": "parcel build src/website.html"
-
+    "dev" : "parcel src/website.html",
+    "build" : "parcel build src/website.html"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callister10/Website.git"
+  },
+
+
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/callister10/Website/issues"
+  },
+  "homepage": "https://github.com/callister10/Website#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
     "sass": "^1.32.8"
