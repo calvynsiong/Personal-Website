@@ -5,7 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edsssssge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Personal website</title>
-		<link rel="stylesheet" href="components/main.scss" />
+		<link rel="stylesheet" href="main.css"/>
+
 		<!-- Font awesome kits -->
 		<link
 			rel="stylesheet"
@@ -15,7 +16,20 @@
 		/>
 	</head>
 	<body>
-		<h1>Main heading</h1>
+		<div class="nav-bar">
+			<div class="nav-bar__container">
+				<i class="fas fa-bars"></i>
+			</div>
+
+			<div class="nav-bar__linkcontainer">
+				<a href="#"> Home </a>
+				<a href="#">Introduction </a>
+				<a href="#">Experiences </a>
+				<a href="#">Resume </a>
+				<a href="#">Personal interests </a>
+				<a href="#">Contact info </a>
+			</div>
+		</div>
 
 		<section id="banner">
 			<div class="banner-text">
@@ -29,22 +43,6 @@
 				</div>
 			</div>
 		</section>
-
-		<div class="container">
-			<div id="topNav">
-				<img src="./webimages/Mcmaster.png" class="McMasterlogo" />
-				<a href="#"> Home </a>
-				<a href="#">Introduction </a>
-				<a href="#">Experiences </a>
-				<a href="#">Resume </a>
-				<a href="#">Personal interests </a>
-				<a href="#">Contact info </a>
-			</div>
-		</div>
-
-		<div id="menuBtn">
-			<img src="./webimages/menu.png" id="menu" />
-		</div>
 
 		Introduction
 
@@ -132,10 +130,8 @@
 		</section>
 		-->
 
-
 		<!-- <script src="script.js"></script> -->
 
-		
 		<!-- 		
   <script>
       var menuBtn = document.getElementById("menuBtn");
@@ -170,7 +166,5 @@
       //     prevScrollpos = currentScrollpos;
       //    }
       // -->
-
-
 	</body>
 </html>
