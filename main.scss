@@ -12,7 +12,9 @@ $clr2: #d66f16;
 $clr3: #de5f0e;
 $clr4: #e54b0d;
 $clr5: #ed2f13;
-$def-font: Monstserrat, sans-serif;
+$def-font: 'Montserrat', sans-serif;
+$heading: 'Playfair Display', sans-serif;
+$accent: 'Roboto', sans-serif;
 $bold: 900;
 $phone: 320px;
 $tablet: 768px;
@@ -37,28 +39,49 @@ $Lgdesktop: 1920px;
 	box-sizing: border-box;
 	font-family: $def-font;
 }
+
 body {
-	min-width: $phone;
+	font-size: 1.5125rem;
 }
 
-// :root {
-// 	// font-size: 16px;
-// }
+:is(h1, h2, h3) {
+	line-height: 1.5;
+	font-family: $heading;
+	font-weight: $bold;
+}
+
+section {
+	padding: 3rem;
+}
+.container {
+	margin-inline: auto;
+	width: 100%;
+	// @include test-border(0.1rem);
+}
+
+.img {
+	max-width: 100%;
+	display: block;
+}
 
 header {
 	text-align: right;
 	display: flex;
+	justify-content: space-around;
 	position: fixed;
-	flex-flow: row wrap;
 	width: 100vw;
 	z-index: 1000;
 	margin-bottom: 1rem;
-	background: $clr1;
+	background: $clr2;
 	justify-content: center;
 
+	@media (min-width: $Lgdesktop) {
+		justify-content: space-around;
+		flex-flow: row wrap;
+	}
+	// Attempting to fix logo responsiveness
 	.logo-container {
 		display: flex;
-		flex-flow: row wra;
 		border-radius: 50%;
 		width: 6rem;
 		height: 6rem;
@@ -66,31 +89,55 @@ header {
 		padding: 1rem;
 		z-index: 1;
 
+		@media (max-width: 480px) {
+			visibility: hidden;
+		}
+		@media (min-width: $Lgdesktop) {
+			justify-self: flex-start;
+		}
 		img {
 			object-fit: cover;
-			// transform: translateY(50%);
 		}
 	}
+	// Switches link positioning based on device width
 	nav {
 		position: absolute;
 		right: 0%;
 		top: 30%;
 		width: 100%;
-		background: $clr1;
-		display: none;
+		background: $clr2;
+		transform: scaleY(0);
+		transition: all 0.5s ease;
+		transform-origin: top;
 
 		ul {
 			list-style: none;
+			position: relative;
+			display: inline-block;
+			// padding: 1em;
+			top: -1rem;
+			z-index: 0;
+			@media (min-width: $Lgdesktop) {
+				display: flex;
+				justify-content: flex-end;
+			}
+			img {
+				object-fit: cover;
+			}
 
 			li {
 				text-decoration: none;
 				text-transform: uppercase;
 				margin-bottom: 1em;
 				margin-right: 2em;
-
+				font-weight: 600;
 				a {
 					color: white;
 					text-decoration: none;
+					padding: 0.5em;
+					display: inline-block;
+					opacity: 0;
+					transition: opacity 0.25s ease-in-out 0.25s;
 
 					&:hover {
 						color: black;
@@ -99,518 +146,543 @@ header {
 			}
 		}
 	}
+}
+// Creating hover effect for links
+@for $i from 1 through 6 {
+	.link-#{$i}::after {
+		position: absolute;
+		top: calc((#{$i}-1) * 15%);
+		right: 0;
+		content: '';
+		width: 100%;
+		height: 12%;
+		background-color: rgba(255, 255, 255, 0.2);
+		z-index: -1;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: all 0.25s ease-in;
+	}
 
-	.nav-toggle {
-		display: none;
-		&:checked ~ nav {
-			display: block;
+	.link-#{$i}:hover::after {
+		transform: scaleX(1);
+		transform-origin: right;
+	}
+}
+// Expandable section with menu icon + hover effects
+.nav-toggle {
+	display: none;
+	&:checked ~ nav {
+		display: block;
+		transform: scaleY(1);
+		transform-origin: bottom;
+
+		a {
+			opacity: 1;
 		}
+	}
 
-		&-label {
-			position: absolute;
-			left: 0;
-			height: 100%;
+	&-label {
+		position: absolute;
+		left: 0;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 5rem;
+
+		.icon-container {
 			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 5rem;
+			border-radius: 50%;
+			position: relative;
+			padding: 1rem;
+			transform: translateX(10%);
+			transition: all 250ms ease;
 
-			.icon-container {
-				display: flex;
-				@include test-border(0.3rem);
-				border-radius: 50%;
-				position: relative;
-				padding: 1rem;
-				transform: translateX(10%);
-				transition: all 0.5s ease;
-
-				&:hover {
-					background-color: rgba(255, 255, 250, 0.2);
-					// background-color: green;
-				}
-
-				// .fa-times {
-				// 	display: block;
-				// 	transform: translate(300%, 0%);
-				// }
+			&:hover {
+				background-color: rgba(255, 255, 250, 0.2);
 			}
 		}
 	}
 }
 
-/* .primary-nav {
-    display: flex;
-	flex-wrap: wrap;
-	flex: 1 1 auto;
-	width: 95vw;
-	background: white;
-	padding: 2rem;
-	justify-content: right;
-}
-
-.primary-nav a {
-	text-decoration: none;
-	font-weight: 600;
-	font-size: 1.2rem;
-	text-transform: uppercase;
-	margin-right: 1em;
-}
-
-.nav-list {
-	list-style: none;
+#banner {
+	padding-top: 112px;
+	text-align: center;
 	display: flex;
-	flex-wrap: wrap;
-	flex: 1 1 auto;
-	justify-content: right;
-	padding: 1rem;
+	flex-flow: column wrap;
+	flex: 1 1 30%;
+	.container {
+		background-color: $clr3;
+
+		h1 {
+			padding-top: 1em;
+			flex-wrap: wrap;
+		}
+		p {
+			padding: 2em;
+			font-size: 1.5rem;
+		}
+	}
 }
 
-.primary-nav a[href^='./H'] {
-	color: var(--clr1);
-}
-.primary-nav a[href^='./E'] {
-	color: var(--clr2);
-}
-.primary-nav a[href^='./R'] {
-	color: var(--clr3);
-}
-.primary-nav a[href^='./P'] {
-	color: var(--clr4);
-}
-.primary-nav a[href^='./C'] {
-	color: var(--clr5);
-}
+#Introduction {
+	display: flex;
+	flex-flow: row wrap;
+	background: $grad1;
+	width: 100vw;
 
-.primary-nav a:hover {
-	color: black;
-	border-bottom: solid black 0.2em;
-} */
+	span {
+		font-weight: bold;
+		font-size: 1.4rem;
+	}
 
-/* 
- * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-   
-}
+	.container {
+		display: flex;
+		flex-flow: row wrap;
+		padding: 1rem;
 
-#banner{
-  background: linear-gradient(rgba(0,0,0,0.5), #ffffff44) , url(https://img4.goodfon.com/original/1920x1080/6/7e/malaziia-ulitsa-street-malaysia.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 110vh;
-  overflow: hidden;
-  margin-top: -20px;
-  
-}
+		& > * {
+			flex: 1 1 20vw;
+			display: flex;
+			flex-flow: column wrap;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			border-radius: 2em;
+			padding: 2rem;
+			margin-bottom: 1rem;
+			transition: all 0.15s ease-in;
 
-.McMasterlogo{
-  width: 150px;
-height: 70%;
-  position: absolute;
-  top: 1%;
-  right: 10%;
-  z-index: 3; 
+			&:hover {
+				transform: translate3D(0, -1px, 0) scale(1.06);
+				box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+			}
+		}
+		& > * + * {
+			margin-left: 0;
 
-}
+			@media (min-width: 390px) {
+				margin-left: 1rem;
+			}
+		}
 
-.banner-text{
-  text-align: center;
-  color: whitesmoke;
-  padding-top: 5%;
-  padding-left: 10%;
-  width: 80%;
-  
-}
+		.Photo-box {
+			// @include test-border(0.2rem);
+			// width: 10%;
+			// height: 2rem;
+			// position: relative;
+			display: flex;
+			align-items: center;
+			align-self: center;
+			box-shadow: none;
 
-.banner-text h1{
-  font-size: 50px;
- 
-}
-.banner-text p{
-  font-size: 20px;
-  font-style: italic;
-   font-family: 'Raleway', sans-serif;
-  
-}
-.banner-btn{
-  margin: 70px auto 0;
-  font-family: 'Verdana', sans-serif;
-  
-    
- 
+			img {
+				object-fit: contain;
+				// position: absolute;
+				// @include test-border(0.2rem);
+				width: 15rem;
+				height: 15rem;
+				top: 0;
+				border-radius: 50%;
+			}
+		}
+	}
 }
 
-.banner-btn a{
-      
-      width: 20%;
-      font-size: 25px;
-      text-decoration: none;
-      font-family: 'Helvetica', sans-serif;
-      display: inline-block;
-      margin: 0 10px;
-      padding: 12px 15px;
-      color: white;
-      border: 1px solid black;
-      box-shadow: 0 0 20px rgb(37, 28, 28);
-      text-transform: uppercase;
-      display: block;
-      left:40%;
-      
-      border-radius: 10px;
-     
-      position: relative;
-      background: radial-gradient(circle, rgba(204,102,0,1) 0%, rgba(253,122,29,1) 23%, rgba(252,176,69,1) 100%);
-      z-index:1;
-      transition: 0.5s;
- 
-}
+// #banner{
+//   background: linear-gradient(rgba(0,0,0,0.5), #ffffff44) , url(https://img4.goodfon.com/original/1920x1080/6/7e/malaziia-ulitsa-street-malaysia.jpg);
+//   background-size: cover;
+//   background-position: center;
+//   height: 110vh;
+//   overflow: hidden;
+//   margin-top: -20px;
 
-.banner-btn a span{
-    width: 0%;
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient( 97.3deg,  rgba(25,50,70,0.81) 10.7%, rgba(155,65,25,0.72) 39.5%, rgba(255,192,0,0.81) 69.7% );
-    z-index:-1;
-    transition: 0.5s;
- 
-}
+// }
 
-.banner-btn a:hover span{
-    width: 100%;
-   
-}
-.banner-btn a:hover {
-    color:white;
-   
-}
+// .McMasterlogo{
+//   width: 150px;
+// height: 70%;
+//   position: absolute;
+//   top: 1%;
+//   right: 10%;
+//   z-index: 3;
 
-#topNav{
-    width: 100%;
-    height: 70px;
-    max-width: 100%;
-    position: fixed;
-    display: block;
-    top: -70px;
-    background: linear-gradient( rgba(204,102,0,1) 0%, rgba(213,94,9,1) 67%, rgba(252,176,69,1) 99%);
-    z-index:2; 
-    transition: top 0.5s;
-    padding: 0 50px 0 50px;
-    
-}
-#topNav a{
-    float: left;
-    display: block;
-    margin : 20px 40px 20px 40px;
-   
-    text-decoration: none;
-    color: white;
-    
-}
+// }
 
-#menuBtn {
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    position: fixed;
-    left: 10px;
-    top: 20px;
-    z-index: 3;
-    cursor: pointer;
-    background: linear-gradient( rgba(204,102,0,1) 0%, rgba(213,94,9,1) 77%, rgba(252,176,69,1) 99%);
-    border-radius: 25px
-    
-}
+// .banner-text{
+//   text-align: center;
+//   color: whitesmoke;
+//   padding-top: 5%;
+//   padding-left: 10%;
+//   width: 80%;
 
- #menuBtn img{
-    width: 50px;       
-}
-Introduction
+// }
 
- #Introduction{
-    width: 100%;
-    padding: 50px 0;
-    background: #ffc3a0;
-    
-    
-}
+// .banner-text h1{
+//   font-size: 50px;
 
-.title-text{
-    position: center;
-    padding: 10px;
-    width: 70%;
-    margin: 10px 300px;;
-    
-    
-    
-}
+// }
+// .banner-text p{
+//   font-size: 20px;
+//   font-style: italic;
+//    font-family: 'Raleway', sans-serif;
 
-.title-text p{
-    margin: auto 20px;
-    font-size: 25px;
-    color:black;
-    position: relative;
-    z-index: 1;
-    display: inline-block;
- 
-    
-}
+// }
+// .banner-btn{
+//   margin: 70px auto 0;
+//   font-family: 'Verdana', sans-serif;
 
-.title-text p::after{
-    content: '';
-    width: 170px;
-    height: 50px;
-    position: absolute;
-    background: linear-gradient(rgba(253,122,29,1), #fff);
-    top: -10px;
-    left: -10px;
-    z-index: -1;
-    border-radius: 20px;
-    
-}
+// }
 
-.title-text h1{
-    margin: 10px;
-    font-size: 50px;
-    color:black;  
-    border-bottom: 5px solid black;    
-}
+// .banner-btn a{
 
-.Intro-box{
-    width: 70%;
-    margin:auto 320px;
-    display: flex;
-    flex-wrap: wrap;
-}
+//       width: 20%;
+//       font-size: 25px;
+//       text-decoration: none;
+//       font-family: 'Helvetica', sans-serif;
+//       display: inline-block;
+//       margin: 0 10px;
+//       padding: 12px 15px;
+//       color: white;
+//       border: 1px solid black;
+//       box-shadow: 0 0 20px rgb(37, 28, 28);
+//       text-transform: uppercase;
+//       display: block;
+//       left:40%;
 
-.Intro {
-    flex-basis: 60%;
-    
-}
+//       border-radius: 10px;
 
-.Intro p{
-    font-size: 24px;
-    line-height: 30px;
-    margin-bottom: 32px;
-    
-}
+//       position: relative;
+//       background: radial-gradient(circle, rgba(204,102,0,1) 0%, rgba(253,122,29,1) 23%, rgba(252,176,69,1) 100%);
+//       z-index:1;
+//       transition: 0.5s;
 
-.Intro h2{
-    font-size: 34px;
-    line-height: 30px;
-    margin-bottom: 10px;
-    
-}
+// }
 
+// .banner-btn a span{
+//     width: 0%;
+//     height: 100%;
+//     border-radius: 10px;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background: linear-gradient( 97.3deg,  rgba(25,50,70,0.81) 10.7%, rgba(155,65,25,0.72) 39.5%, rgba(255,192,0,0.81) 69.7% );
+//     z-index:-1;
+//     transition: 0.5s;
 
-.Intro-img{
-    flex-basis: 40%;
-    margin: auto;
-    
-}
-.Intro-img img{
-    width: 70%;
-    margin-left: 140px;
-    border-radius: 50px; 
-}
+// }
 
+// .banner-btn a:hover span{
+//     width: 100%;
 
+// }
+// .banner-btn a:hover {
+//     color:white;
 
-#Experiences{
-    width: 100%;
-    padding: 80px 0;
-    height: 100%;
-    background: #ffc3a0;
-    
-}
+// }
 
-.Experiences-title-text h1{
-    margin-left: 15%;
-    left: 50%;
-    font-size: 50px;
-    color:black;  
-    
+// #topNav{
+//     width: 100%;
+//     height: 70px;
+//     max-width: 100%;
+//     position: fixed;
+//     display: block;
+//     top: -70px;
+//     background: linear-gradient( rgba(204,102,0,1) 0%, rgba(213,94,9,1) 67%, rgba(252,176,69,1) 99%);
+//     z-index:2;
+//     transition: top 0.5s;
+//     padding: 0 50px 0 50px;
 
-}
+// }
+// #topNav a{
+//     float: left;
+//     display: block;
+//     margin : 20px 40px 20px 40px;
 
-#slider{
-    margin: 0 auto;
-    width: 80%;
-    max-width: 100%;
-    text-align: center;
-  
-    
-    
-}
+//     text-decoration: none;
+//     color: white;
 
-#slider input[type =radio]{
-    display: none;
-}
+// }
 
-#slider label{
-    cursor: pointer;
-    text-decoration: none;
-}
+// #menuBtn {
+//     width: 50px;
+//     height: 50px;
+//     text-align: center;
+//     position: fixed;
+//     left: 10px;
+//     top: 20px;
+//     z-index: 3;
+//     cursor: pointer;
+//     background: linear-gradient( rgba(204,102,0,1) 0%, rgba(213,94,9,1) 77%, rgba(252,176,69,1) 99%);
+//     border-radius: 25px
 
-#slides{
-    padding: 60px;
-    position: relative;
-    height: 500px;
-     border-radius: 30px;
-}
+// }
 
-#overflow{
-    width: 100%;
-    overflow: hidden;
-    height: 1000px;
-}
+//  #menuBtn img{
+//     width: 50px;
+// }
+// Introduction
 
-#r1:checked ~ #slides .inner{
-    margin-left: 0;
-}
+//  #Introduction{
+//     width: 100%;
+//     padding: 50px 0;
+//     background: #ffc3a0;
 
-#r2:checked ~ #slides .inner{
-    margin-left: -100%;
-}
+// }
 
-#r3:checked ~ #slides .inner{
-    margin-left: -200%;
-}
+// .title-text{
+//     position: center;
+//     padding: 10px;
+//     width: 70%;
+//     margin: 10px 300px;;
 
-#slides .inner{
-    transition: margin-left 1s cubic-bezier(0.77, 0, 0.175,1);
-    width: 400%;
-    line-height: 3em;
-    height: 90%;
-   
-    
-        
-}
+// }
 
+// .title-text p{
+//     margin: auto 20px;
+//     font-size: 25px;
+//     color:black;
+//     position: relative;
+//     z-index: 1;
+//     display: inline-block;
 
-#slides .slide{
-    width: 25%;
-    float: left;
-    display: float;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    
-    
-}
+// }
 
-#slides .slide1{
-    background: linear-gradient(rgba(0,0,0,0.5), #ffffff44), url(https://i2.wp.com/cavesocial.com/wp-content/uploads/2019/10/thortonsblog1.png);
-    margin-left: 1.5%;
-    background-repeat: no-repeat;
-    height: 60%;
-    background-size: 90% 100%;
-    
-}
+// .title-text p::after{
+//     content: '';
+//     width: 170px;
+//     height: 50px;
+//     position: absolute;
+//     background: linear-gradient(rgba(253,122,29,1), #fff);
+//     top: -10px;
+//     left: -10px;
+//     z-index: -1;
+//     border-radius: 20px;
 
-#slides .slide2{
-    background: linear-gradient(rgba(0,0,0,0.5), #ffffff44), url(https://websitesca.sfo2.digitaloceanspaces.com/directory-logo/logo-r1MjAU6_HX);
-    margin-left: 5%;
-    background-size: 50% 100%;
-    background-repeat: no-repeat;
-    align-content: center;
-    
-}
+// }
 
-#slides .slide3{
-    background: linear-gradient(rgba(0,0,0,0.5), #ffffff44), url(https://marvel-b1-cdn.bc0a.com/f00000000026007/resilienteducator.com/wp-content/uploads/sites/34/2015/05/Teaching-Social-Justice-in-Theory-and-Practice-2.jpg) ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-left: -6%;
-    
-}
+// .title-text h1{
+//     margin: 10px;
+//     font-size: 50px;
+//     color:black;
+//     border-bottom: 5px solid black;
+// }
 
-.slide-content{
-    padding: 10px;
-    margin: 10px 90px 0 -100;
-    color: white ;
-    line-height: 35px;
-}
-.slide1 .slide-content{
-    padding: 10px;
-    margin: 10px 290px 0 100px;
-    color: white ;
-    line-height: 35px;
-}
+// .Intro-box{
+//     width: 70%;
+//     margin:auto 320px;
+//     display: flex;
+//     flex-wrap: wrap;
+// }
 
-.slide-content p{
-    margin-top: 10%;
-    line-height: 45px;
-    font-size: 30px;
-    color: floralwhite;
- 
-}
+// .Intro {
+//     flex-basis: 60%;
 
-.slide2 .slide-content{
-    padding: 10px;
-    margin: 0px 10px 0 0%;
-    width: 50%;
-    color: white;
-    
-}
+// }
 
-.slide2 .slide-content p {
-    color: white;
-    margin: 10% 30px 0 0%;
-}
-.slide3 .slide-content{
-    padding: 10px;
-    margin: 2% 20% 0 20%;
-    color: white; 
+// .Intro p{
+//     font-size: 24px;
+//     line-height: 30px;
+//     margin-bottom: 32px;
 
-    
-}
+// }
 
+// .Intro h2{
+//     font-size: 34px;
+//     line-height: 30px;
+//     margin-bottom: 10px;
 
+// }
 
+// .Intro-img{
+//     flex-basis: 40%;
+//     margin: auto;
 
-#controls{
-    margin: -130px 0 0 0;
-    width: 100%;
-    height: 50px;
-    z-index: 3;
-    position: relative;
-    
-}
+// }
+// .Intro-img img{
+//     width: 70%;
+//     margin-left: 140px;
+//     border-radius: 50px;
+// }
 
-#controls label{
-    transition: opacity 0.5s ease-out;
-    width: 50px;
-    height: 50px;
-    opacity: .4;
-}
+// #Experiences{
+//     width: 100%;
+//     padding: 80px 0;
+//     height: 100%;
+//     background: #ffc3a0;
 
-#controls label:hover{
-    opacity: 1;
-}
+// }
 
-#r1:checked ~ #controls label:nth-child(2),
-#r2:checked ~ #controls label:nth-child(3),
-#r3:checked ~ #controls label:nth-child(1) {
-    background: url(https://www.flaticon.com/svg/vstatic/svg/854/854183.svg?token=exp=1617734784~hmac=5f517d94deb2d2cb8ce32bc37241c897) no-repeat; 
-    float:right;
-    margin: -200px -50px 0 0 ;
-    transform: rotate(180deg);
-    display: block;
-}
+// .Experiences-title-text h1{
+//     margin-left: 15%;
+//     left: 50%;
+//     font-size: 50px;
+//     color:black;
 
-#r1:checked ~ #controls label:nth-child(3),
-#r2:checked ~ #controls label:nth-child(1),
-#r3:checked ~ #controls label:nth-child(2) {
-    background: url(https://www.flaticon.com/svg/vstatic/svg/854/854183.svg?token=exp=1617734784~hmac=5f517d94deb2d2cb8ce32bc37241c897) no-repeat; 
-    float:left;
-    margin: -200px 0 0 -50px;  
-    display: block;
-}  
- */
+// }
+
+// #slider{
+//     margin: 0 auto;
+//     width: 80%;
+//     max-width: 100%;
+//     text-align: center;
+
+// }
+
+// #slider input[type =radio]{
+//     display: none;
+// }
+
+// #slider label{
+//     cursor: pointer;
+//     text-decoration: none;
+// }
+
+// #slides{
+//     padding: 60px;
+//     position: relative;
+//     height: 500px;
+//      border-radius: 30px;
+// }
+
+// #overflow{
+//     width: 100%;
+//     overflow: hidden;
+//     height: 1000px;
+// }
+
+// #r1:checked ~ #slides .inner{
+//     margin-left: 0;
+// }
+
+// #r2:checked ~ #slides .inner{
+//     margin-left: -100%;
+// }
+
+// #r3:checked ~ #slides .inner{
+//     margin-left: -200%;
+// }
+
+// #slides .inner{
+//     transition: margin-left 1s cubic-bezier(0.77, 0, 0.175,1);
+//     width: 400%;
+//     line-height: 3em;
+//     height: 90%;
+
+// }
+
+// #slides .slide{
+//     width: 25%;
+//     float: left;
+//     display: float;
+//     justify-content: center;
+//     align-items: center;
+//     height: 80%;
+
+// }
+
+// #slides .slide1{
+//     background: linear-gradient(rgba(0,0,0,0.5), #ffffff44), url(https://i2.wp.com/cavesocial.com/wp-content/uploads/2019/10/thortonsblog1.png);
+//     margin-left: 1.5%;
+//     background-repeat: no-repeat;
+//     height: 60%;
+//     background-size: 90% 100%;
+
+// }
+
+// #slides .slide2{
+//     background: linear-gradient(rgba(0,0,0,0.5), #ffffff44), url(https://websitesca.sfo2.digitaloceanspaces.com/directory-logo/logo-r1MjAU6_HX);
+//     margin-left: 5%;
+//     background-size: 50% 100%;
+//     background-repeat: no-repeat;
+//     align-content: center;
+
+// }
+
+// #slides .slide3{
+//     background: linear-gradient(rgba(0,0,0,0.5), #ffffff44), url(https://marvel-b1-cdn.bc0a.com/f00000000026007/resilienteducator.com/wp-content/uploads/sites/34/2015/05/Teaching-Social-Justice-in-Theory-and-Practice-2.jpg) ;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     margin-left: -6%;
+
+// }
+
+// .slide-content{
+//     padding: 10px;
+//     margin: 10px 90px 0 -100;
+//     color: white ;
+//     line-height: 35px;
+// }
+// .slide1 .slide-content{
+//     padding: 10px;
+//     margin: 10px 290px 0 100px;
+//     color: white ;
+//     line-height: 35px;
+// }
+
+// .slide-content p{
+//     margin-top: 10%;
+//     line-height: 45px;
+//     font-size: 30px;
+//     color: floralwhite;
+
+// }
+
+// .slide2 .slide-content{
+//     padding: 10px;
+//     margin: 0px 10px 0 0%;
+//     width: 50%;
+//     color: white;
+
+// }
+
+// .slide2 .slide-content p {
+//     color: white;
+//     margin: 10% 30px 0 0%;
+// }
+// .slide3 .slide-content{
+//     padding: 10px;
+//     margin: 2% 20% 0 20%;
+//     color: white;
+
+// }
+
+// #controls{
+//     margin: -130px 0 0 0;
+//     width: 100%;
+//     height: 50px;
+//     z-index: 3;
+//     position: relative;
+
+// }
+
+// #controls label{
+//     transition: opacity 0.5s ease-out;
+//     width: 50px;
+//     height: 50px;
+//     opacity: .4;
+// }
+
+// #controls label:hover{
+//     opacity: 1;
+// }
+
+// #r1:checked ~ #controls label:nth-child(2),
+// #r2:checked ~ #controls label:nth-child(3),
+// #r3:checked ~ #controls label:nth-child(1) {
+//     background: url(https://www.flaticon.com/svg/vstatic/svg/854/854183.svg?token=exp=1617734784~hmac=5f517d94deb2d2cb8ce32bc37241c897) no-repeat;
+//     float:right;
+//     margin: -200px -50px 0 0 ;
+//     transform: rotate(180deg);
+//     display: block;
+// }
+
+// #r1:checked ~ #controls label:nth-child(3),
+// #r2:checked ~ #controls label:nth-child(1),
+// #r3:checked ~ #controls label:nth-child(2) {
+//     background: url(https://www.flaticon.com/svg/vstatic/svg/854/854183.svg?token=exp=1617734784~hmac=5f517d94deb2d2cb8ce32bc37241c897) no-repeat;
+//     float:left;
+//     margin: -200px 0 0 -50px;
+//     display: block;
+// }
 
 /*  
 
@@ -657,7 +729,6 @@ Introduction
 
     .banner-btn a{
       left: -8%;
-}
     
     .title-text{
         font-size:10px;

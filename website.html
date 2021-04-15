@@ -4,8 +4,22 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edsssssge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Personal website</title>
+		<title>Calvyn Siong</title>
 		<link rel="stylesheet" href="main.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@100&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat"
+			rel="stylesheet"
+		/>
 
 		<!-- Font awesome kits -->
 		<link
@@ -16,6 +30,7 @@
 		/>
 	</head>
 	<body>
+		<!-- Interactive nav bar  -->
 		<header>
 			<div class="logo-container">
 				<img class="logo" src="./webimages/CS_icon.png" alt="Personal icon" />
@@ -23,59 +38,36 @@
 			<input type="checkbox" id="nav-toggle" class="nav-toggle" />
 			<nav class="nav-bar">
 				<ul>
-					<li><a href="#">Home </a></li>
-					<li><a href="#">Introduction </a></li>
-					<li><a href="#">Experiences </a></li>
-					<li><a href="#">Resume </a></li>
-					<li><a href="#">Personal interests </a></li>
-					<li><a href="#">Contact info </a></li>
+					<li><a class="link-1" href="#">Home </a></li>
+					<li><a class="link-2" href="#Introduction">Introduction </a></li>
+					<li><a class="link-3" href="#Experiences">Experiences </a></li>
+					<li><a class="link-4" href="#">Resume </a></li>
+					<li><a class="link-5" href="#">Projects </a></li>
+					<li><a class="link-6" href="#">Contact info </a></li>
 				</ul>
 			</nav>
 			<label for="nav-toggle" class="nav-toggle-label">
 				<div class="icon-container">
-					<!-- <i class="fas fa-times fa-3x"></i> -->
 					<i class="fas fa-bars fa-2x"></i>
 				</div>
 			</label>
 		</header>
 
-		
-		</script>
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<section id="banner">
-			<div class="banner-text">
+		<section id="banner" class="center">
+			<div class="container">
 				<h1>Welcome to my personal website</h1>
-				<p>
-					My name is Calvyn Siong and I am a first year engineering student,
-					looking to learn new things.
-				</p>
-				<div class="banner-btn">
-					<a href="#"><span></span> Personal first year project portfolio </a>
+				<div class="container_remark">
+					<p>
+						Hi there! I am Calvyn, an engineering student studying at McMaster
+						constantly aiming to learn new ideas.
+					</p>
 				</div>
 			</div>
 		</section>
 
-		Introduction
-
 		<section id="Introduction">
-			<div class="title-text">
-				<p>Introduction</p>
-				<h1>Who Am I?</h1>
-			</div>
-			<div class="Intro-box">
-				<div class="Intro">
+			<div class="container">
+				<div class="background_box">
 					<h2>Background</h2>
 					<p>
 						Hi! My name is Calvyn and I was born in Kuala Lumpur, Malaysia and I
@@ -83,19 +75,22 @@
 						self-discipline and curiosity are the biggest factors of self
 						progress. This website is a personal project of mine where I
 						regularly tried to apply my knowledge of
-						<span style="font-weight: 900"> HTML, CSS and Javascript</span> into
-						practice.
+						<span> HTML, CSS and Javascript</span> into practice.
 					</p>
-
-					<h2>Academic Interests</h2>
-
+				</div>
+				<div class="Interests_box">
+					<h2>Interests</h2>
 					<p>
-						I am currently studing in McMaster University, and my goal is to
-						specialize in Electrical Engineering. This aligns with my interest
-						with embedded hardware and technology, as well as similar interests
-						in the future of sustainable energy sources and its possible
-						widespread applications in the future.
+						I am currently studying Software Engineering. This aligns with my
+						interest with technology and design. I enjoy problem solving and
+						having the opportunity to bring ideas to life through programming.
+						My other fields of interest include finance, personal health and
+						music (My favourite albums are
+						<span>Random Access Memories</span> and
+						<span> The Rise and Fall of Ziggy Stardust). </span>
 					</p>
+				</div>
+				<div class="Goals_box">
 					<h2>Goals</h2>
 					<p>
 						I hope to learn many important and relevant skills which would be
@@ -103,15 +98,11 @@
 						University, I look forward to being more involved in my community!
 					</p>
 				</div>
-				<div class="Intro-img">
-					<img src="./webimages/personalphoto.jpg" />
+				<div class="Photo-box">
+					<img src="./webimages/personalphoto.jpg" alt="Personal photo" />
 				</div>
 			</div>
 		</section>
-
-		<p>Part Time supervisor at Tim Hortons</p>
-		<p>Licensed to Learn and Tutoring Expert tutor</p>
-		<p>Social Justice Club President</p>
 
 		<section id="Experiences">
 			<div class="Experiences-title-text">
