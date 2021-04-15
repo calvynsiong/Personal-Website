@@ -16,6 +16,10 @@ header {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   width: 100vw;
   z-index: 1000;
   margin-bottom: 1rem;
@@ -29,6 +33,10 @@ header .logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wra;
+          flex-flow: row wra;
   border-radius: 50%;
   width: 6rem;
   height: 6rem;
@@ -59,7 +67,7 @@ header nav ul li {
   text-decoration: none;
   text-transform: uppercase;
   margin-bottom: 1em;
-  margin-right: 1em;
+  margin-right: 2em;
 }
 
 header nav ul li a {
@@ -99,27 +107,18 @@ header .nav-toggle-label .icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 0.1rem solid black;
+  border: 0.3rem solid black;
+  border-radius: 50%;
   position: relative;
+  padding: 1rem;
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-header .nav-toggle-label .icon-container .fa-bars {
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 111111111;
-}
-
-header .nav-toggle-label .icon-container .fa-bars:checked {
-  display: none;
-}
-
-header .nav-toggle-label .icon-container .fa-times {
-  -webkit-transform: translate(50%, 100%);
-          transform: translate(50%, 100%);
-}
-
-header .nav-toggle-label .icon-container .fa-times:checked {
-  display: none;
+header .nav-toggle-label .icon-container:hover {
+  background-color: rgba(255, 255, 250, 0.2);
 }
 
 /* .primary-nav {

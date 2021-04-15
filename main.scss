@@ -49,6 +49,7 @@ header {
 	text-align: right;
 	display: flex;
 	position: fixed;
+	flex-flow: row wrap;
 	width: 100vw;
 	z-index: 1000;
 	margin-bottom: 1rem;
@@ -57,6 +58,7 @@ header {
 
 	.logo-container {
 		display: flex;
+		flex-flow: row wra;
 		border-radius: 50%;
 		width: 6rem;
 		height: 6rem;
@@ -84,7 +86,7 @@ header {
 				text-decoration: none;
 				text-transform: uppercase;
 				margin-bottom: 1em;
-				margin-right: 1em;
+				margin-right: 2em;
 
 				a {
 					color: white;
@@ -115,22 +117,22 @@ header {
 
 			.icon-container {
 				display: flex;
-				@include test-border(0.1rem);
+				@include test-border(0.3rem);
+				border-radius: 50%;
 				position: relative;
+				padding: 1rem;
+				transform: translateX(10%);
+				transition: all 0.5s ease;
 
-				.fa-bars {
-					transform: translateX(-50%);
-					z-index: 111111111;
-					&:checked {
-						display: none;
-					}
+				&:hover {
+					background-color: rgba(255, 255, 250, 0.2);
+					// background-color: green;
 				}
-				.fa-times {
-					transform: translate(50%, 100%);
-					&:checked {
-						display: none;
-					}
-				}
+
+				// .fa-times {
+				// 	display: block;
+				// 	transform: translate(300%, 0%);
+				// }
 			}
 		}
 	}
