@@ -14,6 +14,10 @@ $clr4: #e54b0d;
 $clr5: #ed2f13;
 $def-font: Monstserrat, sans-serif;
 $bold: 900;
+$phone: 320px;
+$tablet: 768px;
+$desktop: 1024px;
+$Lgdesktop: 1920px;
 
 @mixin flexcenter($direction) {
 	display: flex;
@@ -33,47 +37,101 @@ $bold: 900;
 	box-sizing: border-box;
 	font-family: $def-font;
 }
-
-:root {
-	font-size: 20px;
+body {
+	min-width: $phone;
 }
 
-.nav-bar {
+// :root {
+// 	// font-size: 16px;
+// }
+
+header {
+	text-align: right;
 	display: flex;
-	flex-flow: row wrap;
-	@include test-border(0.1rem);
-	justify-content: space-between;
-	padding: 0.5rem;
+	position: fixed;
+	width: 100vw;
+	z-index: 1000;
+	margin-bottom: 1rem;
+	background: $clr1;
+	justify-content: center;
 
-	#{&}__container {
-		@include test-border(0.1rem);
+	.logo-container {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 2rem;
-		width: 3rem;
-		height: 3rem;
+		border-radius: 50%;
+		width: 6rem;
+		height: 6rem;
+		margin: 0.5rem;
+		padding: 1rem;
+		z-index: 1;
+
+		img {
+			object-fit: cover;
+			// transform: translateY(50%);
+		}
 	}
-	#{&}__linkcontainer {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		// @include test-border(0.1rem);
+	nav {
+		position: absolute;
+		right: 0%;
+		top: 30%;
+		width: 100%;
+		background: $clr1;
+		display: none;
 
-		a {
-			text-decoration: none;
-			font-weight: 500;
-			font-size: 1.2rem;
-			color: #cf7c22;
-			padding: 0.5rem;
+		ul {
+			list-style: none;
 
-			&:hover {
-				border-bottom: 2px solid #cf7c22;
+			li {
+				text-decoration: none;
+				text-transform: uppercase;
+				margin-bottom: 1em;
+				margin-right: 1em;
+
+				a {
+					color: white;
+					text-decoration: none;
+
+					&:hover {
+						color: black;
+					}
+				}
 			}
 		}
+	}
 
-		> * + * {
-			margin-left: 0.5rem;
+	.nav-toggle {
+		display: none;
+		&:checked ~ nav {
+			display: block;
+		}
+
+		&-label {
+			position: absolute;
+			left: 0;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 5rem;
+
+			.icon-container {
+				display: flex;
+				@include test-border(0.1rem);
+				position: relative;
+
+				.fa-bars {
+					transform: translateX(-50%);
+					z-index: 111111111;
+					&:checked {
+						display: none;
+					}
+				}
+				.fa-times {
+					transform: translate(50%, 100%);
+					&:checked {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 }
