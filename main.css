@@ -78,7 +78,9 @@ header .logo-container {
 
 @media (min-width: 1920px) {
   header .logo-container {
-    justify-self: flex-start;
+    justify-self: flex-end;
+    -webkit-transform: translate(-600%, -10%);
+            transform: translate(-600%, -10%);
   }
 }
 
@@ -164,7 +166,13 @@ header nav ul li a:hover {
   transition: all 0.25s ease-in;
 }
 
-.link-1:hover::after {
+@media (min-width: 1024px) {
+  .link-1::after {
+    visibility: hidden;
+  }
+}
+
+.link-1::after .link-1:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: right;
@@ -188,7 +196,13 @@ header nav ul li a:hover {
   transition: all 0.25s ease-in;
 }
 
-.link-2:hover::after {
+@media (min-width: 1024px) {
+  .link-2::after {
+    visibility: hidden;
+  }
+}
+
+.link-2::after .link-2:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: right;
@@ -212,7 +226,13 @@ header nav ul li a:hover {
   transition: all 0.25s ease-in;
 }
 
-.link-3:hover::after {
+@media (min-width: 1024px) {
+  .link-3::after {
+    visibility: hidden;
+  }
+}
+
+.link-3::after .link-3:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: right;
@@ -236,7 +256,13 @@ header nav ul li a:hover {
   transition: all 0.25s ease-in;
 }
 
-.link-4:hover::after {
+@media (min-width: 1024px) {
+  .link-4::after {
+    visibility: hidden;
+  }
+}
+
+.link-4::after .link-4:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: right;
@@ -260,7 +286,13 @@ header nav ul li a:hover {
   transition: all 0.25s ease-in;
 }
 
-.link-5:hover::after {
+@media (min-width: 1024px) {
+  .link-5::after {
+    visibility: hidden;
+  }
+}
+
+.link-5::after .link-5:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: right;
@@ -284,7 +316,13 @@ header nav ul li a:hover {
   transition: all 0.25s ease-in;
 }
 
-.link-6:hover::after {
+@media (min-width: 1024px) {
+  .link-6::after {
+    visibility: hidden;
+  }
+}
+
+.link-6::after .link-6:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: right;
@@ -341,7 +379,7 @@ header nav ul li a:hover {
 }
 
 #banner {
-  padding-top: 112px;
+  padding-top: calc(122px + 2em);
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,9 +398,30 @@ header nav ul li a:hover {
 }
 
 #banner .container h1 {
-  padding-top: 1em;
+  padding: 1em;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-animation: fadeIn linear 2s;
+          animation: fadeIn linear 2s;
+  font-size: 2em;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #banner .container p {
@@ -392,6 +451,7 @@ header nav ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 1em;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -417,6 +477,28 @@ header nav ul li a:hover {
   margin-bottom: 1rem;
   -webkit-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
+  position: relative;
+  z-index: 1;
+}
+
+#Introduction .container > *::after {
+  position: absolute;
+  content: '';
+  background: #de5f0e;
+  width: 100%;
+  border-radius: 2em;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-in;
+  transition: -webkit-transform 0.25s ease-in;
+  transition: transform 0.25s ease-in;
+  transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
 }
 
 #Introduction .container > *:hover {
@@ -424,6 +506,14 @@ header nav ul li a:hover {
           transform: translate3D(0, -1px, 0) scale(1.06);
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+}
+
+#Introduction .container > *:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  border-radius: 2em;
 }
 
 #Introduction .container > * + * {
@@ -449,6 +539,10 @@ header nav ul li a:hover {
           box-shadow: none;
 }
 
+#Introduction .container .Photo-box::after {
+  visibility: hidden;
+}
+
 #Introduction .container .Photo-box img {
   -o-object-fit: contain;
      object-fit: contain;
@@ -458,124 +552,116 @@ header nav ul li a:hover {
   border-radius: 50%;
 }
 
-/*  
-
-@media screen and (max-width: 1200px, min-width: 700px){
-    
-    .banner{
-        height: 70vh
-    }
-    
-    .banner-text h1{
-        font-size: 30px;
-        margin: 10% 10px;
-    
-}
-    
-    .banner-btn a{
-        display: block;
-        margin: 20px 300px;
-        text-align: center;
-        width: 300px;
-        height: 40px;
-        font-size: 20px;
-    }
-    
-    .banner-text p{
-        font-size: 20px;
-    }
-    
-    #topNav{
-        font-size: 15px;
-        width: 100%;
-        height: 130px;
-        
-
-    }
-    #topNav a{
-        width:20%;
-        height: 20%;
-        margin : 1px 0px 11px 11px;
-        
-        
-       
-    }
-
-    .banner-btn a{
-      left: -8%;
-    
-    .title-text{
-        font-size:10px;
-        width: inherit;  
-        margin-left: 200px;
-    }
-    
-    .Intro-box{
-    width: 50%;
-    margin :auto;
+footer {
+  background: -webkit-gradient(linear, left bottom, right top, from(#cf7c22), color-stop(#d66f16), color-stop(#de5f0e), color-stop(#e54b0d), to(#ed2f13));
+  background: linear-gradient(to right top, #cf7c22, #d66f16, #de5f0e, #e54b0d, #ed2f13);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
-    .Intro {
-        flex-basis: 70%;
-
-    }
-
-    .Intro p{
-        font-size: 14px;
-        line-height: 30px;
-        margin-bottom: 32px;
-
-    }
-
-    .Intro-img{
-        flex-basis: 30%;
-        margin: auto ;
-
-    }
-    .Intro-img img{
-        width: 100%;
-        margin-left: 10px;
-        
-    }
-
-
-    #r1:checked ~ #controls label:nth-child(2),
-    #r2:checked ~ #controls label:nth-child(3),
-    #r3:checked ~ #controls label:nth-child(1) {
-        margin: 0 ;
-    
+footer .Quotes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 2em;
+  margin: 2em auto;
+  font-size: 2rem;
 }
 
-    #r1:checked ~ #controls label:nth-last-child(3),
-    #r2:checked ~ #controls label:nth-last-child(1),
-    #r3:checked ~ #controls label:nth-last-child(2) {
-        margin: 0;
-    }
+footer .Quotes p {
+  font-size: 1.5rem;
+}
 
-  
-    
-    .banner-btn a{
-      
-      width: 20%;
-      font-size: 70%;
-      display: inline-block;
-      margin: 0 10px;
-      padding: 12px 15px;
-      color: white;
-      border: 1px solid black;
-      box-shadow: 0 0 20px rgb(37, 28, 28);
-      text-transform: uppercase;
-      display: block;
-      left:40%;
-      
-      border-radius: 10px;
-     
-      position: relative;
-      background: radial-gradient(circle, rgba(204,102,0,1) 0%, rgba(253,122,29,1) 23%, rgba(252,176,69,1) 100%);
-      z-index:1;
-      transition: 0.5s;
- 
-} 
+footer .Contact_links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: Min(8em, 5vw);
+  padding: 2rem;
+}
 
- */
+footer .Contact_links a {
+  color: black;
+  font-style: italic;
+}
+
+footer .Contact_links a:hover {
+  -webkit-transform: translate3D(0, -1px, 0) scale(1.2);
+          transform: translate3D(0, -1px, 0) scale(1.2);
+  -webkit-animation: swivel linear 2s infinite;
+          animation: swivel linear 2s infinite;
+}
+
+@-webkit-keyframes swivel {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  25% {
+    -webkit-transform: rotateZ(15deg);
+            transform: rotateZ(15deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(-15deg);
+            transform: rotateZ(-15deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+@keyframes swivel {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  25% {
+    -webkit-transform: rotateZ(15deg);
+            transform: rotateZ(15deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(-15deg);
+            transform: rotateZ(-15deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+footer .Contact_links > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2em;
+}
 /*# sourceMappingURL=main.css.map */
