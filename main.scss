@@ -1,17 +1,24 @@
 $grad1: linear-gradient(
 	to right top,
-	#cf7c22,
-	#d66f16,
-	#de5f0e,
-	#e54b0d,
-	#ed2f13
+	#e38800,
+	#ab8f00,
+	#6f8f00,
+	#25891e,
+	#007f42,
+	#007460
 );
+// hsl(31, 72%, 47%),
+// hsl(28, 81%, 46%),
+// hsl(23, 88%, 46%),
+// hsl(17, 89%, 47%),
+// hsl(8, 86%, 50%)
 $greygrad: linear-gradient(rgba(0, 0, 0, 0.8), #ffffff94);
-$clr1: #cf7c22;
-$clr2: #d66f16;
-$clr3: #de5f0e;
-$clr4: #e54b0d;
-$clr5: #ed2f13;
+$clr1: #e38800;
+$clr2: #ab8f00;
+$clr3: #6f8f00;
+$clr4: #25891e;
+$clr5: #007f42;
+$clr6: #007460;
 $def-font: 'Montserrat', sans-serif;
 $heading: 'Playfair Display', sans-serif;
 $accent: 'Roboto', sans-serif;
@@ -58,7 +65,6 @@ section {
 .container {
 	margin-inline: auto;
 	width: 100%;
-	// @include test-border(0.1rem);
 }
 
 .img {
@@ -76,7 +82,7 @@ header {
 	width: 100vw;
 	z-index: 1000;
 	margin-bottom: 1rem;
-	background: $clr2;
+	background: $clr3;
 	justify-content: center;
 
 	@media (min-width: $Lgdesktop) {
@@ -84,71 +90,71 @@ header {
 		flex-flow: row wrap;
 	}
 	// Attempting to fix logo responsiveness
-	.logo-container {
-		display: flex;
-		border-radius: 50%;
-		width: 6rem;
-		height: 6rem;
-		margin: 0.5rem;
-		padding: 1rem;
-		z-index: 1;
-		// position: relative;
+}
+.logo-container {
+	display: flex;
+	border-radius: 50%;
+	width: 6rem;
+	height: 6rem;
+	margin: 0.5rem;
+	padding: 1rem;
+	z-index: 1;
 
-		@media (max-width: 480px) {
-			visibility: hidden;
-		}
+	@media (max-width: 600px) {
+		transform: translateX(-15vw);
+	}
+	@media (min-width: $Lgdesktop) {
+		padding: 0;
+		justify-self: flex-end;
+		transform: translate(-600%, -10%);
+	}
+
+	img {
+		object-fit: cover;
+	}
+}
+// Switches link positioning based on device width
+nav {
+	position: absolute;
+	right: 0%;
+	top: 30%;
+	width: 100%;
+	background: $clr3;
+	transform: scaleY(0);
+	transition: all 0.5s ease;
+	transform-origin: top;
+
+	ul {
+		list-style: none;
+		position: relative;
+		display: inline-block;
+		// padding: 1em;
+		top: -1rem;
+		z-index: 0;
 		@media (min-width: $Lgdesktop) {
-			justify-self: flex-end;
-			transform: translate(-600%, -10%);
+			display: flex;
+			justify-content: flex-end;
 		}
-
 		img {
 			object-fit: cover;
 		}
-	}
-	// Switches link positioning based on device width
-	nav {
-		position: absolute;
-		right: 0%;
-		top: 30%;
-		width: 100%;
-		background: $clr2;
-		transform: scaleY(0);
-		transition: all 0.5s ease;
-		transform-origin: top;
 
-		ul {
-			list-style: none;
-			position: relative;
-			display: inline-block;
-			// padding: 1em;
-			top: -1rem;
-			z-index: 0;
-			@media (min-width: $Lgdesktop) {
-				display: flex;
-				justify-content: flex-end;
-			}
-			img {
-				object-fit: cover;
-			}
-
-			li {
+		li {
+			text-decoration: none;
+			text-transform: uppercase;
+			margin-bottom: 1em;
+			margin-right: 2em;
+			font-weight: 600;
+			a {
+				color: white;
 				text-decoration: none;
-				text-transform: uppercase;
-				margin-bottom: 1em;
-				margin-right: 2em;
-				font-weight: 600;
-				a {
-					color: white;
-					text-decoration: none;
-					padding: 0.5em;
-					display: inline-block;
-					opacity: 0;
-					transition: opacity 0.25s ease-in-out 0.25s;
+				padding: 0.5em;
+				display: inline-block;
+				opacity: 0;
+				transition: opacity 0.25s ease-in-out 0.25s;
 
-					&:hover {
-						color: black;
-					}
+				&:hover {
+					color: black;
 				}
 			}
 		}
@@ -164,7 +170,7 @@ header {
 		content: '';
 		width: 100%;
 		height: 12%;
-		background-color: rgba(255, 255, 255, 0.2);
+		background-color: black;
 		z-index: -1;
 		transform: scaleX(0);
 		transform-origin: left;
@@ -185,7 +191,7 @@ header {
 	&:checked ~ nav {
 		display: block;
 		transform: scaleY(1);
-		transform-origin: bottom;
+		transform-origin: top;
 
 		a {
 			opacity: 1;
@@ -227,11 +233,13 @@ header {
 	flex: 1 1 30%;
 	.container {
 		background-color: $clr3;
+		flex-flow: row wrap;
 
 		h1 {
 			padding: 1em;
 			flex-wrap: wrap;
 			animation: fadeIn linear 2s;
+			object-fit: contain;
 			font-size: 2em;
 			@keyframes fadeIn {
 				0% {
@@ -342,6 +350,22 @@ footer {
 	flex-flow: column wrap;
 	align-items: center;
 	text-align: center;
+	position: relative;
+
+	.Contact_links_5 {
+		position: absolute;
+		top: 2%;
+		left: 2%;
+		color: green;
+		a {
+			color: black;
+
+			i:hover {
+				transition: all 0.25s linear;
+				transform: translate3D(0, -1px, 0) scale(1.3);
+			}
+		}
+	}
 
 	.Quotes {
 		display: flex;
@@ -368,7 +392,6 @@ footer {
 			font-style: italic;
 
 			&:hover {
-				transform: translate3D(0, -1px, 0) scale(1.2);
 				animation: swivel linear 2s infinite;
 
 				@keyframes swivel {
@@ -392,7 +415,7 @@ footer {
 		> * {
 			display: flex;
 			align-items: center;
-			flex-direction: row;
+			flex-direction: row wrap;
 			gap: 2em;
 		}
 	}
