@@ -510,6 +510,7 @@ nav ul li a:hover {
 }
 
 #Introduction .container > *:hover {
+  border-radius: 2em;
   -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
           transform: translate3D(0, -1px, 0) scale(1.06);
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
