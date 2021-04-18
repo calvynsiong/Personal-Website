@@ -20,7 +20,7 @@ $clr4: #25891e;
 $clr5: #007f42;
 $clr6: #007460;
 $def-font: 'Montserrat', sans-serif;
-$heading: 'Playfair Display', sans-serif;
+$heading: 'Montserrat', sans-serif;
 $accent: 'Roboto', sans-serif;
 $bold: 900;
 $phone: 320px;
@@ -38,6 +38,15 @@ $Lgdesktop: 1920px;
 
 @mixin test-border($thickness) {
 	border: $thickness solid black;
+}
+@mixin hover-effect($start, $end) {
+	transform: scaleX(0);
+	transform-origin: $end;
+
+	&:hover::after {
+		transform: scaleX(1);
+		transform-origin: $start;
+	}
 }
 
 // Some prefixes/utility classes
@@ -276,6 +285,31 @@ nav {
 		flex-flow: row wrap;
 		padding: 1rem;
 
+		h2 {
+			align-self: center;
+			display: inline;
+			width: fit-content;
+			position: relative;
+			margin-bottom: 1rem;
+
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				left: 0;
+				bottom: 0;
+				height: 2px;
+				background: black;
+				transform: scaleX(0);
+				transform-origin: right;
+				transition: transform 0.5s ease;
+			}
+			&:hover::after {
+				transform: scaleX(1);
+				transform-origin: left;
+			}
+		}
+
 		& > * {
 			flex: 1 1 20vw;
 			display: flex;
@@ -302,7 +336,7 @@ nav {
 				transform-origin: bottom right;
 				transition: transform 0.25s ease-in;
 			}
-			
+
 			&:hover {
 				border-radius: 2em;
 				transform: translate3D(0, -1px, 0) scale(1.06);
@@ -418,6 +452,22 @@ footer {
 			align-items: center;
 			flex-direction: row wrap;
 			gap: 2em;
+		}
+	}
+}
+
+#Experiences {
+	display: grid;
+
+	.image {
+		width: 20rem;
+		height: 20rem;
+		@include test-border(0.2rem);
+
+		&_content {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 }
