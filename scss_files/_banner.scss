@@ -1,0 +1,33 @@
+#banner {
+	// Short banner (Want to add animation)
+	// Evened out banner
+	padding-top: calc(122px + 2em);
+	text-align: center;
+	display: flex;
+	flex-flow: column wrap;
+	flex: 1 1 30%;
+	.container {
+		background-color: $clr3;
+		flex-flow: row wrap;
+
+		h1 {
+			padding: 1em;
+			flex-wrap: wrap;
+			animation: fadeIn linear 2s;
+			object-fit: contain;
+			font-size: 2em;
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+		p {
+			padding: 2em;
+			font-size: 1.5rem;
+		}
+	}
+}

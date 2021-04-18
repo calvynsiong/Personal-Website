@@ -1,0 +1,149 @@
+// navbar section
+
+header {
+	text-align: right;
+	display: flex;
+	justify-content: space-around;
+	position: fixed;
+	width: 100vw;
+	z-index: 1000;
+	margin-bottom: 1rem;
+	background: $clr3;
+	justify-content: center;
+
+	@media (min-width: $Lgdesktop) {
+		justify-content: space-around;
+		flex-flow: row wrap;
+	}
+	// Attempting to fix logo responsiveness
+}
+.logo-container {
+	display: flex;
+	border-radius: 50%;
+	width: 6rem;
+	height: 6rem;
+	margin: 0.5rem;
+	padding: 1rem;
+	z-index: 1;
+
+	@media (max-width: 600px) {
+		transform: translateX(-15vw);
+	}
+	@media (min-width: $Lgdesktop) {
+		padding: 0;
+		justify-self: flex-end;
+		transform: translate(-600%, -10%);
+	}
+
+	img {
+		object-fit: cover;
+	}
+}
+// Switches link positioning based on device width
+nav {
+	position: absolute;
+	right: 0%;
+	top: 30%;
+	width: 100%;
+	background: $clr3;
+	transform: scaleY(0);
+	transition: all 0.5s ease;
+	transform-origin: top;
+
+	ul {
+		list-style: none;
+		position: relative;
+		display: inline-block;
+		// padding: 1em;
+		top: -1rem;
+		z-index: 0;
+		@media (min-width: $Lgdesktop) {
+			display: flex;
+			justify-content: flex-end;
+		}
+		img {
+			object-fit: cover;
+		}
+
+		li {
+			text-decoration: none;
+			text-transform: uppercase;
+			margin-bottom: 1em;
+			margin-right: 2em;
+			font-weight: 600;
+			a {
+				color: white;
+				text-decoration: none;
+				padding: 0.5em;
+				display: inline-block;
+				opacity: 0;
+				transition: opacity 0.25s ease-in-out 0.25s;
+
+				&:hover {
+					color: black;
+				}
+			}
+		}
+	}
+}
+
+// Creating hover effect for links
+@for $i from 1 through 6 {
+	.link-#{$i}::after {
+		position: absolute;
+		top: calc((#{$i}-1) * 15%);
+		right: 0;
+		content: '';
+		width: 100%;
+		height: 12%;
+		background-color: black;
+		z-index: -1;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: all 0.25s ease-in;
+		@media (min-width: $desktop) {
+			visibility: hidden;
+		}
+
+		.link-#{$i}:hover::after {
+			transform: scaleX(1);
+			transform-origin: right;
+		}
+	}
+}
+// Expandable section with menu icon + hover effects
+.nav-toggle {
+	display: none;
+	&:checked ~ nav {
+		display: block;
+		transform: scaleY(1);
+		transform-origin: top;
+
+		a {
+			opacity: 1;
+		}
+	}
+
+	&-label {
+		position: absolute;
+		left: 0;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 5rem;
+
+		.icon-container {
+			display: flex;
+			border-radius: 50%;
+			position: relative;
+			padding: 1rem;
+			transform: translateX(10%);
+			transition: all 250ms ease;
+
+			&:hover {
+				background-color: rgba(255, 255, 250, 0.2);
+			}
+		}
+	}
+}

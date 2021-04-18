@@ -1,0 +1,30 @@
+// Some prefixes/utility classes
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $def-font;
+}
+
+body {
+	font-size: 1.5125rem;
+}
+
+:is(h1, h2, h3) {
+	line-height: 1.5;
+	font-family: $heading;
+	font-weight: $bold;
+}
+
+section {
+	padding: 3rem;
+}
+.container {
+	margin-inline: auto;
+	width: 100%;
+}
+
+.img {
+	max-width: 100%;
+	display: block;
+}

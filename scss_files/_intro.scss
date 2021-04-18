@@ -1,0 +1,111 @@
+//Introduction bit
+
+#Introduction {
+	display: flex;
+	flex-flow: row wrap;
+	background: $grad1;
+	width: 100vw;
+
+	span {
+		font-weight: bold;
+		font-size: 1.4rem;
+	}
+
+	.container {
+		display: flex;
+		gap: 1em;
+		flex-flow: row wrap;
+		padding: 1rem;
+
+		h2 {
+			align-self: center;
+			display: inline;
+			width: fit-content;
+			position: relative;
+			margin-bottom: 1rem;
+
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				left: 0;
+				bottom: 0;
+				height: 2px;
+				background: black;
+				transform: scaleX(0);
+				transform-origin: right;
+				transition: transform 0.5s ease;
+			}
+			&:hover::after {
+				transform: scaleX(1);
+				transform-origin: left;
+			}
+		}
+
+		& > * {
+			flex: 1 1 20vw;
+			display: flex;
+			flex-flow: column wrap;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			border-radius: 2em;
+			padding: 2rem;
+			margin-bottom: 1rem;
+			transition: all 0.15s ease-in;
+			position: relative;
+			z-index: 1;
+
+			&::after {
+				position: absolute;
+				content: '';
+				background: $clr3;
+				width: 100%;
+				border-radius: 2em;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				transform: scale(0);
+				transform-origin: bottom right;
+				transition: transform 0.25s ease-in;
+			}
+
+			&:hover {
+				border-radius: 2em;
+				transform: translate3D(0, -1px, 0) scale(1.06);
+				box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+				&::after {
+					transform: scale(1);
+					transform-origin: top left;
+					border-radius: 2em;
+				}
+			}
+		}
+		& > * + * {
+			margin-left: 0;
+
+			@media (min-width: 390px) {
+				margin-left: 1rem;
+			}
+		}
+
+		.Photo-box {
+			display: flex;
+			align-items: center;
+			align-self: center;
+			box-shadow: none;
+
+			&::after {
+				visibility: hidden;
+			}
+
+			img {
+				object-fit: contain;
+				width: 15rem;
+				height: 15rem;
+				top: 0;
+				border-radius: 50%;
+				box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			}
+		}
+	}
+}
