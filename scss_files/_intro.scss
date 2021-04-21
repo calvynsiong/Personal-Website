@@ -10,14 +10,16 @@
 
 	span {
 		font-weight: bold;
-		font-size: 1.4rem;
+		font-size: 1.3em;
 	}
 
 	.container {
 		display: flex;
 		gap: 1rem;
 		flex-flow: row wrap;
-		padding: .5rem;
+		padding: 0.5rem;
+		line-height: 1.5em;
+		color: rgb(3, 3, 3);
 
 		h2 {
 			align-self: center;
@@ -29,6 +31,7 @@
 			&::after {
 				content: '';
 				position: absolute;
+				border-radius: 2em;
 				width: 100%;
 				left: 0;
 				bottom: 0;

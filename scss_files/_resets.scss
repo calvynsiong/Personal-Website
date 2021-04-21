@@ -9,7 +9,9 @@
 }
 
 body {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
+	overflow-x: hidden;
+	width: 100vw;
 }
 
 :is(h1, h2, h3) {

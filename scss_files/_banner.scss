@@ -8,6 +8,8 @@
 	display: flex;
 	flex-flow: column wrap;
 	flex: 1 1 30%;
+	background: $greygrad, url(./webimages/malaysia.jpg);
+	background-attachment: fixed;
 	.container {
 		background-color: $clr3;
 		flex-flow: row wrap;

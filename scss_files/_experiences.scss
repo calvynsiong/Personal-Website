@@ -2,40 +2,49 @@
 
 .Experiences {
 	display: grid;
-	grid-template-rows: 0.1fr 1fr;
-	gap: 2rem;
-	grid-template-columns: repeat(3, 1fr);
+	gap: 2em;
+	&_1,
+	&_2,
+	&_3 {
+		box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+		padding: 1rem;
+	}
 
 	.image {
-		width: 20rem;
-		height: 20rem;
+		width: clamp(8em, 15em, 20em);
+		height: clamp(8em, 15em, 20em);
 		@include test-border(0.2rem);
 		justify-self: center;
-
 		&_content {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 		}
 	}
-	&_title {
-		grid-column: 2/3;
-		place-self: center;
-	}
+	@media (min-width: $desktop +90px) {
+		grid-template-rows: 0.1fr 1fr;
+		gap: 2rem;
+		grid-template-columns: repeat(3, 1fr);
 
-	&_1,
-	&_2,
-	&_3 {
-		grid-row: 2/3;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
+		&_title {
+			grid-column: 2/3;
+			place-self: center;
+		}
 
-	&_title {
-		display: flex;
-		& > * {
+		&_1,
+		&_2,
+		&_3 {
+			grid-row: 2/3;
 			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&_title {
+			display: flex;
+			& > * {
+				display: flex;
+			}
 		}
 	}
 }

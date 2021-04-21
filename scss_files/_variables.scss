@@ -12,7 +12,10 @@ $grad1: linear-gradient(
 // hsl(23, 88%, 46%),
 // hsl(17, 89%, 47%),
 // hsl(8, 86%, 50%)
-$greygrad: linear-gradient(rgba(0, 0, 0, 0.8), #ffffff94);
+$greygrad: linear-gradient(
+	0deg,
+	hsla(0, 0%, 0%, 0.533) 30% hsla(0, 0%, 100%, 0.267) 100%
+);
 $clr1: #e38800;
 $clr2: #ab8f00;
 $clr3: #6f8f00;
@@ -20,7 +23,7 @@ $clr4: #25891e;
 $clr5: #007f42;
 $clr6: #007460;
 $def-font: 'Montserrat', sans-serif;
-$heading: 'Montserrat', sans-serif;
+$heading: 'Poppins', sans-serif;
 $accent: 'Roboto', sans-serif;
 $bold: 900;
 $phone: 320px;

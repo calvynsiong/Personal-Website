@@ -7,12 +7,14 @@
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
 }
 
@@ -398,12 +400,14 @@ nav ul li a:hover {
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
 }
 
@@ -430,12 +434,14 @@ section {
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
 }
 
@@ -466,6 +472,9 @@ section {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 30%;
           flex: 1 1 30%;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, rgba(0, 0, 0, 0.533))), url(./webimages/malaysia.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.533) 30% rgba(255, 255, 255, 0.267) 100%), url(./webimages/malaysia.jpg);
+  background-attachment: fixed;
 }
 
 #banner .container {
@@ -519,12 +528,14 @@ section {
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
 }
 
@@ -557,7 +568,7 @@ section {
 
 #Introduction span {
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.3em;
 }
 
 #Introduction .container {
@@ -569,7 +580,9 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  padding: .5rem;
+  padding: 0.5rem;
+  line-height: 1.5em;
+  color: #030303;
 }
 
 #Introduction .container h2 {
@@ -587,6 +600,7 @@ section {
 #Introduction .container h2::after {
   content: '';
   position: absolute;
+  border-radius: 2em;
   width: 100%;
   left: 0;
   bottom: 0;
@@ -714,12 +728,14 @@ section {
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
 }
 
@@ -740,16 +756,18 @@ section {
 .Experiences {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 0.1fr 1fr;
-      grid-template-rows: 0.1fr 1fr;
-  gap: 2rem;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.Experiences_1, .Experiences_2, .Experiences_3 {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+  padding: 1rem;
 }
 
 .Experiences .image {
-  width: 20rem;
-  height: 20rem;
+  width: clamp(8em, 15em, 20em);
+  height: clamp(8em, 15em, 20em);
   border: 0.2rem solid black;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -762,39 +780,45 @@ section {
      object-fit: cover;
 }
 
-.Experiences_title {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  place-self: center;
-}
-
-.Experiences_1, .Experiences_2, .Experiences_3 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.Experiences_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.Experiences_title > * {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 1114px) {
+  .Experiences {
+    -ms-grid-rows: 0.1fr 1fr;
+        grid-template-rows: 0.1fr 1fr;
+    gap: 2rem;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .Experiences_title {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    place-self: center;
+  }
+  .Experiences_1, .Experiences_2, .Experiences_3 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .Experiences_title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Experiences_title > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 * {
@@ -806,12 +830,14 @@ section {
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
 }
 
@@ -829,6 +855,12 @@ section {
   display: block;
 }
 
+.Skill {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
 .Skill_1, .Skill_2, .Skill_3,
 .Skill .Future_plan,
 .Skill .Project_1,
@@ -838,13 +870,44 @@ section {
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   border-radius: 1rem;
   padding: 1rem;
+  position: relative;
+  padding: 3em 1em;
+  background: -webkit-gradient(linear, left bottom, right top, from(#e38800), color-stop(#ab8f00), color-stop(#6f8f00), color-stop(#25891e), color-stop(#007f42), to(#007460));
+  background: linear-gradient(to right top, #e38800, #ab8f00, #6f8f00, #25891e, #007f42, #007460);
+}
+
+.Skill_1 > *, .Skill_2 > *, .Skill_3 > *,
+.Skill .Future_plan > *,
+.Skill .Project_1 > *,
+.Skill .Project_2 > *,
+.Skill .Project_3 > * {
+  padding: 1rem;
+}
+
+.Skill .icon_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.Skill .icon_container > * {
+  padding: 1rem;
 }
 
 @media (min-width: 1024px) {
   .Skill {
-    gap: 2rem;
-    display: -ms-grid;
-    display: grid;
     -ms-grid-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
         grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
     -ms-grid-columns: (minmax(20ch, 1fr))[auto-fit];
@@ -855,6 +918,7 @@ section {
   .Skill h3,
   .Skill p {
     text-align: center;
+    padding-top: 0;
   }
   .Skill_title {
     -ms-grid-column: 2;
@@ -877,6 +941,7 @@ section {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
+    position: relative;
   }
   .Skill .Future_plan {
     -ms-grid-row: 3;
@@ -912,12 +977,14 @@ section {
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
 }
 
@@ -1074,12 +1141,14 @@ footer .Contact_links > * {
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
 }
 
@@ -1097,6 +1166,12 @@ section {
   display: block;
 }
 
+.Skill {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
 .Skill_1, .Skill_2, .Skill_3,
 .Skill .Future_plan,
 .Skill .Project_1,
@@ -1106,13 +1181,44 @@ section {
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   border-radius: 1rem;
   padding: 1rem;
+  position: relative;
+  padding: 3em 1em;
+  background: -webkit-gradient(linear, left bottom, right top, from(#e38800), color-stop(#ab8f00), color-stop(#6f8f00), color-stop(#25891e), color-stop(#007f42), to(#007460));
+  background: linear-gradient(to right top, #e38800, #ab8f00, #6f8f00, #25891e, #007f42, #007460);
+}
+
+.Skill_1 > *, .Skill_2 > *, .Skill_3 > *,
+.Skill .Future_plan > *,
+.Skill .Project_1 > *,
+.Skill .Project_2 > *,
+.Skill .Project_3 > * {
+  padding: 1rem;
+}
+
+.Skill .icon_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.Skill .icon_container > * {
+  padding: 1rem;
 }
 
 @media (min-width: 1024px) {
   .Skill {
-    gap: 2rem;
-    display: -ms-grid;
-    display: grid;
     -ms-grid-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
         grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
     -ms-grid-columns: (minmax(20ch, 1fr))[auto-fit];
@@ -1123,6 +1229,7 @@ section {
   .Skill h3,
   .Skill p {
     text-align: center;
+    padding-top: 0;
   }
   .Skill_title {
     -ms-grid-column: 2;
@@ -1145,6 +1252,7 @@ section {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
+    position: relative;
   }
   .Skill .Future_plan {
     -ms-grid-row: 3;

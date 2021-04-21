@@ -1,6 +1,9 @@
 @import 'variables', 'mixins', 'resets';
 
 .Skill {
+	display: grid;
+	gap: 2rem;
+
 	&_1,
 	&_2,
 	&_3,
@@ -11,11 +14,30 @@
 		box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 		border-radius: 1rem;
 		padding: 1rem;
+		position: relative;
+		padding: 3em 1em;
+		background: $grad1;
+		& > * {
+			padding: 1rem;
+		}
+	}
+
+	.icon_container {
+		display: flex;
+		width: 100%;
+		position: absolute;
+		bottom: -1em;
+		left: 0;
+		justify-content: center;
+		align-items: flex-end;
+		padding: 1rem;
+		margin-top: 1rem;
+		& > * {
+			padding: 1rem;
+		}
 	}
 
 	@media (min-width: $desktop) {
-		gap: 2rem;
-		display: grid;
 		grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
 		grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
 		grid-auto-flow: row;
@@ -24,6 +46,7 @@
 		h3,
 		p {
 			text-align: center;
+			padding-top: 0;
 		}
 
 		&_title {
@@ -42,6 +65,7 @@
 		&_2,
 		&_3 {
 			grid-row: 2/3;
+			position: relative;
 		}
 
 		.Future_plan {
