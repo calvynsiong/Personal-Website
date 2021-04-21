@@ -1,3 +1,5 @@
+@import 'variables', 'mixins', 'resets';
+
 #banner {
 	// Short banner (Want to add animation)
 	// Evened out banner
@@ -15,7 +17,7 @@
 			flex-wrap: wrap;
 			animation: fadeIn linear 2s;
 			object-fit: contain;
-			font-size: 2em;
+			font-size: max(0.1em, min(1.5em, 5em));
 			@keyframes fadeIn {
 				0% {
 					opacity: 0;

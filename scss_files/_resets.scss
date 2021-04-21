@@ -1,3 +1,5 @@
+@import 'variables', 'mixins';
+
 // Some prefixes/utility classes
 * {
 	margin: 0;
@@ -7,7 +9,7 @@
 }
 
 body {
-	font-size: 1.5125rem;
+	font-size: 1.2rem;
 }
 
 :is(h1, h2, h3) {

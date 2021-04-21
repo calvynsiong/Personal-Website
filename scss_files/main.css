@@ -1,3 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+:is(h1, h2, h3) {
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+section {
+  padding: 3rem;
+}
+
+.container {
+  margin-inline: auto;
+  width: 100%;
+}
+
+.img {
+  max-width: 100%;
+  display: block;
+}
+
 header {
   text-align: right;
   display: -webkit-box;
@@ -27,15 +59,15 @@ header {
 }
 
 .logo-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
+  width: 1rem;
+  height: 4rem;
   margin: 0.5rem;
-  padding: 1rem;
+  padding: 1.5rem;
   z-index: 1;
+  place-content: center;
 }
 
 @media (max-width: 600px) {
@@ -55,8 +87,10 @@ header {
 }
 
 .logo-container img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 3rem;
+  height: 3rem;
 }
 
 nav {
@@ -342,6 +376,13 @@ nav ul li a:hover {
           transform: translateX(10%);
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.nav-toggle-label .icon-container > * {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .nav-toggle-label .icon-container:hover {
@@ -357,7 +398,39 @@ nav ul li a:hover {
 }
 
 body {
-  font-size: 1.5125rem;
+  font-size: 1.2rem;
+}
+
+:is(h1, h2, h3) {
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+section {
+  padding: 3rem;
+}
+
+.container {
+  margin-inline: auto;
+  width: 100%;
+}
+
+.img {
+  max-width: 100%;
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 1.2rem;
 }
 
 :is(h1, h2, h3) {
@@ -411,7 +484,7 @@ section {
           animation: fadeIn linear 2s;
   -o-object-fit: contain;
      object-fit: contain;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 @-webkit-keyframes fadeIn {
@@ -437,6 +510,38 @@ section {
   font-size: 1.5rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+:is(h1, h2, h3) {
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+section {
+  padding: 3rem;
+}
+
+.container {
+  margin-inline: auto;
+  width: 100%;
+}
+
+.img {
+  max-width: 100%;
+  display: block;
+}
+
 #Introduction {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -459,12 +564,12 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1em;
+  gap: 1rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  padding: 1rem;
+  padding: .5rem;
 }
 
 #Introduction .container h2 {
@@ -506,8 +611,8 @@ section {
 
 #Introduction .container > * {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 20vw;
-          flex: 1 1 20vw;
+      -ms-flex: 1 1 25vw;
+          flex: 1 1 25vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -600,22 +705,234 @@ section {
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-#Experiences {
-  display: -ms-grid;
-  display: grid;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-#Experiences .image {
+body {
+  font-size: 1.2rem;
+}
+
+:is(h1, h2, h3) {
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+section {
+  padding: 3rem;
+}
+
+.container {
+  margin-inline: auto;
+  width: 100%;
+}
+
+.img {
+  max-width: 100%;
+  display: block;
+}
+
+.Experiences {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.1fr 1fr;
+      grid-template-rows: 0.1fr 1fr;
+  gap: 2rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.Experiences .image {
   width: 20rem;
   height: 20rem;
   border: 0.2rem solid black;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
-#Experiences .image_content {
+.Experiences .image_content {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.Experiences_title {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  place-self: center;
+}
+
+.Experiences_1, .Experiences_2, .Experiences_3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Experiences_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Experiences_title > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+:is(h1, h2, h3) {
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+section {
+  padding: 3rem;
+}
+
+.container {
+  margin-inline: auto;
+  width: 100%;
+}
+
+.img {
+  max-width: 100%;
+  display: block;
+}
+
+.Skill_1, .Skill_2, .Skill_3,
+.Skill .Future_plan,
+.Skill .Project_1,
+.Skill .Project_2,
+.Skill .Project_3 {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .Skill {
+    gap: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
+    -ms-grid-columns: (minmax(20ch, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+    grid-auto-flow: row;
+  }
+  .Skill h1,
+  .Skill h3,
+  .Skill p {
+    text-align: center;
+  }
+  .Skill_title {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .Skill .Future_plan,
+  .Skill .Project_3 {
+    place-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .Skill_1, .Skill_2, .Skill_3 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .Skill .Future_plan {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .Skill .Project_title {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .Skill .Project_1,
+  .Skill .Project_2,
+  .Skill .Project_3 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+:is(h1, h2, h3) {
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+section {
+  padding: 3rem;
+}
+
+.container {
+  margin-inline: auto;
+  width: 100%;
+}
+
+.img {
+  max-width: 100%;
+  display: block;
 }
 
 footer {
@@ -746,5 +1063,111 @@ footer .Contact_links > * {
       -ms-flex-direction: row wrap;
           flex-direction: row wrap;
   gap: 2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+:is(h1, h2, h3) {
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+section {
+  padding: 3rem;
+}
+
+.container {
+  margin-inline: auto;
+  width: 100%;
+}
+
+.img {
+  max-width: 100%;
+  display: block;
+}
+
+.Skill_1, .Skill_2, .Skill_3,
+.Skill .Future_plan,
+.Skill .Project_1,
+.Skill .Project_2,
+.Skill .Project_3 {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .Skill {
+    gap: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
+    -ms-grid-columns: (minmax(20ch, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+    grid-auto-flow: row;
+  }
+  .Skill h1,
+  .Skill h3,
+  .Skill p {
+    text-align: center;
+  }
+  .Skill_title {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .Skill .Future_plan,
+  .Skill .Project_3 {
+    place-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .Skill_1, .Skill_2, .Skill_3 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .Skill .Future_plan {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .Skill .Project_title {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .Skill .Project_1,
+  .Skill .Project_2,
+  .Skill .Project_3 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
 }
 /*# sourceMappingURL=main.css.map */
