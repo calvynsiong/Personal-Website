@@ -11,7 +11,7 @@
 		padding: 1rem;
 		display: flex;
 		flex-flow: column;
-		align-items: center;
+		justify-items: baseline;
 		border-radius: 1em;
 		transition: all 0.25s linear;
 		background: $grad1;
@@ -21,6 +21,7 @@
 		}
 		& > * + * {
 			margin-top: 1em;
+			justify-self: center;
 			align-self: center;
 		}
 	}
@@ -53,6 +54,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			text-align: center;
 		}
 
 		&_title {

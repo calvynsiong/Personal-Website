@@ -86,8 +86,8 @@ header {
   .logo-container {
     padding: 0;
     justify-self: flex-end;
-    -webkit-transform: translate(-600%, -10%);
-            transform: translate(-600%, -10%);
+    -webkit-transform: translate(-1200%, -10%);
+            transform: translate(-1200%, -10%);
   }
 }
 
@@ -149,13 +149,15 @@ nav ul li a {
   text-decoration: none;
   padding: 0.5em;
   display: inline-block;
-  opacity: 0;
-  -webkit-transition: opacity 0.25s ease-in-out 0.25s;
-  transition: opacity 0.25s ease-in-out 0.25s;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 nav ul li a:hover {
-  color: black;
+  color: gold;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-bottom: 2px solid gold;
 }
 
 .link-1::after {
@@ -579,6 +581,7 @@ section {
   background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
   background: linear-gradient(to right top, #4e54c8, #8f94fb);
   width: 100vw;
+  padding-top: 6em;
 }
 
 #Introduction span {
@@ -791,9 +794,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-items: baseline;
   border-radius: 1em;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
@@ -844,6 +845,8 @@ section {
 
 .Experiences_1 > * + *, .Experiences_2 > * + *, .Experiences_3 > * + * {
   margin-top: 1em;
+  -ms-grid-column-align: center;
+      justify-self: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -892,6 +895,7 @@ section {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    text-align: center;
   }
   .Experiences_title {
     display: -webkit-box;
@@ -1049,6 +1053,7 @@ section {
 .Skill .Project_2 a h1:hover,
 .Skill .Project_3 a h1:hover {
   color: gold;
+  text-decoration: underline;
 }
 
 .Skill_1:hover, .Skill_2:hover, .Skill_3:hover,
@@ -1476,6 +1481,7 @@ section {
 .Skill .Project_2 a h1:hover,
 .Skill .Project_3 a h1:hover {
   color: gold;
+  text-decoration: underline;
 }
 
 .Skill_1:hover, .Skill_2:hover, .Skill_3:hover,

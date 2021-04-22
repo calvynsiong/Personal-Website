@@ -7,6 +7,7 @@
 	flex-flow: row wrap;
 	background: $grad1;
 	width: 100vw;
+	padding-top: 6em;
 
 	span {
 		font-weight: bold;
@@ -28,24 +29,7 @@
 			width: fit-content;
 			position: relative;
 			margin-bottom: 1rem;
-
-			&::after {
-				content: '';
-				position: absolute;
-				border-radius: 2em;
-				width: 100%;
-				left: 0;
-				bottom: 0;
-				height: 2px;
-				background: white;
-				transform: scaleX(0);
-				transform-origin: right;
-				transition: transform 0.5s ease;
-			}
-			&:hover::after {
-				transform: scaleX(1);
-				transform-origin: left;
-			}
+			@include heading-highlight(white);
 		}
 
 		& > * {
