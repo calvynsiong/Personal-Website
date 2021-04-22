@@ -1224,18 +1224,18 @@ footer {
   position: relative;
 }
 
-footer .Contact_links_6 {
+footer .Top_link {
   position: absolute;
   top: 2%;
   left: 2%;
   color: green;
 }
 
-footer .Contact_links_6 a {
+footer .Top_link a {
   color: black;
 }
 
-footer .Contact_links_6 a i:hover {
+footer .Top_link a i:hover {
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
   -webkit-transform: translate3D(0, -1px, 0) scale(1.3);
