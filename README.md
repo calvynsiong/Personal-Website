@@ -1,1 +1,1 @@
-My attempts at making a personal website. It will be made with HTML/CSS, and compiled with SCSS.
+Personal website to apply my knowledge of HTML and CSS (compiled with SCSS).
