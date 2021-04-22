@@ -10,9 +10,8 @@ header {
 	width: 100vw;
 	z-index: 1000;
 	margin-bottom: 1rem;
-	background: $clr3;
+	background: $clr4;
 	justify-content: center;
-	
 
 	@media (min-width: $Lgdesktop) {
 		justify-content: space-around;
@@ -51,7 +50,7 @@ nav {
 	right: 0%;
 	top: 30%;
 	width: 100%;
-	background: $clr3;
+	background: $clr4;
 	transform: scaleY(0);
 	transition: all 0.5s ease;
 	transform-origin: top;
@@ -148,8 +147,11 @@ nav {
 			transition: all 250ms ease;
 			transform: scale(0.8);
 
+		
+			
 			& > * {
-				transform: scale(0.8);
+				color: white;
+				transform: scale(0.9);
 			}
 
 			&:hover {

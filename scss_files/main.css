@@ -10,12 +10,15 @@ body {
   font-size: 1.1rem;
   overflow-x: hidden;
   width: 100vw;
+  color: white;
+  background: white;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
+  color: white;
 }
 
 section {
@@ -43,7 +46,7 @@ header {
   width: 100vw;
   z-index: 1000;
   margin-bottom: 1rem;
-  background: #6f8f00;
+  background: #382b47;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -100,7 +103,7 @@ nav {
   right: 0%;
   top: 30%;
   width: 100%;
-  background: #6f8f00;
+  background: #382b47;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   -webkit-transition: all 0.5s ease;
@@ -383,8 +386,9 @@ nav ul li a:hover {
 }
 
 .nav-toggle-label .icon-container > * {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  color: white;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .nav-toggle-label .icon-container:hover {
@@ -403,12 +407,15 @@ body {
   font-size: 1.1rem;
   overflow-x: hidden;
   width: 100vw;
+  color: white;
+  background: white;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
+  color: white;
 }
 
 section {
@@ -437,12 +444,15 @@ body {
   font-size: 1.1rem;
   overflow-x: hidden;
   width: 100vw;
+  color: white;
+  background: white;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
+  color: white;
 }
 
 section {
@@ -478,11 +488,12 @@ section {
 }
 
 #banner .container {
-  background-color: #6f8f00;
+  background-color: #382b47;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  z-index: 100;
 }
 
 #banner .container h1 {
@@ -493,7 +504,7 @@ section {
           animation: fadeIn linear 2s;
   -o-object-fit: contain;
      object-fit: contain;
-  font-size: 1.5em;
+  font-size: clamp(0, 1em, 2rem, 5rem);
 }
 
 @-webkit-keyframes fadeIn {
@@ -516,7 +527,8 @@ section {
 
 #banner .container p {
   padding: 2em;
-  font-size: 1.5rem;
+  font-size: 1.5em;
+  z-index: -1;
 }
 
 * {
@@ -531,12 +543,15 @@ body {
   font-size: 1.1rem;
   overflow-x: hidden;
   width: 100vw;
+  color: white;
+  background: white;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
+  color: white;
 }
 
 section {
@@ -561,14 +576,15 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  background: -webkit-gradient(linear, left bottom, right top, from(#e38800), color-stop(#ab8f00), color-stop(#6f8f00), color-stop(#25891e), color-stop(#007f42), to(#007460));
-  background: linear-gradient(to right top, #e38800, #ab8f00, #6f8f00, #25891e, #007f42, #007460);
+  background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
+  background: linear-gradient(to right top, #4e54c8, #8f94fb);
   width: 100vw;
 }
 
 #Introduction span {
   font-weight: bold;
   font-size: 1.3em;
+  color: gold;
 }
 
 #Introduction .container {
@@ -582,7 +598,7 @@ section {
           flex-flow: row wrap;
   padding: 0.5rem;
   line-height: 1.5em;
-  color: #030303;
+  color: white;
 }
 
 #Introduction .container h2 {
@@ -605,7 +621,7 @@ section {
   left: 0;
   bottom: 0;
   height: 2px;
-  background: black;
+  background: white;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: right;
@@ -625,8 +641,8 @@ section {
 
 #Introduction .container > * {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 25vw;
-          flex: 1 1 25vw;
+      -ms-flex: 1 1 22vw;
+          flex: 1 1 22vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -634,21 +650,21 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+  background: rgba(255, 255, 255, 0.1);
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 2em;
-  padding: 2rem;
+  padding: 1.5rem;
   margin-bottom: 1rem;
   -webkit-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
   position: relative;
-  z-index: 1;
 }
 
 #Introduction .container > *::after {
   position: absolute;
   content: '';
-  background: #6f8f00;
+  background: #1f1926;
   width: 100%;
   border-radius: 2em;
   height: 100%;
@@ -669,8 +685,8 @@ section {
   border-radius: 2em;
   -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
           transform: translate3D(0, -1px, 0) scale(1.06);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
+          box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
 }
 
 #Introduction .container > *:hover::after {
@@ -702,6 +718,7 @@ section {
       align-self: center;
   -webkit-box-shadow: none;
           box-shadow: none;
+  background: none;
 }
 
 #Introduction .container .Photo-box::after {
@@ -731,12 +748,15 @@ body {
   font-size: 1.1rem;
   overflow-x: hidden;
   width: 100vw;
+  color: white;
+  background: white;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
+  color: white;
 }
 
 section {
@@ -756,6 +776,7 @@ section {
 .Experiences {
   display: -ms-grid;
   display: grid;
+  background: #382b47;
   gap: 2em;
 }
 
@@ -763,17 +784,80 @@ section {
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1em;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
+  background: linear-gradient(to right top, #4e54c8, #8f94fb);
+}
+
+.Experiences_1::after, .Experiences_2::after, .Experiences_3::after {
+  position: absolute;
+  content: '';
+  background: #1f1926;
+  width: 100%;
+  border-radius: 2em;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-in;
+  transition: -webkit-transform 0.25s ease-in;
+  transition: transform 0.25s ease-in;
+  transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
+}
+
+.Experiences_1:hover, .Experiences_2:hover, .Experiences_3:hover {
+  border-radius: 2em;
+  -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
+          transform: translate3D(0, -1px, 0) scale(1.06);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
+          box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
+}
+
+.Experiences_1:hover::after, .Experiences_2:hover::after, .Experiences_3:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  border-radius: 2em;
+}
+
+.Experiences_1:hover, .Experiences_2:hover, .Experiences_3:hover {
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+
+.Experiences_1 > * + *, .Experiences_2 > * + *, .Experiences_3 > * + * {
+  margin-top: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .Experiences .image {
   width: clamp(8em, 15em, 20em);
   height: clamp(8em, 15em, 20em);
-  border: 0.2rem solid black;
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
 .Experiences .image_content {
+  border-radius: 50%;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -833,12 +917,15 @@ body {
   font-size: 1.1rem;
   overflow-x: hidden;
   width: 100vw;
+  color: white;
+  background: white;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
+  color: white;
 }
 
 section {
@@ -859,6 +946,7 @@ section {
   display: -ms-grid;
   display: grid;
   gap: 2rem;
+  background: #382b47;
 }
 
 .Skill_1, .Skill_2, .Skill_3,
@@ -866,14 +954,110 @@ section {
 .Skill .Project_1,
 .Skill .Project_2,
 .Skill .Project_3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   border-radius: 1rem;
   padding: 1rem;
   position: relative;
   padding: 3em 1em;
-  background: -webkit-gradient(linear, left bottom, right top, from(#e38800), color-stop(#ab8f00), color-stop(#6f8f00), color-stop(#25891e), color-stop(#007f42), to(#007460));
-  background: linear-gradient(to right top, #e38800, #ab8f00, #6f8f00, #25891e, #007f42, #007460);
+  background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
+  background: linear-gradient(to right top, #4e54c8, #8f94fb);
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.Skill_1::after, .Skill_2::after, .Skill_3::after,
+.Skill .Future_plan::after,
+.Skill .Project_1::after,
+.Skill .Project_2::after,
+.Skill .Project_3::after {
+  position: absolute;
+  content: '';
+  background: #1f1926;
+  width: 100%;
+  border-radius: 2em;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-in;
+  transition: -webkit-transform 0.25s ease-in;
+  transition: transform 0.25s ease-in;
+  transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
+}
+
+.Skill_1:hover, .Skill_2:hover, .Skill_3:hover,
+.Skill .Future_plan:hover,
+.Skill .Project_1:hover,
+.Skill .Project_2:hover,
+.Skill .Project_3:hover {
+  border-radius: 2em;
+  -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
+          transform: translate3D(0, -1px, 0) scale(1.06);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
+          box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
+}
+
+.Skill_1:hover::after, .Skill_2:hover::after, .Skill_3:hover::after,
+.Skill .Future_plan:hover::after,
+.Skill .Project_1:hover::after,
+.Skill .Project_2:hover::after,
+.Skill .Project_3:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  border-radius: 2em;
+}
+
+.Skill_1 a, .Skill_2 a, .Skill_3 a,
+.Skill .Future_plan a,
+.Skill .Project_1 a,
+.Skill .Project_2 a,
+.Skill .Project_3 a {
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.Skill_1 a:hover, .Skill_2 a:hover, .Skill_3 a:hover,
+.Skill .Future_plan a:hover,
+.Skill .Project_1 a:hover,
+.Skill .Project_2 a:hover,
+.Skill .Project_3 a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.Skill_1 a h1:hover, .Skill_2 a h1:hover, .Skill_3 a h1:hover,
+.Skill .Future_plan a h1:hover,
+.Skill .Project_1 a h1:hover,
+.Skill .Project_2 a h1:hover,
+.Skill .Project_3 a h1:hover {
+  color: gold;
+}
+
+.Skill_1:hover, .Skill_2:hover, .Skill_3:hover,
+.Skill .Future_plan:hover,
+.Skill .Project_1:hover,
+.Skill .Project_2:hover,
+.Skill .Project_3:hover {
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
 }
 
 .Skill_1 > *, .Skill_2 > *, .Skill_3 > *,
@@ -906,13 +1090,26 @@ section {
   padding: 1rem;
 }
 
+.Skill .photo {
+  width: 50%;
+  height: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.Skill .photo > * {
+  border-radius: 2em;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media (min-width: 1024px) {
   .Skill {
-    -ms-grid-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
-        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
-    -ms-grid-columns: (minmax(20ch, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+    grid: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr/repeat(auto-fit, minmax(20ch, 1fr));
     grid-auto-flow: row;
+    position: relative;
   }
   .Skill h1,
   .Skill h3,
@@ -980,12 +1177,15 @@ body {
   font-size: 1.1rem;
   overflow-x: hidden;
   width: 100vw;
+  color: white;
+  background: white;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
+  color: white;
 }
 
 section {
@@ -1003,8 +1203,8 @@ section {
 }
 
 footer {
-  background: -webkit-gradient(linear, left bottom, right top, from(#e38800), color-stop(#ab8f00), color-stop(#6f8f00), color-stop(#25891e), color-stop(#007f42), to(#007460));
-  background: linear-gradient(to right top, #e38800, #ab8f00, #6f8f00, #25891e, #007f42, #007460);
+  background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
+  background: linear-gradient(to right top, #4e54c8, #8f94fb);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1019,18 +1219,18 @@ footer {
   position: relative;
 }
 
-footer .Contact_links_5 {
+footer .Contact_links_6 {
   position: absolute;
   top: 2%;
   left: 2%;
   color: green;
 }
 
-footer .Contact_links_5 a {
+footer .Contact_links_6 a {
   color: black;
 }
 
-footer .Contact_links_5 a i:hover {
+footer .Contact_links_6 a i:hover {
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
   -webkit-transform: translate3D(0, -1px, 0) scale(1.3);
@@ -1071,7 +1271,7 @@ footer .Contact_links {
 }
 
 footer .Contact_links a {
-  color: black;
+  color: white;
   font-style: italic;
 }
 
@@ -1144,12 +1344,15 @@ body {
   font-size: 1.1rem;
   overflow-x: hidden;
   width: 100vw;
+  color: white;
+  background: white;
 }
 
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
+  color: white;
 }
 
 section {
@@ -1170,6 +1373,7 @@ section {
   display: -ms-grid;
   display: grid;
   gap: 2rem;
+  background: #382b47;
 }
 
 .Skill_1, .Skill_2, .Skill_3,
@@ -1177,14 +1381,110 @@ section {
 .Skill .Project_1,
 .Skill .Project_2,
 .Skill .Project_3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   border-radius: 1rem;
   padding: 1rem;
   position: relative;
   padding: 3em 1em;
-  background: -webkit-gradient(linear, left bottom, right top, from(#e38800), color-stop(#ab8f00), color-stop(#6f8f00), color-stop(#25891e), color-stop(#007f42), to(#007460));
-  background: linear-gradient(to right top, #e38800, #ab8f00, #6f8f00, #25891e, #007f42, #007460);
+  background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
+  background: linear-gradient(to right top, #4e54c8, #8f94fb);
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.Skill_1::after, .Skill_2::after, .Skill_3::after,
+.Skill .Future_plan::after,
+.Skill .Project_1::after,
+.Skill .Project_2::after,
+.Skill .Project_3::after {
+  position: absolute;
+  content: '';
+  background: #1f1926;
+  width: 100%;
+  border-radius: 2em;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-in;
+  transition: -webkit-transform 0.25s ease-in;
+  transition: transform 0.25s ease-in;
+  transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
+}
+
+.Skill_1:hover, .Skill_2:hover, .Skill_3:hover,
+.Skill .Future_plan:hover,
+.Skill .Project_1:hover,
+.Skill .Project_2:hover,
+.Skill .Project_3:hover {
+  border-radius: 2em;
+  -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
+          transform: translate3D(0, -1px, 0) scale(1.06);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
+          box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
+}
+
+.Skill_1:hover::after, .Skill_2:hover::after, .Skill_3:hover::after,
+.Skill .Future_plan:hover::after,
+.Skill .Project_1:hover::after,
+.Skill .Project_2:hover::after,
+.Skill .Project_3:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  border-radius: 2em;
+}
+
+.Skill_1 a, .Skill_2 a, .Skill_3 a,
+.Skill .Future_plan a,
+.Skill .Project_1 a,
+.Skill .Project_2 a,
+.Skill .Project_3 a {
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.Skill_1 a:hover, .Skill_2 a:hover, .Skill_3 a:hover,
+.Skill .Future_plan a:hover,
+.Skill .Project_1 a:hover,
+.Skill .Project_2 a:hover,
+.Skill .Project_3 a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.Skill_1 a h1:hover, .Skill_2 a h1:hover, .Skill_3 a h1:hover,
+.Skill .Future_plan a h1:hover,
+.Skill .Project_1 a h1:hover,
+.Skill .Project_2 a h1:hover,
+.Skill .Project_3 a h1:hover {
+  color: gold;
+}
+
+.Skill_1:hover, .Skill_2:hover, .Skill_3:hover,
+.Skill .Future_plan:hover,
+.Skill .Project_1:hover,
+.Skill .Project_2:hover,
+.Skill .Project_3:hover {
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
 }
 
 .Skill_1 > *, .Skill_2 > *, .Skill_3 > *,
@@ -1217,13 +1517,26 @@ section {
   padding: 1rem;
 }
 
+.Skill .photo {
+  width: 50%;
+  height: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.Skill .photo > * {
+  border-radius: 2em;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media (min-width: 1024px) {
   .Skill {
-    -ms-grid-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
-        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
-    -ms-grid-columns: (minmax(20ch, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+    grid: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr/repeat(auto-fit, minmax(20ch, 1fr));
     grid-auto-flow: row;
+    position: relative;
   }
   .Skill h1,
   .Skill h3,

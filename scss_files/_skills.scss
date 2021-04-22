@@ -3,6 +3,7 @@
 .Skill {
 	display: grid;
 	gap: 2rem;
+	background: $clr4;
 
 	&_1,
 	&_2,
@@ -11,12 +12,31 @@
 	.Project_1,
 	.Project_2,
 	.Project_3 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 		border-radius: 1rem;
 		padding: 1rem;
 		position: relative;
 		padding: 3em 1em;
 		background: $grad1;
+		transition: all 0.25s linear;
+		@include hover-darken();
+		a {
+			text-decoration: none;
+			transition: all 0.25s ease;
+			&:hover {
+				transform: scale(1.2);
+			}
+			h1:hover {
+				color: gold;
+			}
+		}
+
+		&:hover {
+			transform: translateY(-1em);
+		}
 		& > * {
 			padding: 1rem;
 		}
@@ -36,11 +56,23 @@
 			padding: 1rem;
 		}
 	}
-
+	.photo {
+		width: 50%;
+		height: 50%;
+		// @include test-border(0.1rem);
+		padding: 0;
+		margin: 0;
+		& > * {
+			border-radius: 2em;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
 	@media (min-width: $desktop) {
-		grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr;
-		grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+		grid: 0.1fr 0.1fr 0.1fr 0.1fr 0.5fr / repeat(auto-fit, minmax(20ch, 1fr));
 		grid-auto-flow: row;
+		position: relative;
 
 		h1,
 		h3,

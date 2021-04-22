@@ -12,12 +12,15 @@ body {
 	font-size: 1.1rem;
 	overflow-x: hidden;
 	width: 100vw;
+	color: white;
+	background: white;
 }
 
 :is(h1, h2, h3) {
 	line-height: 1.5;
 	font-family: $heading;
-	font-weight: $bold;
+	font-weight: 700;
+	color: white;
 }
 
 section {
