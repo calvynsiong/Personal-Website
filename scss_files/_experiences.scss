@@ -1,0 +1,65 @@
+@import 'variables', 'mixins', 'resets';
+
+.Experiences {
+	display: grid;
+	background: $clr4;
+	gap: 2em;
+	&_1,
+	&_2,
+	&_3 {
+		box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+		padding: 1rem;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		border-radius: 1em;
+		transition: all 0.25s linear;
+		background: $grad1;
+		@include hover-darken();
+		&:hover {
+			transform: translateY(-1em);
+		}
+		& > * + * {
+			margin-top: 1em;
+			align-self: center;
+		}
+	}
+
+	.image {
+		width: clamp(8em, 15em, 20em);
+		height: clamp(8em, 15em, 20em);
+		justify-self: center;
+		&_content {
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	@media (min-width: $desktop +90px) {
+		grid-template-rows: 0.1fr 1fr;
+		gap: 2rem;
+		grid-template-columns: repeat(3, 1fr);
+
+		&_title {
+			grid-column: 2/3;
+			place-self: center;
+		}
+
+		&_1,
+		&_2,
+		&_3 {
+			grid-row: 2/3;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&_title {
+			display: flex;
+			& > * {
+				display: flex;
+			}
+		}
+	}
+}

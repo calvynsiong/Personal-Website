@@ -1,0 +1,43 @@
+$clr1: #6c2bd7;
+$clr2: #baa1d5;
+$clr3: #1f1926;
+$clr4: #382b47;
+$clr5: #382b47;
+$clr6: #1f1926;
+// $grad1: linear-gradient(
+// 	to right top,
+// 	#e38800,
+// 	#ab8f00,
+// 	#6f8f00,
+// 	#25891e,
+// 	#007f42,
+// 	#007460
+// );
+// $grad1: linear-gradient(to right top, $clr3, $clr4, $clr5, $clr6);
+// $grad1: linear-gradient(to right top, #0f0c29, #302b63, #24243e); Lawrenciu,
+$grad1: linear-gradient(to right top, #4e54c8, #8f94fb);
+
+// hsl(31, 72%, 47%),
+// hsl(28, 81%, 46%),
+// hsl(23, 88%, 46%),
+// hsl(17, 89%, 47%),
+// hsl(8, 86%, 50%)
+$greygrad: linear-gradient(
+	0deg,
+	hsla(0, 0%, 0%, 0.533) 30% hsla(0, 0%, 100%, 0.267) 100%
+);
+// $clr1: #e38800;
+// $clr2: #ab8f00;
+// $clr3: #6f8f00;
+// $clr4: #25891e;
+// $clr5: #007f42;
+// $clr6: #007460;
+
+$def-font: 'Montserrat', sans-serif;
+$heading: 'Poppins', sans-serif;
+$accent: 'Roboto', sans-serif;
+$bold: 900;
+$phone: 320px;
+$tablet: 768px;
+$desktop: 1024px;
+$Lgdesktop: 1920px;

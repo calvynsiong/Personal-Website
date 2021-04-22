@@ -1,0 +1,78 @@
+@import 'variables', 'mixins', 'resets';
+
+footer {
+	background: $grad1;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	text-align: center;
+	position: relative;
+
+	.Contact_links_6 {
+		position: absolute;
+		top: 2%;
+		left: 2%;
+		color: green;
+		a {
+			color: black;
+
+			i:hover {
+				transition: all 0.25s linear;
+				transform: translate3D(0, -1px, 0) scale(1.3);
+			}
+		}
+	}
+
+	.Quotes {
+		display: flex;
+		flex-flow: column wrap;
+		gap: 2em;
+		margin: 2em auto;
+		font-size: 2rem;
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
+
+	.Contact_links {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-flow: row wrap;
+		gap: Min(8em, 5vw);
+		padding: 2rem;
+
+		a {
+			color: white;
+			font-style: italic;
+
+			&:hover {
+				animation: swivel linear 2s infinite;
+
+				@keyframes swivel {
+					0% {
+						transform: rotateZ(0deg);
+					}
+					25% {
+						transform: rotateZ(15deg);
+					}
+					75% {
+						transform: rotateZ(-15deg);
+					}
+
+					100% {
+						transform: rotateZ(0deg);
+					}
+				}
+			}
+		}
+
+		> * {
+			display: flex;
+			align-items: center;
+			flex-direction: row wrap;
+			gap: 2em;
+		}
+	}
+}

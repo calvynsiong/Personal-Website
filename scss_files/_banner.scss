@@ -1,0 +1,40 @@
+@import 'variables', 'mixins', 'resets';
+
+#banner {
+	// Short banner (Want to add animation)
+	// Evened out banner
+	padding-top: calc(122px + 2em);
+	text-align: center;
+	display: flex;
+	flex-flow: column wrap;
+	flex: 1 1 30%;
+	background: $greygrad, url(./webimages/malaysia.jpg);
+	background-attachment: fixed;
+
+	.container {
+		background-color: $clr5;
+		flex-flow: row wrap;
+		z-index: 100;
+
+		h1 {
+			padding: 1em;
+			flex-wrap: wrap;
+			animation: fadeIn linear 2s;
+			object-fit: contain;
+			font-size: clamp(0, 1em, 2rem, 5rem);
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+		p {
+			padding: 2em;
+			font-size: 1.5em;
+			z-index: -1;
+		}
+	}
+}

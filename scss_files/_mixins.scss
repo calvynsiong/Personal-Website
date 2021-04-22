@@ -1,0 +1,39 @@
+@mixin flexcenter($direction) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1 1 50%;
+	flex-flow: $direction wrap;
+}
+
+@mixin test-border($thickness) {
+	border: $thickness solid black;
+}
+
+@mixin hover-darken() {
+	&::after {
+		position: absolute;
+		content: '';
+		background: $clr3;
+		width: 100%;
+		border-radius: 2em;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transform: scale(0);
+		transform-origin: bottom right;
+		transition: transform 0.25s ease-in;
+	}
+
+	&:hover {
+		border-radius: 2em;
+		transform: translate3D(0, -1px, 0) scale(1.06);
+		box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
+		&::after {
+			transform: scale(1);
+			transform-origin: top left;
+			border-radius: 2em;
+		}
+	}
+}
