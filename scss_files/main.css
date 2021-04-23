@@ -588,6 +588,12 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
   background: linear-gradient(to right top, #4e54c8, #8f94fb);
   width: 100vw;
@@ -609,7 +615,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  padding: 0.5rem;
+  padding: 0rem;
   line-height: 1.5em;
   color: white;
 }
@@ -694,6 +700,13 @@ section {
   margin-bottom: 1em;
 }
 
+@media (max-width: 320px) {
+  #Introduction .container > * .Intro_photos {
+    width: 5em;
+    height: 5em;
+  }
+}
+
 #Introduction .container > * .Intro_photos img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -741,7 +754,7 @@ section {
 
 @media (min-width: 390px) {
   #Introduction .container > * + * {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 }
 
@@ -766,12 +779,19 @@ section {
 #Introduction .container .Photo-box img {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 15rem;
-  height: 15rem;
+  width: clamp(5rem, 15rem, 20rem);
+  height: clamp(5rem, 15rem, 20rem);
   top: 0;
   border-radius: 50%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (max-width: 320px) {
+  #Introduction .container .Photo-box img {
+    width: 10em;
+    height: 10em;
+  }
 }
 
 * {

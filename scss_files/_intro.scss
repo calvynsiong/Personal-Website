@@ -5,6 +5,8 @@
 #Introduction {
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
 	background: $grad1;
 	width: 100vw;
 	padding-top: 6em;
@@ -19,7 +21,7 @@
 		display: flex;
 		gap: 1rem;
 		flex-flow: row wrap;
-		padding: 0.5rem;
+		padding: 0rem;
 		line-height: 1.5em;
 		color: white;
 		@media (max-width: $phone) {
@@ -54,6 +56,10 @@
 				width: clamp(5em, 10em, 15em);
 				height: clamp(5em, 10em, 15em);
 				margin-bottom: 1em;
+				@media (max-width: $phone) {
+					width: 5em;
+					height: 5em;
+				}
 
 				// @include test-border(0.2rem);
 				img {
@@ -91,7 +97,7 @@
 			margin-left: 0;
 
 			@media (min-width: 390px) {
-				margin-left: 1rem;
+				margin-left: 0.5rem;
 			}
 		}
 
@@ -108,11 +114,15 @@
 
 			img {
 				object-fit: contain;
-				width: 15rem;
-				height: 15rem;
+				width: clamp(5rem, 15rem, 20rem);
+				height: clamp(5rem, 15rem, 20rem);
 				top: 0;
 				border-radius: 50%;
 				box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+				@media (max-width: $phone) {
+					width: 10em;
+					height: 10em;
+				}
 			}
 		}
 	}
