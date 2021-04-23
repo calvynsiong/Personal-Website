@@ -692,7 +692,7 @@ section {
   margin-bottom: 1em;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
   #Introduction .container > * .Intro_photos {
     width: 5em;
     height: 5em;
