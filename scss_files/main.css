@@ -694,6 +694,7 @@ section {
 
 @media (max-width: 768px) {
   #Introduction .container > * .Intro_photos {
+    display: none;
     width: 5em;
     height: 5em;
   }
