@@ -7,9 +7,10 @@
 }
 
 body {
-  font-size: 1.1rem;
+  font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
-  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -406,9 +407,10 @@ nav ul li a:hover {
 }
 
 body {
-  font-size: 1.1rem;
+  font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
-  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -443,9 +445,10 @@ section {
 }
 
 body {
-  font-size: 1.1rem;
+  font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
-  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -498,6 +501,12 @@ section {
   z-index: 100;
 }
 
+@media (max-width: 320px) {
+  #banner .container {
+    font-size: 0.5em;
+  }
+}
+
 #banner .container h1 {
   padding: 1em;
   -ms-flex-wrap: wrap;
@@ -506,7 +515,7 @@ section {
           animation: fadeIn linear 2s;
   -o-object-fit: contain;
      object-fit: contain;
-  font-size: clamp(0, 1em, 2rem, 5rem);
+  font-size: clamp(1vw, 2em, 5rem);
 }
 
 @-webkit-keyframes fadeIn {
@@ -542,9 +551,10 @@ section {
 }
 
 body {
-  font-size: 1.1rem;
+  font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
-  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -602,6 +612,12 @@ section {
   padding: 0.5rem;
   line-height: 1.5em;
   color: white;
+}
+
+@media (max-width: 320px) {
+  #Introduction .container {
+    font-size: 0.8em;
+  }
 }
 
 #Introduction .container h2 {
@@ -767,9 +783,10 @@ section {
 }
 
 body {
-  font-size: 1.1rem;
+  font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
-  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -871,6 +888,12 @@ section {
       align-self: center;
 }
 
+@media (max-width: 320px) {
+  .Experiences {
+    font-size: 0.8em;
+  }
+}
+
 .Experiences .image {
   width: clamp(8em, 15em, 20em);
   height: clamp(8em, 15em, 20em);
@@ -937,9 +960,10 @@ section {
 }
 
 body {
-  font-size: 1.1rem;
+  font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
-  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -1045,6 +1069,16 @@ section {
   -webkit-transform-origin: top left;
           transform-origin: top left;
   border-radius: 2em;
+}
+
+@media (max-width: 320px) {
+  .Skill_1, .Skill_2, .Skill_3,
+  .Skill .Future_plan,
+  .Skill .Project_1,
+  .Skill .Project_2,
+  .Skill .Project_3 {
+    font-size: 0.8em;
+  }
 }
 
 .Skill_1 a, .Skill_2 a, .Skill_3 a,
@@ -1198,9 +1232,10 @@ section {
 }
 
 body {
-  font-size: 1.1rem;
+  font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
-  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -1241,6 +1276,12 @@ footer {
           align-items: center;
   text-align: center;
   position: relative;
+}
+
+@media (max-width: 320px) {
+  footer {
+    font-size: 0.8em;
+  }
 }
 
 footer .Top_link {
@@ -1365,9 +1406,10 @@ footer .Contact_links > * {
 }
 
 body {
-  font-size: 1.1rem;
+  font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
-  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -1473,6 +1515,16 @@ section {
   -webkit-transform-origin: top left;
           transform-origin: top left;
   border-radius: 2em;
+}
+
+@media (max-width: 320px) {
+  .Skill_1, .Skill_2, .Skill_3,
+  .Skill .Future_plan,
+  .Skill .Project_1,
+  .Skill .Project_2,
+  .Skill .Project_3 {
+    font-size: 0.8em;
+  }
 }
 
 .Skill_1 a, .Skill_2 a, .Skill_3 a,

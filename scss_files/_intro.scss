@@ -22,6 +22,9 @@
 		padding: 0.5rem;
 		line-height: 1.5em;
 		color: white;
+		@media (max-width: $phone) {
+			font-size: 0.8em;
+		}
 
 		h2 {
 			align-self: center;

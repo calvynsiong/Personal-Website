@@ -9,9 +9,10 @@
 }
 
 body {
-	font-size: 1.1rem;
+	font-size: clamp(0.2rem, 1rem, 1.1rem);
 	overflow-x: hidden;
-	width: 100vw;
+	max-width: 100vw;
+	min-width: 100vw;
 	color: white;
 	background: white;
 }

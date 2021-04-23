@@ -16,12 +16,16 @@
 		flex-flow: row wrap;
 		z-index: 100;
 
+		@media (max-width: $phone) {
+			font-size: 0.5em;
+		}
 		h1 {
 			padding: 1em;
 			flex-wrap: wrap;
 			animation: fadeIn linear 2s;
 			object-fit: contain;
-			font-size: clamp(0, 1em, 2rem, 5rem);
+			font-size: clamp(1vw, 2em, 5rem);
+
 			@keyframes fadeIn {
 				0% {
 					opacity: 0;

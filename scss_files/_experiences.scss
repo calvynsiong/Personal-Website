@@ -25,6 +25,9 @@
 			align-self: center;
 		}
 	}
+	@media (max-width: $phone) {
+		font-size: 0.8em;
+	}
 
 	.image {
 		width: clamp(8em, 15em, 20em);

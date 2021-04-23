@@ -7,6 +7,9 @@ footer {
 	align-items: center;
 	text-align: center;
 	position: relative;
+	@media (max-width: $phone) {
+		font-size: 0.8em;
+	}
 
 	.Top_link {
 		position: absolute;

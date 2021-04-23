@@ -23,6 +23,9 @@
 		background: $grad1;
 		transition: all 0.25s linear;
 		@include hover-darken();
+		@media (max-width: $phone) {
+			font-size: 0.8em;
+		}
 		a {
 			text-decoration: none;
 			transition: all 0.25s ease;
