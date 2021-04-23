@@ -33,7 +33,7 @@
 		}
 
 		& > * {
-			flex: 1 1 22vw;
+			flex: 1 1 20vw;
 			display: flex;
 			flex-flow: column wrap;
 			background: rgba(255, 255, 255, 0.1);
@@ -43,6 +43,20 @@
 			margin-bottom: 1rem;
 			transition: all 0.15s ease-in;
 			position: relative;
+
+			.Intro_photos {
+				display: flex;
+				justify-content: center;
+				align-self: center;
+				width: clamp(5em, 10em, 15em);
+				height: clamp(5em, 10em, 15em);
+				margin-bottom: 1em;
+
+				// @include test-border(0.2rem);
+				img {
+					object-fit: cover;
+				}
+			}
 
 			&::after {
 				position: absolute;
