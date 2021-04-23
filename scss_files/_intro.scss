@@ -114,8 +114,8 @@
 
 			img {
 				object-fit: contain;
-				width: 10em;
-				height: 10em;
+				width: clamp(5rem, 15rem, 20rem);
+				height: clamp(5rem, 15rem, 20rem);
 				top: 0;
 				border-radius: 50%;
 				box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
