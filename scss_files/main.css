@@ -695,8 +695,8 @@ section {
           justify-content: center;
   -ms-flex-item-align: center;
       align-self: center;
-  width: clamp(5em, 10em, 15em);
-  height: clamp(5em, 10em, 15em);
+  width: 10em;
+  height: 10em;
   margin-bottom: 1em;
 }
 
@@ -779,8 +779,8 @@ section {
 #Introduction .container .Photo-box img {
   -o-object-fit: contain;
      object-fit: contain;
-  width: clamp(5rem, 15rem, 20rem);
-  height: clamp(5rem, 15rem, 20rem);
+  width: 10em;
+  height: 10em;
   top: 0;
   border-radius: 50%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
