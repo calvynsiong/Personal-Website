@@ -63,7 +63,11 @@
 
 				// @include test-border(0.2rem);
 				img {
-					object-fit: cover;
+					object-fit: contain;
+					@media (max-width: $tablet) {
+						width: 4em;
+						height: 4em;
+					}
 				}
 			}
 

@@ -9,6 +9,7 @@
 body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -430,6 +431,7 @@ nav ul li a:hover {
 body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -470,6 +472,7 @@ section {
 body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -578,6 +581,7 @@ section {
 body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -735,8 +739,15 @@ section {
 }
 
 #Introduction .container > * .Intro_photos img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  #Introduction .container > * .Intro_photos img {
+    width: 4em;
+    height: 4em;
+  }
 }
 
 #Introduction .container > *::after {
@@ -832,6 +843,7 @@ section {
 body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -1011,6 +1023,7 @@ section {
 body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -1285,6 +1298,7 @@ section {
 body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
+  min-width: 100vw;
   color: white;
   background: white;
 }
@@ -1461,6 +1475,7 @@ footer .Contact_links > * {
 body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
+  min-width: 100vw;
   color: white;
   background: white;
 }
