@@ -21,27 +21,30 @@ header {
 }
 .logo-container {
 	display: grid;
-	border-radius: 50%;
-	width: 1rem;
+
+	width: 4rem;
 	height: 4rem;
 	margin: 0.5rem;
 	padding: 1.5rem;
 	z-index: 1;
 	place-content: center;
 
-	@media (max-width: 600px) {
-		transform: translateX(-15vw);
-	}
 	@media (min-width: $Lgdesktop) {
 		padding: 0;
 		justify-self: flex-end;
-		transform: translate(-1200%, -10%);
+		transform: translate(-400%, -10%);
 	}
 
 	img {
 		object-fit: contain;
-		width: 3rem;
-		height: 3rem;
+		width: 12rem;
+		height: 5rem;
+		border-radius: 20%;
+		@media (max-width: 600px) {
+			width: 8rem;
+			height: 2rem;
+			transform: translateX(-5vw);
+		}
 	}
 }
 // Switches link positioning based on device width
@@ -60,7 +63,7 @@ nav {
 		position: relative;
 		display: inline-block;
 		// padding: 1em;
-		top: -1rem;
+		top: -0.5rem;
 		z-index: 0;
 		@media (min-width: $Lgdesktop) {
 			display: flex;

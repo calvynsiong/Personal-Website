@@ -65,8 +65,7 @@ header {
 .logo-container {
   display: -ms-grid;
   display: grid;
-  border-radius: 50%;
-  width: 1rem;
+  width: 4rem;
   height: 4rem;
   margin: 0.5rem;
   padding: 1.5rem;
@@ -74,27 +73,30 @@ header {
   place-content: center;
 }
 
-@media (max-width: 600px) {
-  .logo-container {
-    -webkit-transform: translateX(-15vw);
-            transform: translateX(-15vw);
-  }
-}
-
 @media (min-width: 1920px) {
   .logo-container {
     padding: 0;
     justify-self: flex-end;
-    -webkit-transform: translate(-1200%, -10%);
-            transform: translate(-1200%, -10%);
+    -webkit-transform: translate(-400%, -10%);
+            transform: translate(-400%, -10%);
   }
 }
 
 .logo-container img {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 3rem;
-  height: 3rem;
+  width: 12rem;
+  height: 5rem;
+  border-radius: 20%;
+}
+
+@media (max-width: 600px) {
+  .logo-container img {
+    width: 8rem;
+    height: 2rem;
+    -webkit-transform: translateX(-5vw);
+            transform: translateX(-5vw);
+  }
 }
 
 nav {
@@ -115,7 +117,7 @@ nav ul {
   list-style: none;
   position: relative;
   display: inline-block;
-  top: -1rem;
+  top: -0.5rem;
   z-index: 0;
 }
 
@@ -694,7 +696,6 @@ section {
 
 @media (max-width: 768px) {
   #Introduction .container > * .Intro_photos {
-    display: none;
     width: 5em;
     height: 5em;
   }
