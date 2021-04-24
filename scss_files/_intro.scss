@@ -57,16 +57,18 @@
 				height: 10em;
 				margin-bottom: 1em;
 				@media (max-width: $tablet) {
-					width: 4em;
-					height: 4em;
+					width: 6em;
+					height: 6em;
 				}
 
 				// @include test-border(0.2rem);
 				img {
 					object-fit: contain;
+					width: 10em;
+					height: 10em;
 					@media (max-width: $tablet) {
-						width: 4em;
-						height: 4em;
+						width: 6em;
+						height: 6em;
 					}
 				}
 			}

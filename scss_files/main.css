@@ -10,6 +10,7 @@ body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
   min-width: 100vw;
+  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -432,6 +433,7 @@ body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
   min-width: 100vw;
+  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -473,6 +475,7 @@ body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
   min-width: 100vw;
+  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -582,6 +585,7 @@ body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
   min-width: 100vw;
+  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -733,20 +737,22 @@ section {
 
 @media (max-width: 768px) {
   #Introduction .container > * .Intro_photos {
-    width: 4em;
-    height: 4em;
+    width: 6em;
+    height: 6em;
   }
 }
 
 #Introduction .container > * .Intro_photos img {
   -o-object-fit: contain;
      object-fit: contain;
+  width: 10em;
+  height: 10em;
 }
 
 @media (max-width: 768px) {
   #Introduction .container > * .Intro_photos img {
-    width: 4em;
-    height: 4em;
+    width: 6em;
+    height: 6em;
   }
 }
 
@@ -844,6 +850,7 @@ body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
   min-width: 100vw;
+  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -1024,6 +1031,7 @@ body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
   min-width: 100vw;
+  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -1299,6 +1307,7 @@ body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
   min-width: 100vw;
+  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -1476,6 +1485,7 @@ body {
   font-size: clamp(0.2rem, 1rem, 1.1rem);
   overflow-x: hidden;
   min-width: 100vw;
+  max-width: 100vw;
   color: white;
   background: white;
 }
