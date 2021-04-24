@@ -57,9 +57,9 @@
 				height: 10em;
 				margin-bottom: 1em;
 				@media (max-width: $tablet) {
-					// display: none;
-					width: 5em;
-					height: 5em;
+					display: none;
+					// width: 5em;
+					// height: 5em;
 				}
 
 				// @include test-border(0.2rem);
