@@ -164,10 +164,8 @@ nav {
 			}
 			color: white;
 			transform: scale(0.9);
-			& > * {
-			}
 
-			&:hover {
+			&:hover, &:active {
 				background-color: rgba(255, 255, 250, 0.2);
 			}
 		}

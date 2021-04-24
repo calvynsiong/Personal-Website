@@ -16,7 +16,8 @@
 		transition: all 0.25s linear;
 		background: $grad1;
 		@include hover-darken();
-		&:hover {
+		&:hover,
+		&:active {
 			transform: translateY(-1em);
 		}
 		& > * + * {

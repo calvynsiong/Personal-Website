@@ -29,16 +29,16 @@
 		a {
 			text-decoration: none;
 			transition: all 0.25s ease;
-			&:hover {
+			&:hover, &:active {
 				transform: scale(1.2);
 			}
-			h1:hover {
+			h1:hover, h1:active {
 				color: gold;
 				text-decoration: underline;
 			}
 		}
 
-		&:hover {
+		&:hover, &:active {
 			transform: translateY(-1em);
 		}
 		& > * {

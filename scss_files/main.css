@@ -417,7 +417,7 @@ nav ul li a:hover {
   }
 }
 
-.nav-toggle-label .icon-container:hover {
+.nav-toggle-label .icon-container:hover, .nav-toggle-label .icon-container:active {
   background-color: rgba(255, 255, 250, 0.2);
 }
 
@@ -776,7 +776,7 @@ section {
   transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
 }
 
-#Introduction .container > *:hover {
+#Introduction .container > *:hover, #Introduction .container > *:active {
   border-radius: 2em;
   -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
           transform: translate3D(0, -1px, 0) scale(1.06);
@@ -784,7 +784,7 @@ section {
           box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
 }
 
-#Introduction .container > *:hover::after {
+#Introduction .container > *:hover::after, #Introduction .container > *:active::after {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: top left;
@@ -942,7 +942,7 @@ section {
   border-radius: 2em;
 }
 
-.Experiences_1:hover, .Experiences_2:hover, .Experiences_3:hover {
+.Experiences_1:hover, .Experiences_1:active, .Experiences_2:hover, .Experiences_2:active, .Experiences_3:hover, .Experiences_3:active {
   -webkit-transform: translateY(-1em);
           transform: translateY(-1em);
 }
@@ -1163,29 +1163,41 @@ section {
   transition: all 0.25s ease;
 }
 
-.Skill_1 a:hover, .Skill_2 a:hover, .Skill_3 a:hover,
+.Skill_1 a:hover, .Skill_1 a:active, .Skill_2 a:hover, .Skill_2 a:active, .Skill_3 a:hover, .Skill_3 a:active,
 .Skill .Future_plan a:hover,
+.Skill .Future_plan a:active,
 .Skill .Project_1 a:hover,
+.Skill .Project_1 a:active,
 .Skill .Project_2 a:hover,
-.Skill .Project_3 a:hover {
+.Skill .Project_2 a:active,
+.Skill .Project_3 a:hover,
+.Skill .Project_3 a:active {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.Skill_1 a h1:hover, .Skill_2 a h1:hover, .Skill_3 a h1:hover,
+.Skill_1 a h1:hover, .Skill_1 a h1:active, .Skill_2 a h1:hover, .Skill_2 a h1:active, .Skill_3 a h1:hover, .Skill_3 a h1:active,
 .Skill .Future_plan a h1:hover,
+.Skill .Future_plan a h1:active,
 .Skill .Project_1 a h1:hover,
+.Skill .Project_1 a h1:active,
 .Skill .Project_2 a h1:hover,
-.Skill .Project_3 a h1:hover {
+.Skill .Project_2 a h1:active,
+.Skill .Project_3 a h1:hover,
+.Skill .Project_3 a h1:active {
   color: gold;
   text-decoration: underline;
 }
 
-.Skill_1:hover, .Skill_2:hover, .Skill_3:hover,
+.Skill_1:hover, .Skill_1:active, .Skill_2:hover, .Skill_2:active, .Skill_3:hover, .Skill_3:active,
 .Skill .Future_plan:hover,
+.Skill .Future_plan:active,
 .Skill .Project_1:hover,
+.Skill .Project_1:active,
 .Skill .Project_2:hover,
-.Skill .Project_3:hover {
+.Skill .Project_2:active,
+.Skill .Project_3:hover,
+.Skill .Project_3:active {
   -webkit-transform: translateY(-1em);
           transform: translateY(-1em);
 }
@@ -1617,29 +1629,41 @@ section {
   transition: all 0.25s ease;
 }
 
-.Skill_1 a:hover, .Skill_2 a:hover, .Skill_3 a:hover,
+.Skill_1 a:hover, .Skill_1 a:active, .Skill_2 a:hover, .Skill_2 a:active, .Skill_3 a:hover, .Skill_3 a:active,
 .Skill .Future_plan a:hover,
+.Skill .Future_plan a:active,
 .Skill .Project_1 a:hover,
+.Skill .Project_1 a:active,
 .Skill .Project_2 a:hover,
-.Skill .Project_3 a:hover {
+.Skill .Project_2 a:active,
+.Skill .Project_3 a:hover,
+.Skill .Project_3 a:active {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.Skill_1 a h1:hover, .Skill_2 a h1:hover, .Skill_3 a h1:hover,
+.Skill_1 a h1:hover, .Skill_1 a h1:active, .Skill_2 a h1:hover, .Skill_2 a h1:active, .Skill_3 a h1:hover, .Skill_3 a h1:active,
 .Skill .Future_plan a h1:hover,
+.Skill .Future_plan a h1:active,
 .Skill .Project_1 a h1:hover,
+.Skill .Project_1 a h1:active,
 .Skill .Project_2 a h1:hover,
-.Skill .Project_3 a h1:hover {
+.Skill .Project_2 a h1:active,
+.Skill .Project_3 a h1:hover,
+.Skill .Project_3 a h1:active {
   color: gold;
   text-decoration: underline;
 }
 
-.Skill_1:hover, .Skill_2:hover, .Skill_3:hover,
+.Skill_1:hover, .Skill_1:active, .Skill_2:hover, .Skill_2:active, .Skill_3:hover, .Skill_3:active,
 .Skill .Future_plan:hover,
+.Skill .Future_plan:active,
 .Skill .Project_1:hover,
+.Skill .Project_1:active,
 .Skill .Project_2:hover,
-.Skill .Project_3:hover {
+.Skill .Project_2:active,
+.Skill .Project_3:hover,
+.Skill .Project_3:active {
   -webkit-transform: translateY(-1em);
           transform: translateY(-1em);
 }
