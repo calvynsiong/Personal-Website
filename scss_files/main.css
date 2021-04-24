@@ -13,6 +13,10 @@ body {
   background: white;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
@@ -128,6 +132,7 @@ nav ul {
   list-style: none;
   position: relative;
   display: inline-block;
+  margin-right: 2em;
   top: -0.5rem;
   z-index: 0;
 }
@@ -155,10 +160,6 @@ nav ul li {
   margin-right: 0.5em;
   font-weight: 600;
   font-size: clamp(0.8rem, 1rem, 1.1rem);
-}
-
-nav ul li:last-child {
-  margin-right: 1em;
 }
 
 nav ul li a {
@@ -433,6 +434,10 @@ body {
   background: white;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
@@ -467,6 +472,10 @@ body {
   overflow-x: hidden;
   color: white;
   background: white;
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 :is(h1, h2, h3) {
@@ -571,6 +580,10 @@ body {
   overflow-x: hidden;
   color: white;
   background: white;
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 :is(h1, h2, h3) {
@@ -716,7 +729,8 @@ section {
 
 @media (max-width: 768px) {
   #Introduction .container > * .Intro_photos {
-    display: none;
+    width: 4em;
+    height: 4em;
   }
 }
 
@@ -820,6 +834,10 @@ body {
   overflow-x: hidden;
   color: white;
   background: white;
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 :is(h1, h2, h3) {
@@ -995,6 +1013,10 @@ body {
   overflow-x: hidden;
   color: white;
   background: white;
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 :is(h1, h2, h3) {
@@ -1267,6 +1289,10 @@ body {
   background: white;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 :is(h1, h2, h3) {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
@@ -1437,6 +1463,10 @@ body {
   overflow-x: hidden;
   color: white;
   background: white;
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 :is(h1, h2, h3) {
