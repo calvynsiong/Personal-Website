@@ -51,10 +51,11 @@ header {
           justify-content: center;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1024px) {
   header {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -65,20 +66,20 @@ header {
 .logo-container {
   display: -ms-grid;
   display: grid;
+  place-content: center;
   width: 4rem;
   height: 4rem;
   margin: 0.5rem;
   padding: 1.5rem;
   z-index: 1;
-  place-content: center;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1024px) {
   .logo-container {
-    padding: 0;
-    justify-self: flex-end;
-    -webkit-transform: translate(-400%, -10%);
-            transform: translate(-400%, -10%);
+    padding: 1rem;
+    justify-self: flex-start;
+    -webkit-transform: translate(100%, -20%);
+            transform: translate(100%, -20%);
   }
 }
 
@@ -100,17 +101,27 @@ header {
 }
 
 nav {
+  display: block;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: top;
+          transform-origin: top;
   position: absolute;
   right: 0%;
   top: 30%;
-  width: 100%;
-  background: #382b47;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  -webkit-transform-origin: top;
-          transform-origin: top;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    width: 100%;
+    background: #382b47;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
 }
 
 nav ul {
@@ -121,7 +132,7 @@ nav ul {
   z-index: 0;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1024px) {
   nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -141,8 +152,9 @@ nav ul li {
   text-decoration: none;
   text-transform: uppercase;
   margin-bottom: 1em;
-  margin-right: 2em;
+  margin-right: 0.5em;
   font-weight: 600;
+  font-size: clamp(0.8rem, 1rem, 1.1rem);
 }
 
 nav ul li a {
@@ -345,16 +357,17 @@ nav ul li a:hover {
   display: none;
 }
 
-.nav-toggle:checked ~ nav {
-  display: block;
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-transform-origin: top;
-          transform-origin: top;
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
+@media (max-width: 1024px) {
+  .nav-toggle:checked ~ nav {
+    display: block;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+  .nav-toggle:checked ~ nav a {
+    opacity: 1;
+  }
 }
 
 .nav-toggle-label {
@@ -386,12 +399,15 @@ nav ul li a:hover {
   transition: all 250ms ease;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
-}
-
-.nav-toggle-label .icon-container > * {
   color: white;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+@media (min-width: 1024px) {
+  .nav-toggle-label .icon-container {
+    display: none;
+  }
 }
 
 .nav-toggle-label .icon-container:hover {

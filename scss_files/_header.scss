@@ -13,26 +13,24 @@ header {
 	background: $clr4;
 	justify-content: center;
 
-	@media (min-width: $Lgdesktop) {
-		justify-content: space-around;
+	@media (min-width: $desktop) {
+		justify-content: space-between;
 		flex-flow: row wrap;
 	}
 	// Attempting to fix logo responsiveness
 }
 .logo-container {
 	display: grid;
-
+	place-content: center;
 	width: 4rem;
 	height: 4rem;
 	margin: 0.5rem;
 	padding: 1.5rem;
 	z-index: 1;
-	place-content: center;
-
-	@media (min-width: $Lgdesktop) {
-		padding: 0;
-		justify-self: flex-end;
-		transform: translate(-400%, -10%);
+	@media (min-width: $desktop) {
+		padding: 1rem;
+		justify-self: flex-start;
+		transform: translate(100%, -20%);
 	}
 
 	img {
@@ -49,23 +47,27 @@ header {
 }
 // Switches link positioning based on device width
 nav {
+	display: block;
+	transform: scaleY(1);
+	transform-origin: top;
 	position: absolute;
 	right: 0%;
 	top: 30%;
-	width: 100%;
-	background: $clr4;
-	transform: scaleY(0);
-	transition: all 0.5s ease;
-	transform-origin: top;
+	@media (max-width: $desktop) {
+		width: 100%;
+		background: $clr4;
+		transform: scaleY(0);
+		transition: all 0.5s ease;
+		transform-origin: top;
+	}
 
 	ul {
 		list-style: none;
 		position: relative;
 		display: inline-block;
-		// padding: 1em;
 		top: -0.5rem;
 		z-index: 0;
-		@media (min-width: $Lgdesktop) {
+		@media (min-width: $desktop) {
 			display: flex;
 			justify-content: flex-end;
 		}
@@ -77,8 +79,9 @@ nav {
 			text-decoration: none;
 			text-transform: uppercase;
 			margin-bottom: 1em;
-			margin-right: 2em;
+			margin-right: 0.5em;
 			font-weight: 600;
+			font-size: clamp(0.8rem, 1rem, 1.1rem);
 			a {
 				color: white;
 				text-decoration: none;
@@ -123,13 +126,15 @@ nav {
 // Expandable section with menu icon + hover effects
 .nav-toggle {
 	display: none;
-	&:checked ~ nav {
-		display: block;
-		transform: scaleY(1);
-		transform-origin: top;
+	@media (max-width: $desktop) {
+		&:checked ~ nav {
+			display: block;
+			transform: scaleY(1);
+			transform-origin: top;
 
-		a {
-			opacity: 1;
+			a {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -151,9 +156,12 @@ nav {
 			transition: all 250ms ease;
 			transform: scale(0.8);
 
+			@media (min-width: $desktop) {
+				display: none;
+			}
+			color: white;
+			transform: scale(0.9);
 			& > * {
-				color: white;
-				transform: scale(0.9);
 			}
 
 			&:hover {
