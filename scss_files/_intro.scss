@@ -64,8 +64,9 @@
 				// @include test-border(0.2rem);
 				img {
 					object-fit: contain;
-					width: 10em;
-					height: 10em;
+					width: 12rem;
+					height: 12rem;
+					padding: 1rem;
 					@media (max-width: $tablet) {
 						width: 6em;
 						height: 6em;

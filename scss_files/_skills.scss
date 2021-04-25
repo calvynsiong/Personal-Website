@@ -4,6 +4,8 @@
 	display: grid;
 	gap: 2rem;
 	background: $clr4;
+	padding: 2rem;
+	text-align: center;
 
 	&_1,
 	&_2,
@@ -17,11 +19,11 @@
 		align-items: center;
 		box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 		border-radius: 1rem;
-		padding: 1rem;
 		position: relative;
-		padding: 3em 1em;
+		padding: 3em 0;
 		background: $grad1;
 		transition: all 0.25s linear;
+		max-width: 100%;
 		@include hover-darken();
 		@media (max-width: $phone) {
 			font-size: 0.8em;
@@ -29,16 +31,19 @@
 		a {
 			text-decoration: none;
 			transition: all 0.25s ease;
-			&:hover, &:active {
-				transform: scale(1.2);
+			&:hover,
+			&:active {
+				transform: scale(1.05);
 			}
-			h1:hover, h1:active {
+			h1:hover,
+			h1:active {
 				color: gold;
 				text-decoration: underline;
 			}
 		}
 
-		&:hover, &:active {
+		&:hover,
+		&:active {
 			transform: translateY(-1em);
 		}
 		& > * {
@@ -63,7 +68,6 @@
 	.photo {
 		width: 50%;
 		height: 50%;
-		// @include test-border(0.1rem);
 		padding: 0;
 		margin: 0;
 		& > * {

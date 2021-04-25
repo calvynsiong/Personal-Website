@@ -57,7 +57,7 @@ nav {
 		width: 100%;
 		background: $clr4;
 		transform: scaleY(0);
-		transition: all 0.5s ease;
+		transition: transform 0.5s ease;
 		transform-origin: top;
 	}
 
@@ -90,13 +90,20 @@ nav {
 				text-decoration: none;
 				padding: 0.5em;
 				display: inline-block;
-				transition: all 0.25s ease-in-out;
+				opacity: 0;
+				transition: opacity 0.1s ease-in-out 0s;
 
-				&:hover {
-					color: gold;
-					transform: scale(1.2);
-					border-bottom: 2px solid gold;
+				@media (min-width: $desktop) {
+					opacity: 1;
 				}
+			}
+
+			&:hover {
+				color: gold;
+				transform: scale(1.2);
+				display: inline-block;
+				border-bottom: 2px solid gold;
+				transition: all 0.25s ease-in-out;
 			}
 		}
 	}
@@ -126,6 +133,7 @@ nav {
 		}
 	}
 }
+
 // Expandable section with menu icon + hover effects
 .nav-toggle {
 	display: none;
@@ -137,6 +145,7 @@ nav {
 
 			a {
 				opacity: 1;
+				transition: opacity 0.25s ease-in-out 0.25s;
 			}
 		}
 	}
@@ -165,7 +174,8 @@ nav {
 			color: white;
 			transform: scale(0.9);
 
-			&:hover, &:active {
+			&:hover,
+			&:active {
 				background-color: rgba(255, 255, 250, 0.2);
 			}
 		}

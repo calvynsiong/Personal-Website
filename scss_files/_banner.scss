@@ -3,16 +3,25 @@
 #banner {
 	// Short banner (Want to add animation)
 	// Evened out banner
-	padding-top: calc(122px + 2em);
+	padding-top: calc(122px + 10rem);
+	padding-bottom: 10rem;
 	text-align: center;
 	display: flex;
 	flex-flow: column wrap;
 	flex: 1 1 30%;
-	background: $greygrad, url(./webimages/malaysia.jpg);
+	background: $greygrad, url(./webimages/KualaLumpur.jpg), no-repeat;
+	background-size: cover;
 	background-attachment: fixed;
 
 	.container {
-		background-color: $clr5;
+		// background-color: rgb(56, 43, 71);
+		background: rgba(56, 43, 71, 0.3);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		backdrop-filter: blur(0px);
+		-webkit-backdrop-filter: blur(0px);
+		border-radius: 10px;
+		border: 1px solid rgba(255, 255, 255, 0.18);
+		// opacity: 0.8;
 		flex-flow: row wrap;
 		z-index: 100;
 

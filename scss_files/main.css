@@ -123,8 +123,10 @@ nav {
     background: #382b47;
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
     -webkit-transform-origin: top;
             transform-origin: top;
   }
@@ -169,15 +171,25 @@ nav ul li a {
   text-decoration: none;
   padding: 0.5em;
   display: inline-block;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in-out 0s;
+  transition: opacity 0.1s ease-in-out 0s;
 }
 
-nav ul li a:hover {
+@media (min-width: 1024px) {
+  nav ul li a {
+    opacity: 1;
+  }
+}
+
+nav ul li:hover {
   color: gold;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  display: inline-block;
   border-bottom: 2px solid gold;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .link-1::after {
@@ -374,6 +386,8 @@ nav ul li a:hover {
   }
   .nav-toggle:checked ~ nav a {
     opacity: 1;
+    -webkit-transition: opacity 0.25s ease-in-out 0.25s;
+    transition: opacity 0.25s ease-in-out 0.25s;
   }
 }
 
@@ -506,7 +520,8 @@ section {
 }
 
 #banner {
-  padding-top: calc(122px + 2em);
+  padding-top: calc(122px + 10rem);
+  padding-bottom: 10rem;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -518,13 +533,20 @@ section {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 30%;
           flex: 1 1 30%;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, rgba(0, 0, 0, 0.533))), url(./webimages/malaysia.jpg);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.533) 30% rgba(255, 255, 255, 0.267) 100%), url(./webimages/malaysia.jpg);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, rgba(0, 0, 0, 0.533))), url(./webimages/KualaLumpur.jpg), no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.533) 30% rgba(255, 255, 255, 0.267) 100%), url(./webimages/KualaLumpur.jpg), no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
 
 #banner .container {
-  background-color: #382b47;
+  background: rgba(56, 43, 71, 0.3);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -745,8 +767,9 @@ section {
 #Introduction .container > * .Intro_photos img {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 10em;
-  height: 10em;
+  width: 12rem;
+  height: 12rem;
+  padding: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -1066,6 +1089,8 @@ section {
   display: grid;
   gap: 2rem;
   background: #382b47;
+  padding: 2rem;
+  text-align: center;
 }
 
 .Skill_1, .Skill_2, .Skill_3,
@@ -1086,13 +1111,13 @@ section {
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   border-radius: 1rem;
-  padding: 1rem;
   position: relative;
-  padding: 3em 1em;
+  padding: 3em 0;
   background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
   background: linear-gradient(to right top, #4e54c8, #8f94fb);
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
+  max-width: 100%;
 }
 
 .Skill_1::after, .Skill_2::after, .Skill_3::after,
@@ -1172,11 +1197,14 @@ section {
 .Skill .Project_2 a:active,
 .Skill .Project_3 a:hover,
 .Skill .Project_3 a:active {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-.Skill_1 a h1:hover, .Skill_1 a h1:active, .Skill_2 a h1:hover, .Skill_2 a h1:active, .Skill_3 a h1:hover, .Skill_3 a h1:active,
+.Skill_1 a h1:hover,
+.Skill_1 a h1:active, .Skill_2 a h1:hover,
+.Skill_2 a h1:active, .Skill_3 a h1:hover,
+.Skill_3 a h1:active,
 .Skill .Future_plan a h1:hover,
 .Skill .Future_plan a h1:active,
 .Skill .Project_1 a h1:hover,
@@ -1372,6 +1400,10 @@ footer {
   }
 }
 
+footer h1 {
+  font-size: 3rem;
+}
+
 footer .Top_link {
   position: absolute;
   top: 2%;
@@ -1532,6 +1564,8 @@ section {
   display: grid;
   gap: 2rem;
   background: #382b47;
+  padding: 2rem;
+  text-align: center;
 }
 
 .Skill_1, .Skill_2, .Skill_3,
@@ -1552,13 +1586,13 @@ section {
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   border-radius: 1rem;
-  padding: 1rem;
   position: relative;
-  padding: 3em 1em;
+  padding: 3em 0;
   background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
   background: linear-gradient(to right top, #4e54c8, #8f94fb);
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
+  max-width: 100%;
 }
 
 .Skill_1::after, .Skill_2::after, .Skill_3::after,
@@ -1638,11 +1672,14 @@ section {
 .Skill .Project_2 a:active,
 .Skill .Project_3 a:hover,
 .Skill .Project_3 a:active {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-.Skill_1 a h1:hover, .Skill_1 a h1:active, .Skill_2 a h1:hover, .Skill_2 a h1:active, .Skill_3 a h1:hover, .Skill_3 a h1:active,
+.Skill_1 a h1:hover,
+.Skill_1 a h1:active, .Skill_2 a h1:hover,
+.Skill_2 a h1:active, .Skill_3 a h1:hover,
+.Skill_3 a h1:active,
 .Skill .Future_plan a h1:hover,
 .Skill .Future_plan a h1:active,
 .Skill .Project_1 a h1:hover,
