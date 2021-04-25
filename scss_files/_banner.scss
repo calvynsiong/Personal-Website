@@ -12,6 +12,10 @@
 	background: $greygrad, url(./webimages/KualaLumpur.jpg), no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	span {
+		font-weight: bold;
+		color: gold;
+	}
 
 	.container {
 		// background-color: rgb(56, 43, 71);
