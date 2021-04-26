@@ -1261,6 +1261,16 @@ section {
   margin-top: 1rem;
 }
 
+.Skill .icon_container img {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  margin-bottom: 1em;
+  margin-left: 1rem;
+  padding: 0;
+  border-radius: 20%;
+}
+
 .Skill .icon_container > * {
   padding: 1rem;
 }
@@ -1734,6 +1744,16 @@ section {
           align-items: flex-end;
   padding: 1rem;
   margin-top: 1rem;
+}
+
+.Skill .icon_container img {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  margin-bottom: 1em;
+  margin-left: 1rem;
+  padding: 0;
+  border-radius: 20%;
 }
 
 .Skill .icon_container > * {

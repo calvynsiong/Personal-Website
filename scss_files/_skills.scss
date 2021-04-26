@@ -61,6 +61,15 @@
 		align-items: flex-end;
 		padding: 1rem;
 		margin-top: 1rem;
+		img {
+			width: 2rem;
+			height: 2rem;
+			background-color: white;
+			margin-bottom: 1em;
+			margin-left: 1rem;
+			padding: 0;
+			border-radius: 20%;
+		}
 		& > * {
 			padding: 1rem;
 		}
