@@ -18,14 +18,11 @@
 	}
 
 	.container {
-		// background-color: rgb(56, 43, 71);
-		background: rgba(56, 43, 71, 0.3);
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-		backdrop-filter: blur(0px);
-		-webkit-backdrop-filter: blur(0px);
-		border-radius: 10px;
-		border: 1px solid rgba(255, 255, 255, 0.18);
-		// opacity: 0.8;
+		@include glass(
+			rgba(56, 43, 71, 0.3),
+			rgba(119, 34, 77, 0.37),
+			rgba(255, 255, 255, 0.18)
+		);
 		flex-flow: row wrap;
 		z-index: 100;
 		animation: fadeIn linear 2s;

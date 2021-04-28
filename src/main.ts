@@ -1,4 +1,4 @@
-let links = document.querySelectorAll(`.navlinks`) 
+let links = document.querySelectorAll(`.navlinks`) as NodeListOf<HTMLElement>
 
 console.log(links);
 
