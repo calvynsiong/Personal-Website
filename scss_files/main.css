@@ -943,10 +943,15 @@ section {
 }
 
 .Experiences {
+  padding-top: 5rem;
   display: -ms-grid;
   display: grid;
   background: #382b47;
   gap: 2em;
+}
+
+.Experiences h1 {
+  text-align: center;
 }
 
 .Experiences_1, .Experiences_2, .Experiences_3 {
@@ -1132,7 +1137,7 @@ section {
   display: grid;
   gap: 2rem;
   background: #382b47;
-  padding: 2rem;
+  padding: 5rem 2rem 2rem 2rem;
   text-align: center;
 }
 
@@ -1625,7 +1630,7 @@ section {
   display: grid;
   gap: 2rem;
   background: #382b47;
-  padding: 2rem;
+  padding: 5rem 2rem 2rem 2rem;
   text-align: center;
 }
 
