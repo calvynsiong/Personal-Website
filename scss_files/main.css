@@ -13,8 +13,6 @@ html {
 body {
   font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
-  min-width: 100vw;
-  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -468,8 +466,6 @@ html {
 body {
   font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
-  min-width: 100vw;
-  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -514,8 +510,6 @@ html {
 body {
   font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
-  min-width: 100vw;
-  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -572,12 +566,12 @@ section {
 
 #banner .container {
   background: rgba(56, 43, 71, 0.3);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(119, 34, 77, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(119, 34, 77, 0.37);
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
   border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1em;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -641,8 +635,6 @@ html {
 body {
   font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
-  min-width: 100vw;
-  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -680,6 +672,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  width: 100vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -688,7 +681,6 @@ section {
           align-items: center;
   background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
   background: linear-gradient(to right top, #4e54c8, #8f94fb);
-  width: 100vw;
   padding-top: 6em;
 }
 
@@ -757,6 +749,7 @@ section {
 }
 
 #Introduction .container > * {
+  max-width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20vw;
           flex: 1 1 20vw;
@@ -767,9 +760,13 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: rgba(56, 43, 71, 0.3);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(26, 23, 24, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(26, 23, 24, 0.37);
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+  border: 1px solid rgba(3, 3, 3, 0.18);
+  border-radius: 1em;
   border-radius: 2em;
   padding: 1.5rem;
   margin-bottom: 1rem;
@@ -861,17 +858,16 @@ section {
 }
 
 #Introduction .container .Photo-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   -webkit-box-shadow: none;
           box-shadow: none;
   background: none;
+  border: none;
 }
 
 #Introduction .container .Photo-box::after {
@@ -911,8 +907,6 @@ html {
 body {
   font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
-  min-width: 100vw;
-  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -943,11 +937,30 @@ section {
 }
 
 .Experiences {
-  padding-top: 5rem;
+  padding: 5rem 2rem 5rem 2rem;
   display: -ms-grid;
   display: grid;
   background: #382b47;
   gap: 2em;
+}
+
+@media (max-width: 300px) {
+  .Experiences {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100vw;
+    padding: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .Experiences h1 {
@@ -957,6 +970,8 @@ section {
 .Experiences_1, .Experiences_2, .Experiences_3 {
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+  background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
+  background: linear-gradient(to right top, #4e54c8, #8f94fb);
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -965,12 +980,9 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  justify-items: baseline;
   border-radius: 1em;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
-  background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
-  background: linear-gradient(to right top, #4e54c8, #8f94fb);
 }
 
 .Experiences_1::after, .Experiences_2::after, .Experiences_3::after {
@@ -1030,8 +1042,8 @@ section {
 }
 
 .Experiences .image {
-  width: clamp(8em, 15em, 20em);
-  height: clamp(8em, 15em, 20em);
+  width: CLAMP(8em, 15em, 20em);
+  height: CLAMP(8em, 15em, 20em);
   -ms-grid-column-align: center;
       justify-self: center;
 }
@@ -1101,8 +1113,6 @@ html {
 body {
   font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
-  min-width: 100vw;
-  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -1139,6 +1149,25 @@ section {
   background: #382b47;
   padding: 5rem 2rem 2rem 2rem;
   text-align: center;
+}
+
+@media (max-width: 300px) {
+  .Skill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100vw;
+    padding: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .Skill_1, .Skill_2, .Skill_3,
@@ -1408,8 +1437,6 @@ html {
 body {
   font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
-  min-width: 100vw;
-  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -1464,6 +1491,7 @@ footer {
 
 footer h1 {
   font-size: 3rem;
+  margin-top: 0.5em;
 }
 
 footer .Top_link {
@@ -1493,7 +1521,7 @@ footer .Quotes {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   gap: 2em;
-  margin: 2em auto;
+  margin: 2em 2em;
   font-size: 2rem;
 }
 
@@ -1513,8 +1541,20 @@ footer .Contact_links {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  gap: Min(8em, 5vw);
+  gap: Min(5em, 5vw);
   padding: 2rem;
+}
+
+@media (max-width: 610px) {
+  footer .Contact_links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 footer .Contact_links a {
@@ -1594,8 +1634,6 @@ html {
 body {
   font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
-  min-width: 100vw;
-  max-width: 100vw;
   color: white;
   background: white;
 }
@@ -1632,6 +1670,25 @@ section {
   background: #382b47;
   padding: 5rem 2rem 2rem 2rem;
   text-align: center;
+}
+
+@media (max-width: 300px) {
+  .Skill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100vw;
+    padding: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .Skill_1, .Skill_2, .Skill_3,

@@ -1,24 +1,33 @@
 @import 'variables', 'mixins', 'resets';
 
 .Experiences {
-	h1 {
-		text-align: center;
-	}
-	padding-top: 5rem;
+	padding: 5rem 2rem 5rem 2rem;
 	display: grid;
 	background: $clr4;
 	gap: 2em;
+
+	@media (max-width: 300px) {
+		display: flex;
+		flex-flow: column wrap;
+		flex-basis: 100%;
+		max-width: 100vw;
+		padding: 1rem;
+		justify-content: center;
+	}
+	h1 {
+		text-align: center;
+	}
 	&_1,
 	&_2,
 	&_3 {
 		box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+		background: $grad1;
 		padding: 1rem;
 		display: flex;
 		flex-flow: column;
-		justify-items: baseline;
 		border-radius: 1em;
 		transition: all 0.25s linear;
-		background: $grad1;
+		// background: ;
 		@include hover-darken();
 		&:hover,
 		&:active {
@@ -35,8 +44,8 @@
 	}
 
 	.image {
-		width: clamp(8em, 15em, 20em);
-		height: clamp(8em, 15em, 20em);
+		width: CLAMP(8em, 15em, 20em);
+		height: CLAMP(8em, 15em, 20em);
 		justify-self: center;
 		&_content {
 			border-radius: 50%;

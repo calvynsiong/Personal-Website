@@ -57,3 +57,12 @@
 		transform-origin: left;
 	}
 }
+
+@mixin glass($bgColor, $shadowColor, $borderColor, $blur: 0) {
+	background: $bgColor;
+	box-shadow: 0 8px 32px 0 $shadowColor;
+	backdrop-filter: blur($blur);
+	-webkit-backdrop-filter: blur($blur);
+	border: 1px solid $borderColor;
+	border-radius: 1em;
+}

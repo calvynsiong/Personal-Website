@@ -12,6 +12,7 @@ footer {
 	}
 	h1 {
 		font-size: 3rem;
+		margin-top: 0.5em;
 	}
 
 	.Top_link {
@@ -33,7 +34,7 @@ footer {
 		display: flex;
 		flex-flow: column wrap;
 		gap: 2em;
-		margin: 2em auto;
+		margin: 2em 2em;
 		font-size: 2rem;
 
 		p {
@@ -46,8 +47,13 @@ footer {
 		display: flex;
 		justify-content: center;
 		flex-flow: row wrap;
-		gap: Min(8em, 5vw);
+		gap: Min(5em, 5vw);
 		padding: 2rem;
+
+		@media (max-width: 610px) {
+			flex-direction: column;
+			align-items: center;
+		}
 
 		a {
 			color: white;
