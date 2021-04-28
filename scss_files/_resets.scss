@@ -1,6 +1,9 @@
 @import 'variables', 'mixins';
 
 // Some prefixes/utility classes
+html {
+	scroll-behavior: smooth;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -13,7 +16,6 @@ body {
 	overflow-x: hidden;
 	min-width: 100vw;
 	max-width: 100vw;
-
 	color: white;
 	background: white;
 }

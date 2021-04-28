@@ -102,8 +102,9 @@ nav {
 				color: gold;
 				transform: scale(1.2);
 				display: inline-block;
-				border-bottom: 2px solid gold;
-				transition: all 0.25s ease-in-out;
+				border-bottom: 0;
+				opacity: 1;
+				transition: all 0.05s linear;
 			}
 		}
 	}
@@ -146,6 +147,11 @@ nav {
 			a {
 				opacity: 1;
 				transition: opacity 0.25s ease-in-out 0.25s;
+			}
+
+			li:hover {
+				border-bottom: 2px solid gold;
+				transition: all 0.25s ease-in-out;
 			}
 		}
 	}

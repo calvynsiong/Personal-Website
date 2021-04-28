@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -187,9 +191,10 @@ nav ul li:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   display: inline-block;
-  border-bottom: 2px solid gold;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  border-bottom: 0;
+  opacity: 1;
+  -webkit-transition: all 0.05s linear;
+  transition: all 0.05s linear;
 }
 
 .link-1::after {
@@ -389,6 +394,11 @@ nav ul li:hover {
     -webkit-transition: opacity 0.25s ease-in-out 0.25s;
     transition: opacity 0.25s ease-in-out 0.25s;
   }
+  .nav-toggle:checked ~ nav li:hover {
+    border-bottom: 2px solid gold;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
 }
 
 .nav-toggle-label {
@@ -435,6 +445,10 @@ nav ul li:hover {
   background-color: rgba(255, 255, 250, 0.2);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -475,6 +489,10 @@ section {
 .img {
   max-width: 100%;
   display: block;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -598,6 +616,10 @@ section {
   padding: 2em;
   font-size: 1.5em;
   z-index: -1;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -866,6 +888,10 @@ section {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1045,6 +1071,10 @@ section {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -1350,6 +1380,10 @@ section {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1530,6 +1564,10 @@ footer .Contact_links > * {
       -ms-flex-direction: row wrap;
           flex-direction: row wrap;
   gap: 2em;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {

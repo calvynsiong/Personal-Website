@@ -1,4 +1,4 @@
-let links = document.querySelectorAll(`.navlinks`)
+let links = document.querySelectorAll(`.navlinks`) 
 
 console.log(links);
 
