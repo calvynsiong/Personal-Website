@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-size: clamp(0.2rem, 1rem, 1.1rem);
+  font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
   min-width: 100vw;
   max-width: 100vw;
@@ -466,7 +466,7 @@ html {
 }
 
 body {
-  font-size: clamp(0.2rem, 1rem, 1.1rem);
+  font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
   min-width: 100vw;
   max-width: 100vw;
@@ -512,7 +512,7 @@ html {
 }
 
 body {
-  font-size: clamp(0.2rem, 1rem, 1.1rem);
+  font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
   min-width: 100vw;
   max-width: 100vw;
@@ -639,7 +639,7 @@ html {
 }
 
 body {
-  font-size: clamp(0.2rem, 1rem, 1.1rem);
+  font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
   min-width: 100vw;
   max-width: 100vw;
@@ -909,7 +909,7 @@ html {
 }
 
 body {
-  font-size: clamp(0.2rem, 1rem, 1.1rem);
+  font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
   min-width: 100vw;
   max-width: 100vw;
@@ -1099,7 +1099,7 @@ html {
 }
 
 body {
-  font-size: clamp(0.2rem, 1rem, 1.1rem);
+  font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
   min-width: 100vw;
   max-width: 100vw;
@@ -1406,7 +1406,7 @@ html {
 }
 
 body {
-  font-size: clamp(0.2rem, 1rem, 1.1rem);
+  font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
   min-width: 100vw;
   max-width: 100vw;
@@ -1592,7 +1592,7 @@ html {
 }
 
 body {
-  font-size: clamp(0.2rem, 1rem, 1.1rem);
+  font-size: clamp(0.2rem, 1.2rem, 1.4rem);
   overflow-x: hidden;
   min-width: 100vw;
   max-width: 100vw;
