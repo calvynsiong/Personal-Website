@@ -170,6 +170,11 @@ nav ul li {
   font-size: clamp(0.8rem, 1rem, 1.1rem);
 }
 
+nav ul li:hover {
+  border-bottom: 2px solid gold;
+  color: gold;
+}
+
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -184,12 +189,15 @@ nav ul li a {
   nav ul li a {
     opacity: 1;
   }
+  nav ul li a:hover {
+    border-bottom: 2px solid gold;
+  }
 }
 
 nav ul li:hover {
   color: gold;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   display: inline-block;
   border-bottom: 0;
   opacity: 1;

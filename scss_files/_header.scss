@@ -84,6 +84,10 @@ nav {
 			margin-right: 0.5em;
 			font-weight: 600;
 			font-size: clamp(0.8rem, 1rem, 1.1rem);
+			&:hover {
+				border-bottom: 2px solid gold;
+				color: gold;
+			}
 
 			a {
 				color: white;
@@ -95,12 +99,14 @@ nav {
 
 				@media (min-width: $desktop) {
 					opacity: 1;
+					&:hover {
+						border-bottom: 2px solid gold;
+					}
 				}
 			}
-
 			&:hover {
 				color: gold;
-				transform: scale(1.2);
+				transform: scale(1.1);
 				display: inline-block;
 				border-bottom: 0;
 				opacity: 1;
