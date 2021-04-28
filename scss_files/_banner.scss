@@ -28,6 +28,16 @@
 		// opacity: 0.8;
 		flex-flow: row wrap;
 		z-index: 100;
+		animation: fadeIn linear 2s;
+
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
 
 		@media (max-width: $phone) {
 			font-size: 0.5em;
@@ -35,18 +45,8 @@
 		h1 {
 			padding: 1em;
 			flex-wrap: wrap;
-			animation: fadeIn linear 2s;
 			object-fit: contain;
 			font-size: clamp(1vw, 2em, 5rem);
-
-			@keyframes fadeIn {
-				0% {
-					opacity: 0;
-				}
-				100% {
-					opacity: 1;
-				}
-			}
 		}
 		p {
 			padding: 2em;

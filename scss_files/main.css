@@ -583,23 +583,8 @@ section {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   z-index: 100;
-}
-
-@media (max-width: 320px) {
-  #banner .container {
-    font-size: 0.5em;
-  }
-}
-
-#banner .container h1 {
-  padding: 1em;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-animation: fadeIn linear 2s;
           animation: fadeIn linear 2s;
-  -o-object-fit: contain;
-     object-fit: contain;
-  font-size: clamp(1vw, 2em, 5rem);
 }
 
 @-webkit-keyframes fadeIn {
@@ -618,6 +603,21 @@ section {
   100% {
     opacity: 1;
   }
+}
+
+@media (max-width: 320px) {
+  #banner .container {
+    font-size: 0.5em;
+  }
+}
+
+#banner .container h1 {
+  padding: 1em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -o-object-fit: contain;
+     object-fit: contain;
+  font-size: clamp(1vw, 2em, 5rem);
 }
 
 #banner .container p {
