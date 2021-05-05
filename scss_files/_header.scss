@@ -7,11 +7,14 @@ header {
 	display: flex;
 	justify-content: space-around;
 	position: fixed;
+	transition: opacity .5s ease-in;
+	opacity: 1;
 	width: 100vw;
 	z-index: 1000;
 	margin-bottom: 1rem;
 	background: $clr4;
 	justify-content: center;
+
 
 	@media (min-width: $desktop) {
 		justify-content: space-between;
@@ -117,29 +120,29 @@ nav {
 }
 
 // Creating hover effect for links
-@for $i from 1 through 6 {
-	.link-#{$i}::after {
-		position: absolute;
-		top: calc((#{$i}-1) * 15%);
-		right: 0;
-		content: '';
-		width: 100%;
-		height: 12%;
-		background-color: black;
-		z-index: -1;
-		transform: scaleX(0);
-		transform-origin: left;
-		transition: all 0.25s ease-in;
-		@media (min-width: $desktop) {
-			visibility: hidden;
-		}
+// @for $i from 1 through 6 {
+// 	.link-#{$i}::after {
+// 		position: absolute;
+// 		top: calc((#{$i}-1) * 15%);
+// 		right: 0;
+// 		content: 'sdsd';
+// 		width: 100%;
+// 		height: 12%;
+// 		background-color: black;
+// 		z-index: -1;
+// 		transform: scaleX(0);
+// 		transform-origin: left;
+// 		transition: all 0.25s ease-in;
+// 		@media (min-width: $desktop) {
+// 			visibility: hidden;
+// 		}
 
-		.link-#{$i}:hover::after {
-			transform: scaleX(1);
-			transform-origin: right;
-		}
-	}
-}
+// 		.link-#{$i}:hover::after {
+// 			transform: scaleX(1);
+// 			transform-origin: right;
+// 		}
+// 	}
+// }
 
 // Expandable section with menu icon + hover effects
 .nav-toggle {
