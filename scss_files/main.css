@@ -1004,7 +1004,7 @@ section {
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   border-radius: 1rem;
   position: relative;
-  padding: 1em 2em 3em;
+  padding: 1em 2em 2.5em;
   background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
   background: linear-gradient(to right top, #4e54c8, #8f94fb);
   -webkit-transition: all 0.25s linear;
@@ -1086,6 +1086,7 @@ section {
 .Skill .Project_4 a,
 .Skill .Project_5 a {
   text-decoration: none;
+  color: white;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
@@ -1125,6 +1126,16 @@ section {
 .Skill .Project_5 a h1:active {
   color: gold;
   text-decoration: underline;
+}
+
+.Skill_1 .link, .Skill_2 .link, .Skill_3 .link,
+.Skill .Future_plan .link,
+.Skill .Project_1 .link,
+.Skill .Project_2 .link,
+.Skill .Project_3 .link,
+.Skill .Project_4 .link,
+.Skill .Project_5 .link {
+  color: gold;
 }
 
 .Skill_1:hover, .Skill_1:active, .Skill_2:hover, .Skill_2:active, .Skill_3:hover, .Skill_3:active,
@@ -1557,7 +1568,7 @@ section {
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   border-radius: 1rem;
   position: relative;
-  padding: 1em 2em 3em;
+  padding: 1em 2em 2.5em;
   background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
   background: linear-gradient(to right top, #4e54c8, #8f94fb);
   -webkit-transition: all 0.25s linear;
@@ -1639,6 +1650,7 @@ section {
 .Skill .Project_4 a,
 .Skill .Project_5 a {
   text-decoration: none;
+  color: white;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
@@ -1678,6 +1690,16 @@ section {
 .Skill .Project_5 a h1:active {
   color: gold;
   text-decoration: underline;
+}
+
+.Skill_1 .link, .Skill_2 .link, .Skill_3 .link,
+.Skill .Future_plan .link,
+.Skill .Project_1 .link,
+.Skill .Project_2 .link,
+.Skill .Project_3 .link,
+.Skill .Project_4 .link,
+.Skill .Project_5 .link {
+  color: gold;
 }
 
 .Skill_1:hover, .Skill_1:active, .Skill_2:hover, .Skill_2:active, .Skill_3:hover, .Skill_3:active,

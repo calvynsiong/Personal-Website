@@ -30,7 +30,7 @@
 		box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 		border-radius: 1rem;
 		position: relative;
-		padding: 1em 2em 3em;
+		padding: 1em 2em 2.5em;
 		background: $grad1;
 		transition: all 0.25s linear;
 		max-width: 100%;
@@ -40,6 +40,7 @@
 		}
 		a {
 			text-decoration: none;
+			color: white;
 			transition: all 0.25s ease;
 			&:hover,
 			&:active {
@@ -50,6 +51,10 @@
 				color: gold;
 				text-decoration: underline;
 			}
+		}
+		
+		.link{
+			color: gold;
 		}
 
 		&:hover,
