@@ -765,6 +765,7 @@ section {
   display: grid;
   background: #382b47;
   gap: 2em;
+  max-width: 100vw;
 }
 
 @media (max-width: 300px) {
@@ -786,29 +787,34 @@ section {
   }
 }
 
-.Experiences h1 {
+.Experiences h1,
+.Experiences h2 {
   text-align: center;
 }
 
-.Experiences_1, .Experiences_2, .Experiences_3 {
+.Experiences_1, .Experiences_2, .Experiences_3, .Experiences_4, .Experiences_5 {
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
   background: linear-gradient(to right top, #4e54c8, #8f94fb);
-  padding: 1rem;
+  padding: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 1em;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
 }
 
-.Experiences_1::after, .Experiences_2::after, .Experiences_3::after {
+.Experiences_1::after, .Experiences_2::after, .Experiences_3::after, .Experiences_4::after, .Experiences_5::after {
   position: absolute;
   content: '';
   background: #1f1926;
@@ -828,7 +834,7 @@ section {
   transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
 }
 
-.Experiences_1:hover, .Experiences_2:hover, .Experiences_3:hover {
+.Experiences_1:hover, .Experiences_2:hover, .Experiences_3:hover, .Experiences_4:hover, .Experiences_5:hover {
   border-radius: 2em;
   -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
           transform: translate3D(0, -1px, 0) scale(1.06);
@@ -836,7 +842,7 @@ section {
           box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 15px;
 }
 
-.Experiences_1:hover::after, .Experiences_2:hover::after, .Experiences_3:hover::after {
+.Experiences_1:hover::after, .Experiences_2:hover::after, .Experiences_3:hover::after, .Experiences_4:hover::after, .Experiences_5:hover::after {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: top left;
@@ -844,12 +850,12 @@ section {
   border-radius: 2em;
 }
 
-.Experiences_1:hover, .Experiences_1:active, .Experiences_2:hover, .Experiences_2:active, .Experiences_3:hover, .Experiences_3:active {
+.Experiences_1:hover, .Experiences_1:active, .Experiences_2:hover, .Experiences_2:active, .Experiences_3:hover, .Experiences_3:active, .Experiences_4:hover, .Experiences_4:active, .Experiences_5:hover, .Experiences_5:active {
   -webkit-transform: translateY(-1em);
           transform: translateY(-1em);
 }
 
-.Experiences_1 > * + *, .Experiences_2 > * + *, .Experiences_3 > * + * {
+.Experiences_1 > * + *, .Experiences_2 > * + *, .Experiences_3 > * + *, .Experiences_4 > * + *, .Experiences_5 > * + * {
   margin-top: 1em;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -879,35 +885,19 @@ section {
      object-fit: cover;
 }
 
-@media (min-width: 1114px) {
+@media (min-width: 1024px) {
   .Experiences {
     -ms-grid-rows: 0.1fr 1fr;
         grid-template-rows: 0.1fr 1fr;
-    gap: 2rem;
+    gap: 1em;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
   .Experiences_title {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
     place-self: center;
-  }
-  .Experiences_1, .Experiences_2, .Experiences_3 {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    text-align: center;
   }
   .Experiences_title {
     display: -webkit-box;
@@ -986,7 +976,7 @@ section {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100vw;
-    padding: 1rem;
+    padding: 1em;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -997,7 +987,9 @@ section {
 .Skill .Future_plan,
 .Skill .Project_1,
 .Skill .Project_2,
-.Skill .Project_3 {
+.Skill .Project_3,
+.Skill .Project_4,
+.Skill .Project_5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1012,7 +1004,7 @@ section {
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   border-radius: 1rem;
   position: relative;
-  padding: 3em 0;
+  padding: 1em 2em 3em;
   background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
   background: linear-gradient(to right top, #4e54c8, #8f94fb);
   -webkit-transition: all 0.25s linear;
@@ -1024,7 +1016,9 @@ section {
 .Skill .Future_plan::after,
 .Skill .Project_1::after,
 .Skill .Project_2::after,
-.Skill .Project_3::after {
+.Skill .Project_3::after,
+.Skill .Project_4::after,
+.Skill .Project_5::after {
   position: absolute;
   content: '';
   background: #1f1926;
@@ -1048,7 +1042,9 @@ section {
 .Skill .Future_plan:hover,
 .Skill .Project_1:hover,
 .Skill .Project_2:hover,
-.Skill .Project_3:hover {
+.Skill .Project_3:hover,
+.Skill .Project_4:hover,
+.Skill .Project_5:hover {
   border-radius: 2em;
   -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
           transform: translate3D(0, -1px, 0) scale(1.06);
@@ -1060,7 +1056,9 @@ section {
 .Skill .Future_plan:hover::after,
 .Skill .Project_1:hover::after,
 .Skill .Project_2:hover::after,
-.Skill .Project_3:hover::after {
+.Skill .Project_3:hover::after,
+.Skill .Project_4:hover::after,
+.Skill .Project_5:hover::after {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: top left;
@@ -1073,7 +1071,9 @@ section {
   .Skill .Future_plan,
   .Skill .Project_1,
   .Skill .Project_2,
-  .Skill .Project_3 {
+  .Skill .Project_3,
+  .Skill .Project_4,
+  .Skill .Project_5 {
     font-size: 0.8em;
   }
 }
@@ -1082,7 +1082,9 @@ section {
 .Skill .Future_plan a,
 .Skill .Project_1 a,
 .Skill .Project_2 a,
-.Skill .Project_3 a {
+.Skill .Project_3 a,
+.Skill .Project_4 a,
+.Skill .Project_5 a {
   text-decoration: none;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -1096,7 +1098,11 @@ section {
 .Skill .Project_2 a:hover,
 .Skill .Project_2 a:active,
 .Skill .Project_3 a:hover,
-.Skill .Project_3 a:active {
+.Skill .Project_3 a:active,
+.Skill .Project_4 a:hover,
+.Skill .Project_4 a:active,
+.Skill .Project_5 a:hover,
+.Skill .Project_5 a:active {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -1112,7 +1118,11 @@ section {
 .Skill .Project_2 a h1:hover,
 .Skill .Project_2 a h1:active,
 .Skill .Project_3 a h1:hover,
-.Skill .Project_3 a h1:active {
+.Skill .Project_3 a h1:active,
+.Skill .Project_4 a h1:hover,
+.Skill .Project_4 a h1:active,
+.Skill .Project_5 a h1:hover,
+.Skill .Project_5 a h1:active {
   color: gold;
   text-decoration: underline;
 }
@@ -1125,7 +1135,11 @@ section {
 .Skill .Project_2:hover,
 .Skill .Project_2:active,
 .Skill .Project_3:hover,
-.Skill .Project_3:active {
+.Skill .Project_3:active,
+.Skill .Project_4:hover,
+.Skill .Project_4:active,
+.Skill .Project_5:hover,
+.Skill .Project_5:active {
   -webkit-transform: translateY(-1em);
           transform: translateY(-1em);
 }
@@ -1134,8 +1148,10 @@ section {
 .Skill .Future_plan > *,
 .Skill .Project_1 > *,
 .Skill .Project_2 > *,
-.Skill .Project_3 > * {
-  padding: 1rem;
+.Skill .Project_3 > *,
+.Skill .Project_4 > *,
+.Skill .Project_5 > * {
+  padding: 0.5em 1.5em;
 }
 
 .Skill .icon_container {
@@ -1232,9 +1248,9 @@ section {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4/5;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
   }
   .Skill .Project_1,
   .Skill .Project_2,
@@ -1242,6 +1258,12 @@ section {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     grid-row: 5/6;
+  }
+  .Skill .Project_4,
+  .Skill .Project_5 {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
   }
 }
 
@@ -1507,7 +1529,7 @@ section {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100vw;
-    padding: 1rem;
+    padding: 1em;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1518,7 +1540,9 @@ section {
 .Skill .Future_plan,
 .Skill .Project_1,
 .Skill .Project_2,
-.Skill .Project_3 {
+.Skill .Project_3,
+.Skill .Project_4,
+.Skill .Project_5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1533,7 +1557,7 @@ section {
           box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   border-radius: 1rem;
   position: relative;
-  padding: 3em 0;
+  padding: 1em 2em 3em;
   background: -webkit-gradient(linear, left bottom, right top, from(#4e54c8), to(#8f94fb));
   background: linear-gradient(to right top, #4e54c8, #8f94fb);
   -webkit-transition: all 0.25s linear;
@@ -1545,7 +1569,9 @@ section {
 .Skill .Future_plan::after,
 .Skill .Project_1::after,
 .Skill .Project_2::after,
-.Skill .Project_3::after {
+.Skill .Project_3::after,
+.Skill .Project_4::after,
+.Skill .Project_5::after {
   position: absolute;
   content: '';
   background: #1f1926;
@@ -1569,7 +1595,9 @@ section {
 .Skill .Future_plan:hover,
 .Skill .Project_1:hover,
 .Skill .Project_2:hover,
-.Skill .Project_3:hover {
+.Skill .Project_3:hover,
+.Skill .Project_4:hover,
+.Skill .Project_5:hover {
   border-radius: 2em;
   -webkit-transform: translate3D(0, -1px, 0) scale(1.06);
           transform: translate3D(0, -1px, 0) scale(1.06);
@@ -1581,7 +1609,9 @@ section {
 .Skill .Future_plan:hover::after,
 .Skill .Project_1:hover::after,
 .Skill .Project_2:hover::after,
-.Skill .Project_3:hover::after {
+.Skill .Project_3:hover::after,
+.Skill .Project_4:hover::after,
+.Skill .Project_5:hover::after {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: top left;
@@ -1594,7 +1624,9 @@ section {
   .Skill .Future_plan,
   .Skill .Project_1,
   .Skill .Project_2,
-  .Skill .Project_3 {
+  .Skill .Project_3,
+  .Skill .Project_4,
+  .Skill .Project_5 {
     font-size: 0.8em;
   }
 }
@@ -1603,7 +1635,9 @@ section {
 .Skill .Future_plan a,
 .Skill .Project_1 a,
 .Skill .Project_2 a,
-.Skill .Project_3 a {
+.Skill .Project_3 a,
+.Skill .Project_4 a,
+.Skill .Project_5 a {
   text-decoration: none;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -1617,7 +1651,11 @@ section {
 .Skill .Project_2 a:hover,
 .Skill .Project_2 a:active,
 .Skill .Project_3 a:hover,
-.Skill .Project_3 a:active {
+.Skill .Project_3 a:active,
+.Skill .Project_4 a:hover,
+.Skill .Project_4 a:active,
+.Skill .Project_5 a:hover,
+.Skill .Project_5 a:active {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -1633,7 +1671,11 @@ section {
 .Skill .Project_2 a h1:hover,
 .Skill .Project_2 a h1:active,
 .Skill .Project_3 a h1:hover,
-.Skill .Project_3 a h1:active {
+.Skill .Project_3 a h1:active,
+.Skill .Project_4 a h1:hover,
+.Skill .Project_4 a h1:active,
+.Skill .Project_5 a h1:hover,
+.Skill .Project_5 a h1:active {
   color: gold;
   text-decoration: underline;
 }
@@ -1646,7 +1688,11 @@ section {
 .Skill .Project_2:hover,
 .Skill .Project_2:active,
 .Skill .Project_3:hover,
-.Skill .Project_3:active {
+.Skill .Project_3:active,
+.Skill .Project_4:hover,
+.Skill .Project_4:active,
+.Skill .Project_5:hover,
+.Skill .Project_5:active {
   -webkit-transform: translateY(-1em);
           transform: translateY(-1em);
 }
@@ -1655,8 +1701,10 @@ section {
 .Skill .Future_plan > *,
 .Skill .Project_1 > *,
 .Skill .Project_2 > *,
-.Skill .Project_3 > * {
-  padding: 1rem;
+.Skill .Project_3 > *,
+.Skill .Project_4 > *,
+.Skill .Project_5 > * {
+  padding: 0.5em 1.5em;
 }
 
 .Skill .icon_container {
@@ -1753,9 +1801,9 @@ section {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4/5;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
   }
   .Skill .Project_1,
   .Skill .Project_2,
@@ -1763,6 +1811,12 @@ section {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     grid-row: 5/6;
+  }
+  .Skill .Project_4,
+  .Skill .Project_5 {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
   }
 }
 /*# sourceMappingURL=main.css.map */

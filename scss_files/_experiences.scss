@@ -5,6 +5,7 @@
 	display: grid;
 	background: $clr4;
 	gap: 2em;
+	max-width: 100vw;
 
 	@media (max-width: 300px) {
 		display: flex;
@@ -14,19 +15,25 @@
 		padding: 1rem;
 		justify-content: center;
 	}
-	h1 {
+	h1,
+	h2 {
 		text-align: center;
 	}
+
 	&_1,
 	&_2,
-	&_3 {
+	&_3,
+	&_4,
+	&_5 {
 		box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 		background: $grad1;
-		padding: 1rem;
+		padding: 2em;
 		display: flex;
-		flex-flow: column;
+		flex-direction: column;
 		border-radius: 1em;
 		transition: all 0.25s linear;
+		justify-content: space-between;
+		text-align: center;
 		// background: ;
 		@include hover-darken();
 		&:hover,
@@ -39,6 +46,7 @@
 			align-self: center;
 		}
 	}
+
 	@media (max-width: $phone) {
 		font-size: 0.8em;
 	}
@@ -54,24 +62,14 @@
 			object-fit: cover;
 		}
 	}
-	@media (min-width: $desktop +90px) {
+	@media (min-width: $desktop) {
 		grid-template-rows: 0.1fr 1fr;
-		gap: 2rem;
+		gap: 1em;
 		grid-template-columns: repeat(3, 1fr);
 
 		&_title {
-			grid-column: 2/3;
+			grid-column: 1/4;
 			place-self: center;
-		}
-
-		&_1,
-		&_2,
-		&_3 {
-			grid-row: 2/3;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			text-align: center;
 		}
 
 		&_title {
