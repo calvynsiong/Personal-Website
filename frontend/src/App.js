@@ -21,7 +21,7 @@ function App () {
           setTheme={setTheme}
         ></Header>
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/'> <Home theme={theme}/>  </Route>
           <Route exact path='/about' component={About} />
           <Route exact path='/experiences' component={Experiences} />
           <Route exact path='/projects' component={Projects} />
