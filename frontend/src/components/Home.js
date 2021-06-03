@@ -20,9 +20,18 @@ const Home = ({ theme }) => {
             .
           </p>
           <p className='text-xl mb-4'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab optio
-            tempore qui nemo architecto voluptates facere et earum ipsum
-            obcaecati.
+            Currently in my sophomore year in McMaster University studying
+            Software Engineering. Focused on learning full stack development.
+          </p>
+          <p className='text-xl mb-4'>
+            Reach out to me on{' '}
+            <a
+              href='https://www.instagram.com/calvynsg'
+              className='dark:hover:text-yellow-300 dark:hover:border-yellow-300 underline'
+            >
+              Instagram
+            </a>
+            !
           </p>
         </div>
         <img
