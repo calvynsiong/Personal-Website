@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.nav-link {
+		@apply inline-block -mb-1 hover:border-b-2 hover:border-yellow-700 duration-100 hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:-translate-y-1;
+	}
+}

@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaStickyNote, FaWix } from 'react-icons/fa'
+import {AiOutlineMail } from 'react-icons/ai'
 
 export const socialIcons = [
   {
@@ -21,9 +22,15 @@ export const socialIcons = [
       'https://drive.google.com/file/d/1034uHEAh65yfjqBw3WYtrylDt2o3I6eC/view?usp=sharing'
   },
   {
+    icon: <AiOutlineMail size={30} />,
+    desc: 'Email',
+    username: 'calvyn360@gmail.com',
+    link: 'https://calvyn360.wixsite.com/website'
+  },
+  {
     icon: <FaWix size={30} />,
     desc: 'First Year Portfolio',
     username: 'School projects',
     link: 'https://calvyn360.wixsite.com/website'
-  }
+  },
 ]
