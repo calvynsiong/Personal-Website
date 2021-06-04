@@ -28,13 +28,20 @@ function App () {
     if (category.includes('All')) {
       setSkill(skills)
       return
-    } else if (category.includes('All Projects')) {
+    }
+    const newSkills = skills.filter(skill => skill.category.includes(category))
+
+    setSkill(newSkills)
+  }
+
+  const filterProjects = category => {
+    if (category.includes('All Projects')) {
       setProjects(sideProjects)
       return
     }
-    const newSkills = skills.filter(skill => skill.category.includes(category))
-    setSkill(newSkills)
-    setProjects(newSkills)
+    const newProjects = sideProjects.filter(project => project.category.includes(category)
+    )
+    setProjects(newProjects)
   }
 
   return (
@@ -54,9 +61,9 @@ function App () {
           <Route exact path='/experiences' component={Experiences} />
           <Route exact path='/projects'>
             <Projects
-              filterCategories={filterCategories}
+              filterProjects={filterProjects}
               categories={allProjects}
-              skills={projects}
+              projects={projects}
             ></Projects>
           </Route>
           <Route exact path='/skills'>

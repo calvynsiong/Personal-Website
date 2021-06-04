@@ -41,13 +41,17 @@ const Skills = ({ filterCategories, categories, skills }) => {
 
   return (
     <div className='container'>
-      <h1 className='h1'>Tech Stack</h1>
-      <div className='flex items-center justify-center flex-wrap gap-6 px-5 mb-4'>
+      <h1 className='h1 '>Tech Stack</h1>
+      <div className='flex items-center justify-center flex-wrap mb-4 px-8'>
         {categories.map((type, index) => {
           return (
             <button
               key={index}
-              className='categories'
+              className={`categories ${
+                index === 0 ? `sm:rounded-l-xl` : null
+              } ${
+                index === categories.length - 1 ? `sm:rounded-r-xl` : null
+              }`}
               onClick={() => {
                 filterCategories(type)
               }}
@@ -64,7 +68,7 @@ const Skills = ({ filterCategories, categories, skills }) => {
             return (
               <div className='flex flex-col relative'>
                 <div className='flex-col flex group'>
-                  <div className='flex flex-col justify-between items-center'>
+                  <div className='flex flex-col justify-between items-center '>
                     <button
                       key={id}
                       onClick={() => openModal(id)}
@@ -90,7 +94,7 @@ const Skills = ({ filterCategories, categories, skills }) => {
             )
           })}
       </div>
-      <h1 className='h1'>Currently or Looking to Learn {dots}</h1>
+      <h1 className='h1 mb-6'>Currently or Looking to Learn {dots}</h1>
       <article
         ref={futureSkillSection}
         className='flex gap-16 px-14 mt-4 pb-8 flex-wrap relative'

@@ -25,52 +25,117 @@ import {
 } from 'react-icons/si'
 import matlab from '../assets/matlab.png'
 import express from '../assets/express.jpg'
-
-export const highlights = [
-  {
-    id: Math.floor(Math.random() * 100000000),
-    category: ['Web Development'],
-    url: [],
-    desc: '',
-    img: ''
-  }
-]
+import hand from '../assets/hand.png'
+import roboticarm from '../assets/roboticarm.jpg'
+import birthday from '../assets/birthday.webp'
 
 export const sideProjects = [
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Web Development'],
-    url: [],
-    desc: '',
-    img: ''
+    category: ['🌐 Web Development', '🤝 Collaborative'],
+    name: 'VaccineInfo',
+    url: 'https://github.com/calvynsiong/CovidInfo.git',
+    live: 'https://vaccine-info.herokuapp.com/',
+    desc:
+      'React website that displays global COVID-19 statistics and Canadian vaccine information/progress based on province. 1st Place winner at TOHacks.',
+    stack: 'React, Bootstrap, MaterialUI, Sass',
+    img: 'https://vaccine-info.herokuapp.com/images/logo.svg',
+    highlight: true
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Full Stack '],
-    url: [],
-    desc: '',
-    img: ''
+    category: ['🌐 Web Development'],
+    name: 'Ecommerce',
+    url: 'https://github.com/calvynsiong/Ecommerce.git',
+    live: 'https://eccommercebycalvyn.herokuapp.com/',
+    desc:
+      'Simple Ecommerce site built with MERN stack and Redux for state management.',
+    stack: 'React, Node.js, Express.js, MongoDB, Redux, MaterialUI',
+    img: 'https://i.imgur.com/3wYqcF6.png',
+    highlight: true
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Web Development'],
-    url: [],
-    desc: '',
-    img: ''
-  }
+    category: ['🐍 Python'],
+    name: 'Finger Tracker',
+    url: 'https://github.com/calvynsiong/FingerTracker.git',
+    live:
+      'https://drive.google.com/file/d/1bRurwnWMewoY-uSxBFS12-bWIdWHRbTb/view?usp=sharing',
+    desc:
+      "A finger tracking program created with the OpenCV and MediaPipe library. Detects the coordinates of each finger node to determine the hand's location.",
+    stack: 'Python',
+    img: hand,
+    highlight: true
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['🐍 Python', '🤝 Collaborative'],
+    name: 'Automated robotic arm',
+    url:
+      'https://github.com/calvynsiong/Automated-sensing-system-for-robotic-arm.git',
+    desc:
+      "A finger tracking program created with the OpenCV and MediaPipe library. Detects the coordinates of each finger node to determine the hand's location.",
+    stack: 'Python',
+    img: roboticarm
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['🌐 Web Development'],
+    name: 'To Do List',
+    url: 'https://github.com/calvynsiong/To-Do-List.git',
+    live: 'https://checklistbycalvyn.netlify.app/ ',
+    desc:
+      'A To Do list made with React as well as the useReducer hook for state management',
+    stack: 'React, Sass',
+    img: 'https://i.imgur.com/A6MKnkV.png'
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['🌐 Web Development'],
+    name: 'Basic Reddit Clone',
+    url: 'https://github.com/calvynsiong/Reddit-Clone.git',
+    live: 'https://simpleredditclone.netlify.app/ ',
+    desc:
+      'A simple Reddit front page clone with redesigned components. This project was used to practise React concepts and try out MaterialUI.',
+    stack: 'React, MaterialUI',
+    img:
+      'https://www.logo.wine/a/logo/Reddit/Reddit-Vertical-Color-Logo.wine.svg'
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['🌐 Web Development'],
+    name: 'Birthday Reminders',
+    url: 'https://github.com/calvynsiong/BirthdayReminderWebsite.git',
+    live: 'https://macengbdayreminders.netlify.app/ ',
+    desc:
+      "My first ever React project. Made to track my friends' birthdays.",
+    stack: 'React, Tailwind',
+    img:birthday
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['🌐 Web Development'],
+    name: 'Menu website',
+    url: 'https://github.com/calvynsiong/BirthdayReminderWebsite.git',
+    live: 'https://myheritagerestaurant.netlify.app/ ',
+    desc:
+      "A single page website made with React and styled components. Learned how to map over data and destructure them to be used with components. Finally learned the beauty of implementing dark mode.",
+    stack: 'React, Tailwind',
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYAXy-rKS_1RjEH6CjpNjKuJdmEf-66m44cg&usqp=CAU"
+  },
 ]
 
 export const skills = [
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Languages'],
+    category: ['🔣 Languages'],
     name: 'Python',
     icon: <FaPython size={30} />,
-    desc: `As my first programming language, I am most experienced in Python. I am knowledgable with concepts such as simple data structures (dictionaries, lists, tuples), list comprehension, functions, error handling and object oriented programming. I have also utilised different Python packages such as OpenCV, Matplotlib, NumPy and Mediapipe. I plan to learn Django and Flask for web development, as well as learn web scraping for future purposes.`
+    desc: `As my first programming language, I am most experienced in Python. I am knowledgable with concepts such as simple data structures (dictionaries, lists, tuples), list comprehension, functions, error handling and object oriented programming. I have also utilised different Python packages such as OpenCV, Matplotlib, NumPy and Mediapipe. I plan to learn Django and Flask for 🌐 web development, as well as learn web scraping for future purposes.`
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Framework/Libraries', 'Web Dev'],
+    category: ['📚 Framework/Libraries', '🌐 Web Dev'],
     name: 'React',
     icon: <FaReact size={30} />,
     desc:
@@ -78,7 +143,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Web Dev'],
+    category: ['🌐 Web Dev'],
     name: 'HTML',
     icon: <FaHtml5 size={30} />,
     desc:
@@ -86,7 +151,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Web Dev'],
+    category: ['🌐 Web Dev'],
     name: 'CSS',
     icon: <FaCss3Alt size={30} />,
     desc:
@@ -94,7 +159,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Web Dev'],
+    category: ['🌐 Web Dev'],
     name: 'SASS',
     icon: <FaSass size={30} />,
     desc:
@@ -102,7 +167,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Languages', 'Web Dev'],
+    category: ['🔣 Languages', '🌐 Web Dev'],
     name: 'JavaScript',
     icon: <SiJavascript size={30} />,
     desc:
@@ -110,7 +175,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Languages'],
+    category: ['🔣 Languages'],
     name: 'MATLAB',
     icon: (
       <img
@@ -124,7 +189,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Tools', 'Web Dev'],
+    category: ['⚙️ Tools', '🌐 Web Dev'],
     name: 'MongoDB',
     icon: <SiMongodb size={30} />,
     desc:
@@ -132,7 +197,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Framework/Libraries', 'Web Dev'],
+    category: ['📚 Framework/Libraries', '🌐 Web Dev'],
     name: 'Node.js',
     icon: <FaNodeJs size={30} />,
     desc:
@@ -140,7 +205,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Framework/Libraries', 'Web Dev'],
+    category: ['📚 Framework/Libraries', '🌐 Web Dev'],
     name: 'Express.js',
     icon: (
       <img
@@ -154,7 +219,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Tools'],
+    category: ['⚙️ Tools'],
     name: 'Git',
     icon: <FaGit size={30} />,
     desc:
@@ -162,7 +227,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Tools'],
+    category: ['⚙️ Tools'],
     name: 'Netlify',
     icon: <SiNetlify size={30} />,
     desc:
@@ -170,7 +235,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Tools'],
+    category: ['⚙️ Tools'],
     name: 'Heroku',
     icon: <SiHeroku size={30} />,
     desc:
@@ -178,7 +243,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Web Dev', 'Framework/Libraries'],
+    category: ['🌐 Web Dev', '📚 Framework/Libraries'],
     name: 'Material UI',
     icon: <SiMaterialUi size={30} />,
     desc:
@@ -186,7 +251,7 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Web Dev', 'Framework/Libraries'],
+    category: ['🌐 Web Dev', '📚 Framework/Libraries'],
     name: 'Tailwind CSS',
     icon: <SiTailwindcss size={30} />,
     desc: `Proficient in using Tailwind utility classes and custom configurations to for styling, especially when needed for larger scale projects. I enjoy the clarity of the class names as well as the simplicity of having the styling and the elements all in 1 location  (😅 though it was hard to get used to at first). It's the reason I picked it to style this website!`
@@ -196,21 +261,21 @@ export const skills = [
 export const futureSkills = [
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Web Dev', 'Languages', 'Tools'],
+    category: ['🌐 Web Dev', '🔣 Languages', '⚙️ Tools'],
     name: 'TypeScript',
     icon: <SiTypescript size={30} />,
     desc: ``
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Web Dev', 'Framework/Libraries'],
+    category: ['🌐 Web Dev', '📚 Framework/Libraries'],
     name: 'Bootstrap',
     icon: <FaBootstrap size={30} />,
     desc: ``
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Languages'],
+    category: ['🔣 Languages'],
     name: 'Java',
     icon: <SiJava size={30} />,
     desc: ``
