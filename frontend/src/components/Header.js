@@ -19,18 +19,14 @@ const Header = ({ currentTheme, setTheme, theme }) => {
   }, [index])
 
   return (
-    <div className='flex justify-center align-center p-8 flex-wrap'>
+    <div className='flex justify-center items-center p-8 flex-wrap gap-6'>
       <Link to='/'>
-        <h1
-          className='text-4xl text-center font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:scale-110 hover:translate-x-6 duration-200
-
-'
-        >
+        <h1 className='text-4xl text-center font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:scale-110 hover:translate-x-6 duration-200 w-3/4 sm:w-full'>
           {title}
         </h1>
       </Link>
       <button
-        className='focus:outline-none p-2 ml-auto'
+        className='focus:outline-none p-2 sm:ml-auto text-center'
         onClick={() => setTheme(currentTheme)}
       >
         {theme === 'light' ? (
@@ -39,7 +35,7 @@ const Header = ({ currentTheme, setTheme, theme }) => {
           <IoPartlySunny size={30} />
         )}
       </button>
-      <nav className='min-w-full mt-4'>
+      <nav className='min-w-full -mt-2'>
         <ul className='flex flex-wrap '>
           <li className='relative'>
             <Link to='/about'>
