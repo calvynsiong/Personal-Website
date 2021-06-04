@@ -9,7 +9,8 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaNodeJs,
-  FaGit
+  FaGit,
+  FaBootstrap
 } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
 import {
@@ -19,10 +20,45 @@ import {
   SiNetlify,
   SiHeroku,
   SiMaterialUi,
-  SiTailwindcss
+  SiTailwindcss,
+  SiJava
 } from 'react-icons/si'
 import matlab from '../assets/matlab.png'
 import express from '../assets/express.jpg'
+
+export const highlights = [
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['Web Development'],
+    url: [],
+    desc: '',
+    img: ''
+  }
+]
+
+export const sideProjects = [
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['Web Development'],
+    url: [],
+    desc: '',
+    img: ''
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['Full Stack '],
+    url: [],
+    desc: '',
+    img: ''
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['Web Development'],
+    url: [],
+    desc: '',
+    img: ''
+  }
+]
 
 export const skills = [
   {
@@ -70,7 +106,7 @@ export const skills = [
     name: 'JavaScript',
     icon: <SiJavascript size={30} />,
     desc:
-      'Proficient in ES6+ Javascript. Javascript is my most used programming language and my favourite as well. I understand different array methods, ternary/nullish operators, scope, DOM manipulation/events, callback/HO functions, error handling, promises and async/await concepts. Aiming to learn and implement Typescript in my own projects for better type safety and maintainability.'
+      'Proficient in ES6+ Javascript. Javascript is my most used programming language and my favourite as well. I understand different array methods, ternary/nullish operators, scope, DOM manipulation/events, callback/HO functions, error handling, promises and async/await concepts. Aiming to learn and implement Typescript in my own projects for better type safety and maintainability.Proficient in ES6+ Javascript. Javascript is my most used programming language and my favourite as well. I understand different array methods, ternary/nullish operators, scope, DOM manipulation/events, callback/HO functions, error handling, promises and async/await concepts. Aiming to learn and implement Typescript in my own projects for better type safety and maintainability.'
   },
   {
     id: Math.floor(Math.random() * 100000000),
@@ -160,18 +196,25 @@ export const skills = [
 export const futureSkills = [
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['Web Dev', 'Framework/Libraries'],
-    name: 'Tailwind CSS',
-    icon: <SiTailwindcss size={30} />,
-    desc: `Proficient in using Tailwind utility classes and custom configurations to for styling, especially when needed for larger scale projects. I enjoy the clarity of the class names as well as the simplicity of having the styling and the elements all in 1 location  (😅 though it was hard to get used to at first). It's the reason I picked it to style this website!`
+    category: ['Web Dev', 'Languages', 'Tools'],
+    name: 'TypeScript',
+    icon: <SiTypescript size={30} />,
+    desc: ``
   },
   {
     id: Math.floor(Math.random() * 100000000),
     category: ['Web Dev', 'Framework/Libraries'],
-    name: 'Tailwind CSS',
-    icon: <SiTailwindcss size={30} />,
-    desc: `Proficient in using Tailwind utility classes and custom configurations to for styling, especially when needed for larger scale projects. I enjoy the clarity of the class names as well as the simplicity of having the styling and the elements all in 1 location  (😅 though it was hard to get used to at first). It's the reason I picked it to style this website!`
+    name: 'Bootstrap',
+    icon: <FaBootstrap size={30} />,
+    desc: ``
   },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['Languages'],
+    name: 'Java',
+    icon: <SiJava size={30} />,
+    desc: ``
+  }
 ]
 
 export const socialIcons = [

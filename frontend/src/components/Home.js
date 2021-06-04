@@ -10,18 +10,18 @@ const Home = ({ theme }) => {
           <p className='text-xl mb-4'>
             Welcome to my personal website! This is the second version of it,
             built with{' '}
-            <span className='text-2xl text-yellow-600 dark:text-purple-500'>
+            <span className='highlight-text'>
               React
             </span>{' '}
             and styled with{' '}
-            <span className='text-2xl text-yellow-600   dark:text-purple-500'>
+            <span className='highlight-text'>
               Tailwind CSS
             </span>
             .
           </p>
           <p className='text-xl mb-4'>
             Currently in my sophomore year in McMaster University studying
-            Software Engineering. Focused on learning full stack development.
+            <span className="highlight-text"> Software Engineering</span>. Focused on learning full stack development.
           </p>
           <p className='text-xl mb-4'>
             Reach out to me on{' '}
