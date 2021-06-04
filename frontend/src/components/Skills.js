@@ -5,7 +5,8 @@ const Skills = ({ filterCategories, categories, skills }) => {
   const [title, setTitle] = useState('')
 
   const openModal = id => {
-    modal.current.classList.add('scale-100')
+    modal.current.classList.add('left-0', 'w-screen')
+    modal.current.classList.remove('-left-full', 'w-0')
     console.log(id)
     const changeModalContent = () => {
       console.log(skills)
@@ -17,20 +18,21 @@ const Skills = ({ filterCategories, categories, skills }) => {
     changeModalContent()
   }
   const closeModal = () => {
-    modal.current.classList.remove('scale-100')
+    modal.current.classList.remove('left-0', 'w-screen')
+    modal.current.classList.add('-left-full', 'w-0')
   }
 
   const modal = useRef(null)
 
   return (
     <div className='flex flex-col w-full items-center'>
-      <h1 className='h1'>Relevant skills</h1>
+      <h1 className='h1'>Tech Stack</h1>
       <div className='flex items-center justify-center flex-wrap gap-6 px-5 mb-4'>
         {categories.map((type, index) => {
           return (
             <button
               key={index}
-              className='rounded-3xl text-xl dark:bg-yellow-600 bg-opacity-70 p-3 w-24 min-w-max mb-2  focus:outline-none outline-none transform hover:scale-105 duration-200'
+              className='rounded-xl text-xl bg-yellow-400  dark:bg-yellow-600  p-2 w-24 min-w-max mb-2  focus:outline-none outline-none transform hover:scale-105 duration-200'
               onClick={() => {
                 filterCategories(type)
               }}
@@ -42,7 +44,7 @@ const Skills = ({ filterCategories, categories, skills }) => {
       </div>
       <div className='flex w-full flex-wrap justify-center p-8 gap-16'>
         {skills
-          //   .sort((a, b) => (a.name > b.name ? 1 : -1))
+          .sort((a, b) => (a.name > b.name ? 1 : -1))
           .map(({ id, name, icon }) => {
             return (
               <div className='flex flex-col '>
@@ -66,9 +68,9 @@ const Skills = ({ filterCategories, categories, skills }) => {
                 <div
                   key={id}
                   ref={modal}
-                  className='fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-90 transform scale-0 transition-transform duration-300'
+                  className='fixed top-0  -left-full  w-0 h-screen flex items-center justify-center bg-black bg-opacity-90 transform transition-all duration-300'
                 >
-                  <div className='bg- w-3/4 h-1/2 p-12'>
+                  <div className='bg- w-3/4 h-1/2 p-12 '>
                     <button
                       onClick={() => closeModal()}
                       type='button'
@@ -89,14 +91,17 @@ const Skills = ({ filterCategories, categories, skills }) => {
                         />
                       </svg>
                     </button>
-                    <h1 className='h1'>{title}</h1>
-                    <p key={id}>{body}</p>
+                    <h1 className='h1 text-white underline'>{title}</h1>
+                    <p className='text-xl text-white' key={id}>
+                      {body}
+                    </p>
                   </div>
                 </div>
               </div>
             )
           })}
       </div>
+      <h1 className='h1'>Currently or Looking to Learn</h1>
     </div>
   )
 }

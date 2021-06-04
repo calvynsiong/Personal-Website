@@ -37,7 +37,7 @@ const Header = ({ currentTheme, setTheme, theme }) => {
       </button>
       <nav className='min-w-full -mt-2'>
         <ul className='flex flex-wrap '>
-          <li className='relative'>
+          <li className='relative ml-2'>
             <Link to='/about'>
               <p className='nav-link'>About</p>
             </Link>{' '}
