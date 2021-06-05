@@ -39,10 +39,10 @@ const AboutContent = () => {
                   {visible ? (section.id === id ? section.hidden : null) : null}
                 </p>
                 <button
-                  className='block transform mouse-pointer bg-gray-900  text-white mt-8  py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:outline-none'
+                  className='block transform mouse-pointer bg-gray-900  text-white mt-8  py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600 hover:shadow-2xl focus:outline-none'
                   onClick={() => toggleHidden(section.id)}
                 >
-                  {visible
+                  {visible 
                     ? section.id === id
                       ? 'Hide'
                       : 'Read More'
