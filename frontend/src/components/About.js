@@ -1,13 +1,12 @@
 import React from 'react'
+import AboutContent from './AboutContent'
 
 const About = () => {
-    return (
-        <div className="container" >
-            <h1 className="h1">Background</h1>
-            <h1 className="h1">Interests and Goals</h1>
-            <h1 className="h1">Personal</h1>
-        </div>
-    )
+  return (
+    <div className='container px-8'>
+     <AboutContent></AboutContent>
+    </div>
+  )
 }
 
 export default About

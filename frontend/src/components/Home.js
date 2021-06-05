@@ -27,6 +27,7 @@ const Home = ({ theme }) => {
             Reach out to me on{' '}
             <a
               href='https://www.instagram.com/calvynsg'
+              target="blank"
               className='dark:hover:text-yellow-300 dark:hover:border-yellow-300 underline'
             >
               Instagram
@@ -50,7 +51,7 @@ const Home = ({ theme }) => {
               return (
                 <a href={link} target='blank'>
                   <li
-                    className={`group flex relative list-none mb-6 cursor-pointer gap-3 hover:${
+                    className={`group flex  hover:animate-bounce relative list-none mb-6 cursor-pointer gap-3 hover:${
                       theme === 'light' ? `text-purple-900` : `text-black`
                     }`}
                   >

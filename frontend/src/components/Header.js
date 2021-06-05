@@ -33,19 +33,22 @@ const Header = ({ currentTheme, setTheme, theme }) => {
   }, [index2])
 
   return (
-    <div className='flex justify-center items-center p-8 px-6 mb-7  flex-wrap gap-6'>
+    <div className='flex justify-center items-center p-8 px-6 mb-7  flex-wrap gap-6 '>
       <ScrollButton></ScrollButton>
 
-      <Link className='flex flex-wrap gap-4' to='/'>
-        <h1 className='text-4xl text-center font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 break-word'>
+      <Link
+        className='flex flex-wrap gap-4 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 hover:text-yellow-700 dark:hover:text-yellow-300 '
+        to='/'
+      >
+        <h1 className='text-4xl text-center font-semibold dark:hover:border-yellow-300  break-word'>
           {title}
         </h1>
-        <h1 className='text-4xl text-center font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 break-words'>
+        <h1 className='text-4xl text-center font-semibold dark:hover:border-yellow-300  break-words'>
           {title2}
         </h1>
       </Link>
       <button
-        className='focus:outline-none p-2 sm:ml-auto text-center'
+        className='focus:outline-none p-2 sm:ml-auto text-center hover:text-purple-700 dark:hover:text-yellow-300'
         onClick={() => setTheme(currentTheme)}
       >
         {theme === 'light' ? (

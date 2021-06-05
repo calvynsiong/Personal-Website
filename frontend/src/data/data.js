@@ -254,7 +254,7 @@ export const skills = [
     name: 'Heroku',
     icon: <SiHeroku size={30} />,
     desc:
-      'Used the platform to deploy larger and more complex projects, primarily made with MERN stack with the Heroku CLI.'
+      'Used the platform to deploy larger and more complex projects (MERN stack) with the Heroku CLI.'
   },
   {
     id: Math.floor(Math.random() * 100000000),
@@ -262,7 +262,7 @@ export const skills = [
     name: 'Material UI',
     icon: <SiMaterialUi size={30} />,
     desc:
-      'Used Material UI in React for styling componets in a quick and scalable manner. Also utilized custom styling with JSS for customizing components.'
+      'Used Material UI in React for styling components in a quick and scalable manner. Also utilized custom styling with JSS for customizing components.'
   },
   {
     id: Math.floor(Math.random() * 100000000),
@@ -335,7 +335,7 @@ export const socialIcons = [
     icon: <AiOutlineMail size={30} />,
     desc: 'Email',
     username: 'calvyn360@gmail.com',
-    link: 'https://calvyn360.wixsite.com/website'
+    link: 'mailto:calvyn360@gmail.com?Subject=Reaching Out'
   },
   {
     icon: <FaWix size={30} />,
@@ -354,9 +354,9 @@ export const experiences = [
       `Practised interpersonal and communication skills by
                         working collaboratively with team members in a fast paced environment`,
       `Supervised on weekend
-                        shifts and handled customer complaints`,
+                        shifts and handled customer complaints`
     ],
-    icon: <FaCoffee size={30}></FaCoffee>,
+    icon: <FaCoffee size={30}></FaCoffee>
   },
   {
     role: 'Tutor',
@@ -367,8 +367,7 @@ export const experiences = [
       `Adept in visualisation techniques and clearly communicated ideas with clarity`,
       `Tutored Grade 10-12 in Math, English and Science`
     ],
-    icon:<FaChalkboardTeacher size={30}></FaChalkboardTeacher>
-,
+    icon: <FaChalkboardTeacher size={30}></FaChalkboardTeacher>
   },
   {
     role: 'Social Justice Club President',
@@ -378,9 +377,8 @@ export const experiences = [
       `Lead discussions among club members and organized food drives and awareness campaigns`,
       `Volunteered for Food For Life Canada with Peers to prepare and distribute fresh food for residents in need`
     ],
-    icon: <FaPeace size={30}> </FaPeace>,
+    icon: <FaPeace size={30}> </FaPeace>
   }
 ]
-
 
 // This is getting way too large, isn't it...

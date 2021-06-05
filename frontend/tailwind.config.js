@@ -17,7 +17,8 @@ module.exports = {
       borderWidth: ['hover'],
       borderStyle: ['hover'],
       borderColor: ['hover'],
-      fontWeight: ['hover']
+      fontWeight: ['hover'],
+      animation: ['hover'],
     }
   },
   plugins: []
