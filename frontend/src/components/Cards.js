@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Cards = ({project}) => {
+const Cards = ({ project }) => {
   return (
     <div className=' z-40 p-3 mt-10 w-full xs:w-96  grid grid-cols-1 auto-rows-auto cursor-default select-none rounded bg-blue-400 dark:bg-gray-900 shadow-lg min-h-full xs:h-96'>
       <div className='font-semibold row-span-1 text-xl mb-2 ml-2 text-gray-900 dark:text-white'>
@@ -32,7 +32,11 @@ const Cards = ({project}) => {
           <p className='text-lg'>{project.stack}</p>
         </div>
       </div>
-      
+      <img
+        className='rounded-full object-contain w-24 h-24 self-center mx-auto row-span-5'
+        src={project.img}
+        alt={project.name}
+      ></img>
     </div>
   )
 }

@@ -20,7 +20,7 @@ const ExperienceCards = () => {
           .map((experience, index) => {
             return index % 2 === 0 ? (
               <div class='flex flex-row-reverse md:contents'>
-                <div class='bg-blue-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md  xs:w-96 max-w-full w-full'>
+                <div class='bg-blue-500 dark:bg-gray-900 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md  sm:w-96 max-w-full w-full'>
                   <div className='flex justify-between'>
                     <h3 class='font-semibold text-lg mb-1'>
                       {experience.role}
@@ -51,7 +51,7 @@ const ExperienceCards = () => {
                   </div>
                   <div class='w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow'></div>
                 </div>
-                <div class='bg-blue-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md xs:w-96 max-w-full'>
+                <div class='bg-blue-500 dark:bg-gray-900 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md sm:w-96 max-w-full'>
                   
                   <div className='flex justify-between'>
                     <h3 class='font-semibold text-lg mb-1'>

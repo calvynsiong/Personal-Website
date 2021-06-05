@@ -11,7 +11,7 @@
 		@apply text-2xl text-yellow-600 dark:text-purple-500;
 	},
 	.categories {
-		@apply text-xl bg-yellow-400  dark:bg-yellow-600  p-2 w-24 min-w-max  focus:outline-none outline-none transform hover:scale-105 duration-200 focus:text-purple-900 focus:translate-y-4  dark:focus:text-blue-900 border-black border-2 mb-6 -ml-1;
+		@apply text-xl bg-yellow-400  dark:bg-yellow-600  p-2 w-24 min-w-max  focus:outline-none outline-none transform  duration-200 hover:font-semibold focus:text-purple-900 focus:translate-y-4  dark:focus:text-blue-900 border-black border-2 mb-6 -ml-1;
 	},
 	.container {
 		@apply flex flex-col w-full items-center mx-auto;
