@@ -21,7 +21,9 @@ import {
   SiHeroku,
   SiMaterialUi,
   SiTailwindcss,
-  SiJava
+  SiJava,
+  SiPostgresql,
+  SiVisualstudiocode
 } from 'react-icons/si'
 import matlab from '../assets/matlab.png'
 import express from '../assets/express.jpg'
@@ -45,7 +47,7 @@ export const sideProjects = [
   {
     id: Math.floor(Math.random() * 100000000),
     category: ['🌐 Web Development'],
-    name: 'Ecommerce',
+    name: 'Ecommerce site',
     url: 'https://github.com/calvynsiong/Ecommerce.git',
     live: 'https://eccommercebycalvyn.herokuapp.com/',
     desc:
@@ -107,10 +109,9 @@ export const sideProjects = [
     name: 'Birthday Reminders',
     url: 'https://github.com/calvynsiong/BirthdayReminderWebsite.git',
     live: 'https://macengbdayreminders.netlify.app/ ',
-    desc:
-      "My first ever React project. Made to track my friends' birthdays.",
+    desc: "My first ever React project. Made to track my friends' birthdays.",
     stack: 'React, Tailwind',
-    img:birthday
+    img: birthday
   },
   {
     id: Math.floor(Math.random() * 100000000),
@@ -119,10 +120,21 @@ export const sideProjects = [
     url: 'https://github.com/calvynsiong/BirthdayReminderWebsite.git',
     live: 'https://myheritagerestaurant.netlify.app/ ',
     desc:
-      "A single page website made with React and styled components. Learned how to map over data and destructure them to be used with components. Finally learned the beauty of implementing dark mode.",
+      'A single page website made with React and styled components. Learned how to map over data and destructure them to be used with components. Finally learned the beauty of implementing dark mode.',
     stack: 'React, Tailwind',
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYAXy-rKS_1RjEH6CjpNjKuJdmEf-66m44cg&usqp=CAU"
+    img:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYAXy-rKS_1RjEH6CjpNjKuJdmEf-66m44cg&usqp=CAU'
   },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['🌐 Web Development'],
+    name: 'Chatting app',
+    url: 'https://github.com/calvynsiong/BirthdayReminderWebsite.git',
+    desc:
+      'A project to practise MERN stack and using web sockets for real time updates. WIP.',
+    stack: 'React, Node.js, Express.js, MongoDB, Pusher',
+    img: 'https://github.com/calvynsiong/MERN-chatapp.git'
+  }
 ]
 
 export const skills = [
@@ -139,7 +151,7 @@ export const skills = [
     name: 'React',
     icon: <FaReact size={30} />,
     desc:
-      'Learned how to create functional components with ES6 Javascript, alongside hooks to create scalable websites and applications. I have also had experience building React components that are able to connect with the backend (Node.js) to send HTTP requests for interactive experiences. Currently trying to learn and incorporate Redux for better state management.'
+      'Learned how to create functional components with ES6 Javascript, alongside hooks to create scalable websites and applications. I have also had experience building React components that are able to connect with the backend (Node.js) to send HTTP requests for interactive experiences. Currently trying to learn and incorporate Redux for better state management. I have also used Postman to test requests to APIs.'
   },
   {
     id: Math.floor(Math.random() * 100000000),
@@ -255,6 +267,13 @@ export const skills = [
     name: 'Tailwind CSS',
     icon: <SiTailwindcss size={30} />,
     desc: `Proficient in using Tailwind utility classes and custom configurations to for styling, especially when needed for larger scale projects. I enjoy the clarity of the class names as well as the simplicity of having the styling and the elements all in 1 location  (😅 though it was hard to get used to at first). It's the reason I picked it to style this website!`
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['⚙️ Tools'],
+    name: 'VS Code',
+    icon: <SiVisualstudiocode size={30} />,
+    desc: `My primary IDE for coding. I am comfortable with using different extensions and the integrated terminal to work efficiently.`
   }
 ]
 
@@ -271,6 +290,13 @@ export const futureSkills = [
     category: ['🌐 Web Dev', '📚 Framework/Libraries'],
     name: 'Bootstrap',
     icon: <FaBootstrap size={30} />,
+    desc: ``
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: ['🌐 Web Dev', '📚 Framework/Libraries'],
+    name: 'Postgresql',
+    icon: <SiPostgresql size={30} />,
     desc: ``
   },
   {
@@ -313,5 +339,20 @@ export const socialIcons = [
     desc: 'First Year Portfolio',
     username: 'School projects',
     link: 'https://calvyn360.wixsite.com/website'
+  }
+]
+
+export const experiences = [
+  {
+    role: 'Tim Hortons Supervisor',
+    start: '25/10/2018'
+  },
+  {
+    role: 'Tutor',
+    start: '10/10/2017'
+  },
+  {
+    role: 'Social Justice Club President',
+    start: '3/11/2017'
   }
 ]

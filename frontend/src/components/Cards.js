@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cards = ({project}) => {
   return (
-    <div className=' z-50 p-3 mt-10 max-w-sm w-96 w-xs grid grid-cols-1 auto-rows-auto cursor-default select-none rounded bg-blue-400 dark:bg-gray-900 shadow-lg min-h-full h-96'>
+    <div className=' z-50 p-3 mt-10 w-full xs:w-96  grid grid-cols-1 auto-rows-auto cursor-default select-none rounded bg-blue-400 dark:bg-gray-900 shadow-lg min-h-full xs:h-96'>
       <div className='font-semibold row-span-1 text-xl mb-2 ml-2 text-gray-900 dark:text-white'>
         {project.name}
       </div>

@@ -48,9 +48,9 @@ const Skills = ({ filterCategories, categories, skills }) => {
             <button
               key={index}
               className={`categories ${
-                index === 0 ? `sm:rounded-l-xl` : null
+                index === 0 ? `md:rounded-l-xl` : null
               } ${
-                index === categories.length - 1 ? `sm:rounded-r-xl` : null
+                index === categories.length - 1 ? `md:rounded-r-xl` : null
               }`}
               onClick={() => {
                 filterCategories(type)

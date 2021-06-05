@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { IoSunnyOutline } from 'react-icons/io5'
 import { IoPartlySunny } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
+import {BiArrowToTop} from "react-icons/bi"
 
 const Header = ({ currentTheme, setTheme, theme }) => {
   const [title, setTitle] = useState('')
@@ -19,9 +20,9 @@ const Header = ({ currentTheme, setTheme, theme }) => {
   }, [index])
 
   return (
-    <div className='flex justify-center items-center p-8 flex-wrap gap-6'>
+    <div className='flex justify-center items-center p-8 px-6 mb-7  flex-wrap gap-6'>
       <Link to='/'>
-        <h1 className='text-4xl text-center font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:scale-110 hover:translate-x-6 duration-200 w-3/4 sm:w-full'>
+        <h1 className='text-4xl text-center font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 break-words sm:w-full'>
           {title}
         </h1>
       </Link>
