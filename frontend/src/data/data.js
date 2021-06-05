@@ -10,7 +10,10 @@ import {
   FaCss3Alt,
   FaNodeJs,
   FaGit,
-  FaBootstrap
+  FaBootstrap,
+  FaChalkboardTeacher,
+  FaCoffee,
+  FaPeace
 } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
 import {
@@ -345,14 +348,39 @@ export const socialIcons = [
 export const experiences = [
   {
     role: 'Tim Hortons Supervisor',
-    start: '25/10/2018'
+    start: '25.10.2018',
+    end: `present`,
+    desc: [
+      `Practised interpersonal and communication skills by
+                        working collaboratively with team members in a fast paced environment`,
+      `Supervised on weekend
+                        shifts and handled customer complaints`,
+    ],
+    icon: <FaCoffee size={30}></FaCoffee>,
   },
   {
     role: 'Tutor',
-    start: '10/10/2017'
+    start: '10.10.2017',
+    end: `Present`,
+    desc: [
+      `Tutored with License to Learn and currently on contract with The Tutoring Expert`,
+      `Adept in visualisation techniques and clearly communicated ideas with clarity`,
+      `Tutored Grade 10-12 in Math, English and Science`
+    ],
+    icon:<FaChalkboardTeacher size={30}></FaChalkboardTeacher>
+,
   },
   {
     role: 'Social Justice Club President',
-    start: '3/11/2017'
+    start: '03.11.2017',
+    end: `05.03.2020`,
+    desc: [
+      `Lead discussions among club members and organized food drives and awareness campaigns`,
+      `Volunteered for Food For Life Canada with Peers to prepare and distribute fresh food for residents in need`
+    ],
+    icon: <FaPeace size={30}> </FaPeace>,
   }
 ]
+
+
+// This is getting way too large, isn't it...

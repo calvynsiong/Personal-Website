@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import useDarkMode from './useDarkMode'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './components/Home'
@@ -39,14 +39,15 @@ function App () {
       setProjects(sideProjects)
       return
     }
-    const newProjects = sideProjects.filter(project => project.category.includes(category)
+    const newProjects = sideProjects.filter(project =>
+      project.category.includes(category)
     )
     setProjects(newProjects)
   }
 
   return (
     <Router>
-      <div className='flex flex-col bg-blue-200  dark:bg-blue-900 dark:text-white  min-h-screen duration-500'>
+      <div className='flex flex-col bg-blue-200  dark:bg-blue-900 dark:text-white  min-h-screen duration-500 overflow-hidden'>
         <Header
           currentTheme={currentTheme}
           theme={theme}

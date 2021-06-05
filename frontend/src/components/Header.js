@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoSunnyOutline } from 'react-icons/io5'
 import { IoPartlySunny } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
@@ -7,12 +7,13 @@ import ScrollButton from './ScrollButton'
 
 const Header = ({ currentTheme, setTheme, theme }) => {
   const [title, setTitle] = useState('')
+  const [title2, setTitle2] = useState('')
 
-  const text = 'Calvyn Siong 常家颖'
-
- 
+  const text = 'Calvyn Siong'
+  const text2 = ' 常家颖'
 
   const [index, setIndex] = useState(0)
+  const [index2, setIndex2] = useState(0)
   useEffect(() => {
     if (index < text.length) {
       setTimeout(() => {
@@ -22,13 +23,25 @@ const Header = ({ currentTheme, setTheme, theme }) => {
     }
   }, [index])
 
+  useEffect(() => {
+    if (index2 < text2.length) {
+      setTimeout(() => {
+        setTitle2(title2 + text2[index2])
+        setIndex2(index2 + 1)
+      }, 1000)
+    }
+  }, [index2])
+
   return (
     <div className='flex justify-center items-center p-8 px-6 mb-7  flex-wrap gap-6'>
       <ScrollButton></ScrollButton>
 
-      <Link to='/'>
-        <h1 className='text-4xl text-center font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 break-words sm:w-full'>
+      <Link className='flex flex-wrap gap-4' to='/'>
+        <h1 className='text-4xl text-center font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 break-word'>
           {title}
+        </h1>
+        <h1 className='text-4xl text-center font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 break-words'>
+          {title2}
         </h1>
       </Link>
       <button

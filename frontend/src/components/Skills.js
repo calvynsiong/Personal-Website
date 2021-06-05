@@ -97,7 +97,7 @@ const Skills = ({ filterCategories, categories, skills }) => {
       <h1 className='h1 mb-6'>Currently or Looking to Learn {dots}</h1>
       <article
         ref={futureSkillSection}
-        className='flex gap-16 px-14 mt-4 pb-8 flex-wrap relative'
+        className='flex justify-center gap-16 px-14 mt-4 pb-8 flex-wrap relative'
       >
         {futureSkills
           .sort((a, b) => (a.name > b.name ? 1 : -1))

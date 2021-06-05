@@ -1,24 +1,41 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { BiArrowToTop } from 'react-icons/bi'
 
 const ScrollButton = () => {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
 
-  let scrollPos = 0
+  const [y, setY] = useState(window.scrollY)
 
-  window.addEventListener('scroll', () => {
-    if (document.documentElement.scrollTop <= scrollPos) {
-      setVisible(false)
-    } else {
-      setVisible(true)
+  const handleNavigation = useCallback(
+    e => {
+      const window = e.currentTarget
+      if (y > window.scrollY) {
+        setVisible(false)
+      } else if (y < window.scrollY) {
+        setVisible(true)
+      }
+      setY(window.scrollY)
+    },
+    [y]
+  )
+
+  useEffect(() => {
+    setY(window.scrollY)
+    window.addEventListener('scroll', handleNavigation)
+
+    return () => {
+      window.removeEventListener('scroll', handleNavigation)
     }
+  }, [handleNavigation])
 
-  })
 
   const scrollToTop = e => {
     e.preventDefault()
     window.scroll({ top: 0, left: 0, behavior: 'smooth' })
   }
+
+
+  
   return (
     <button
       className={`fixed bottom-4 ${
