@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { IoSunnyOutline } from 'react-icons/io5'
 import { IoPartlySunny } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
-import {BiArrowToTop} from "react-icons/bi"
+
+import ScrollButton from './ScrollButton'
 
 const Header = ({ currentTheme, setTheme, theme }) => {
   const [title, setTitle] = useState('')
 
-  var text = 'Calvyn Siong 常家颖'
+  const text = 'Calvyn Siong 常家颖'
+
+ 
 
   const [index, setIndex] = useState(0)
   useEffect(() => {
@@ -21,6 +24,8 @@ const Header = ({ currentTheme, setTheme, theme }) => {
 
   return (
     <div className='flex justify-center items-center p-8 px-6 mb-7  flex-wrap gap-6'>
+      <ScrollButton></ScrollButton>
+
       <Link to='/'>
         <h1 className='text-4xl text-center font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 break-words sm:w-full'>
           {title}

@@ -2,11 +2,9 @@ import React from 'react'
 import { experiences } from '../data/data'
 
 const ExperienceCards = () => {
-
-
   return (
     <div class='container'>
-      <div class='flex flex-col md:grid grid-cols-9 mx-auto p-2 text-blue-50'>
+      <div class='flex flex-col md:grid grid-cols-9 mx-auto p-6 text-blue-50'>
         {experiences
           .sort((a, b) => {
             const aa = a.start
@@ -22,7 +20,7 @@ const ExperienceCards = () => {
           .map((experience, index) => {
             return index % 2 === 0 ? (
               <div class='flex flex-row-reverse md:contents'>
-                <div class='bg-blue-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md  xs:w-96 max-w-full'>
+                <div class='bg-blue-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md  xs:w-96 max-w-full w-full'>
                   <div className='flex justify-between'>
                     <h3 class='font-semibold text-lg mb-1'>
                       {experience.role}
@@ -54,7 +52,15 @@ const ExperienceCards = () => {
                   <div class='w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow'></div>
                 </div>
                 <div class='bg-blue-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md xs:w-96 max-w-full'>
-                  <h3 class='font-semibold text-lg mb-1'>{experience.role}</h3>
+                  
+                  <div className='flex justify-between'>
+                    <h3 class='font-semibold text-lg mb-1'>
+                      {experience.role}
+                    </h3>
+                    <h3 class='font-semibold text-lg mb-1'>
+                      {experience.start}
+                    </h3>
+                  </div>
                   <p class='leading-tight text-justify'>{experience.role}</p>
                 </div>
               </div>
