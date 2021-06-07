@@ -58,35 +58,36 @@ const Header = ({ currentTheme, setTheme, theme }) => {
         )}
       </button>
       <nav className='min-w-full -mt-2'>
-        <ul className='flex flex-wrap '>
+        <ul className='flex flex-wrap'>
           <li className='relative ml-2'>
-            <Link to='/about'>
-              <p className='nav-link'>About</p>
+            <Link to='/about' className="flex gap-2 items-end">
+              <p className='nav-link flex gap-2'>About </p>
+              <span>||</span>
             </Link>{' '}
-            <span>||</span>
+
           </li>
           <li className='ml-2'>
-            <Link to='/skills'>
+            <Link to='/skills' className="flex gap-2 items-end">
               <p className='nav-link'>Skills</p>
+              <span>|| </span>
             </Link>{' '}
-            <span>|| </span>
           </li>
           <li className='ml-2'>
-            <Link to='/projects'>
+            <Link to='/projects' className="flex gap-2 items-end">
               {' '}
               <p className='nav-link'>Projects</p>{' '}
+              <span>||</span>
             </Link>{' '}
-            <span>||</span>
           </li>
           <li className='ml-2'>
-            <Link to='/experiences'>
+            <Link to='/experiences' className="flex gap-2 items-end">
               {' '}
               <p className='nav-link'>Experiences</p>
+              <span>||</span>
             </Link>{' '}
-            <span>||</span>
           </li>
           <li className='ml-2'>
-            <Link to='/journal'>
+            <Link to='/journal' >
               {' '}
               <p className='nav-link'>Journal</p>
             </Link>

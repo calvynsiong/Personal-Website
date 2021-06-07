@@ -10,11 +10,11 @@ const Home = ({ theme }) => {
           <p className='text-xl md:text-2xl mb-4'>
             Welcome to my personal website! This is the second version of it,
             built with{' '}
-            <span className='highlight-text'>
+            <span className='highlight-text '>
               React
             </span>{' '}
             and styled with{' '}
-            <span className='highlight-text'>md:text-2xl 
+            <span className='highlight-text'>
               Tailwind CSS
             </span>
             .

@@ -1,32 +1,13 @@
 export const JournalContent = [
     {
         id: Math.floor(Math.random() * 100000000),
-        title: 'My first journal',
+        title: 'First Journal',
         body:
-            ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptate temporibus! Repellendus, dolores. Minima saepe maxime cumque rem provident tenetur, a nobis soluta harum ad delectus sint quia recusandae corporis officiis voluptatem earum veritatis! Sint culpa corporis debitis sunt! Ducimus exercitationem iure sit placeat officia corporis, iste molestiae expedita, accusantium deleniti incidunt totam natus nihil adipisci hic, alias neque vel? '
+            ["Finally finished my website. There's definitely room for improvement to be made in several different sections. Part of me can't help to implement all the cool animation and special effects that I see on other people's websites, but I think it's best to take it 1 step at a time and realy think about what I need to include. Really fun to use React, especially for scaling up certain sections of the website (modals and skill sections). Can't imagine using plain HTML and CSS to add new parts and maintain them regularly. I've seen some really impressive personal websites/portfolios that take an abysmal time to load, and hopefully my website does not turn out that way.", <a href="https://calvynsiong.github.io/" target="blank" className="block mt-6 underline text-purple-800 dark:text-blue-300">Link to my first website.</a>, "Wow looking back on my first website, it was definitely quite rough around the edges. I'd like to think I was able to use the feedback I got to improve the second version."]
         ,
-        date: ' 05.06.2021',
+        date: ' 07.06.2021',
         period: '2021',
-        img: 'https://lh3.googleusercontent.com/ycLjdNhrmrQ7tF7ueSwtJjA-MDchBdZkBi58pxSkJlLsswtFvJIGG1-3ur9wSwzsWPnz2lo=s115'
+        
     },
-    {
-        id: Math.floor(Math.random() * 100000000),
-        title: 'My first journal',
-        body:
-            ' Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya '
-        ,
-        date: ' 05.06.2021',
-        period: '2022',
-        img: ''
-    },
-    {
-        id: Math.floor(Math.random() * 100000000),
-        title: 'My first journal',
-        body:
-            ' Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya Heya '
-        ,
-        date: ' 05.06.2021',
-        period: '2023',
-        img: ''
-    }
+  
 ]

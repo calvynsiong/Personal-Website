@@ -5,11 +5,11 @@
 
 @layer base {
 	.nav-link {
-		@apply inline-block -mb-1 hover:border-b-2 hover:border-yellow-700 duration-100 hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:-translate-y-1 text-sm xs:text-lg md:text-2xl;
+		@apply inline-block -mb-1 hover:border-b-2 hover:border-yellow-200 duration-100 hover:text-yellow-200 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:translate-y-1 text-sm xs:text-lg md:text-2xl;
 	}
 	,
 	.highlight-text {
-		@apply text-2xl text-yellow-700 dark:text-purple-500;
+		@apply text-2xl text-yellow-200 dark:text-blue-300 font-semibold;
 	}
 	,
 	.categories {

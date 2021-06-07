@@ -23,15 +23,14 @@ function App() {
 
   const allJournals = [
     "All Journals",
-    ...new Set(JournalContent.map(entry => entry.period))
+    ...new Set(JournalContent.map(entry => entry.period).sort((a, b) => (a > b ? 1 : -1)))
   ]
 
-  console.log(allJournals)
 
   const [setTheme, currentTheme, theme] = useDarkMode()
   const [skill, setSkill] = useState(skills)
   const [projects, setProjects] = useState(sideProjects)
-  const [journals, setJournals] = useState(allJournals)
+  const [journals, setJournals] = useState(JournalContent)
 
   const filterCategories = category => {
     if (category.includes('All')) {
@@ -53,22 +52,24 @@ function App() {
     )
     setProjects(newProjects)
   }
-  // const filterJournals = entry => {
-  //   if (entry === ('All Journals')) {
-  //     setProjects(JournalContent)
-  //     return
-  //   }
-  //   const newProjects = sideProjects.filter(project =>
-  //     project.category.includes(category)
-  //   )
-  //   setProjects(newProjects)
-  // }
+
+
+  const filterJournals = period => {
+    if (period === ('All Journals')) {
+      setJournals(JournalContent)
+      return
+    }
+    const newJournals = JournalContent.filter(entry =>
+      entry.period.includes(period)
+    )
+    setJournals(newJournals)
+  }
 
   const modal = useRef(null)
 
   return (
     <Router>
-      <div className='flex flex-col bg-blue-200  dark:bg-blue-900 dark:text-white  min-h-screen duration-500 overflow-hidden'>
+      <div className='flex flex-col bg-gradient-to-r from-green-500 to-blue-500 dark:from-blue-900 dark:to-purple-500 dark:text-white  min-h-screen duration-500 overflow-hidden'>
         <Header
           currentTheme={currentTheme}
           theme={theme}
@@ -97,7 +98,12 @@ function App() {
             ></Skills>
           </Route>
           <Route exact path='/journal'>
-            <Journal modal={modal}></Journal>
+            <Journal modal={modal}
+              filterJournals={filterJournals}
+              categories={allJournals}
+              journals={journals}
+
+            ></Journal>
           </Route>
         </Switch>
       </div>

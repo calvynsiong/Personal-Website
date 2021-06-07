@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Modal from './Modal'
 import { JournalContent } from "../data/JournalContentData"
 
-const Journal = ({ modal }) => {
+const Journal = ({ modal, filterJournals, categories, journals }) => {
 
   const [modalContent, setModalContent] = useState({
     body: "",
@@ -15,11 +15,11 @@ const Journal = ({ modal }) => {
     modal.current.classList.remove('-left-full', 'w-0')
     const changeModalContent = () => {
       const properEntry = JournalContent.filter(entry => entry.id === id)[0]
-      console.log(properEntry)
       setModalContent({
-        body: properEntry.body,
         title: properEntry.title,
-        img: properEntry.img
+        body: properEntry.body,
+        img: properEntry.img,
+        date: properEntry.date
       })
     }
     changeModalContent()
@@ -40,30 +40,18 @@ const Journal = ({ modal }) => {
         </p>
 
         <ul class=' list-reset flex flex-wrap my-6 self-center'>
-          <li class=' rounded-tl  -mb-px block border p-2 border-gray-900 hover:shadow-2xl backdrop  hover:bg-white hover:bg-opacity-10'>
-            May 2021
-          </li>
-          <li class=' -mb-px block border p-2 border-gray-900 hover:shadow-2xl backdrop  hover:bg-white hover:bg-opacity-10'>
-            May 2021
-          </li>
-          <li class=' -mb-px block border p-2 border-gray-900 hover:shadow-2xl backdrop  hover:bg-white hover:bg-opacity-10'>
-            May 2021
-          </li>
-          <li class=' -mb-px block border p-2 border-gray-900 hover:shadow-2xl backdrop  hover:bg-white hover:bg-opacity-10'>
-            May 2021
-          </li>
-          <li class='rounded-br  block border p-2 border-gray-900 hover:shadow-2xl backdrop  hover:bg-white hover:bg-opacity-10'>
-            May 2021
-          </li>
+          {categories.map((type, index) => {
+            return <li key={index} class={` ${index === 0 ? `rounded-l` : null
+              } ${index === categories.length - 1 ? `rounded-r` : null
+              }   -mb-px block border p-2 border-gray-900 text-xl hover:shadow-2xl backdrop  hover:bg-white hover:bg-opacity-10`}
+              onClick={() => filterJournals(type)}
+
+            > {type} </li>
+          })}
+
         </ul>
-
-
-
-
-
-
         {
-          JournalContent.sort((a, b) => {
+          journals.sort((a, b) => {
             const aa = a.date
               .split('.')
               .reverse()
@@ -74,7 +62,7 @@ const Journal = ({ modal }) => {
               .join()
             return aa > bb ? -1 : aa > bb ? 1 : 0
           }).map((entry) => {
-            return <article key={entry.id} className='w-5/6  h-full hover:shadow-2xl backdrop  hover:bg-white hover:bg-opacity-10 rounded p-3  border border-gray-900 dark:border-gray-300 flex flex-col self-center my-10 transform duration-200 hover:scale-105 '>
+            return <article key={entry.id} className='w-5/6  h-full hover:shadow-2xl backdrop  hover:bg-white hover:bg-opacity-10 rounded border border-gray-900 dark:border-gray-300 flex flex-col self-center my-10 transform duration-200 hover:scale-105 p-8'>
               <h1 className='text-xl w-max sm:text-3xl text-center self-center border-b-2 p-1 mb-4 border-gray-900 break-words dark:border-gray-300'>
                 {entry.title}
               </h1>
@@ -83,15 +71,15 @@ const Journal = ({ modal }) => {
               </h3>
 
               <p className='text-xl sm:text-2xl break-words'>
-                {entry.body.substring(
+                {entry.body[0].substring(
                   0,
                   400
-                )}{entry.body.length > 400 ? `...` : null}
+                )}{entry.body[0].length > 300 ? `...` : null}
 
               </p>
 
               <button
-                className='block transform mouse-pointer bg-gray-900 dark:bg-blue-300 dark:text-black text-white mt-8  py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-200 hover:shadow-2xl focus:outline-none w-24'
+                className='block transform mouse-pointer bg-gray-900 dark:bg-blue-300 dark:text-black text-white mt-8  py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-200 hover:shadow-2xl focus:outline-none w-24 sm:hover:animate-pulse'
                 onClick={() => openJournalModal(entry.id)}
               >
                 Read more
@@ -103,8 +91,9 @@ const Journal = ({ modal }) => {
 
         <Modal id={1} closeModal={closeJournalModal} modal={modal}>
           <h1 className='h1  underline'>{modalContent.title}</h1>
+          <p className='font-thin text-lg sm:text-2xl my-4 pl-8'>{modalContent.date}</p>
           <div className="flex flex-wrap gap-8 pl-8">
-            <p className={`text-lg sm:text-2xl ${modalContent.img ?`max-w-3xl`:null} `}>{modalContent.body}</p>
+            <p className={`text-lg sm:text-2xl ${modalContent.img ? `max-w-3xl` : null} `}>{modalContent.body}</p>
             {modalContent.img ? <img src={modalContent.img} className="w-3/4 max-w-xs rounded-lg" alt="Test" /> : null}
           </div>
         </Modal>
