@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { futureSkills } from '../data/data'
 import Modal from './Modal'
 
-const Skills = ({ filterCategories, categories, skills }) => {
+const Skills = ({ filterCategories, categories, skills, modal }) => {
   const [body, setBody] = useState('')
   const [title, setTitle] = useState('')
   const [dots, setDots] = useState('')
@@ -17,7 +17,7 @@ const Skills = ({ filterCategories, categories, skills }) => {
     }, 1750)
   }, [])
 
-  const openModal = id => {
+  const openSkillModal = id => {
     modal.current.classList.add('left-0', 'w-screen')
     modal.current.classList.remove('-left-full', 'w-0')
     futureSkillSection.current.classList.remove('relative')
@@ -35,7 +35,7 @@ const Skills = ({ filterCategories, categories, skills }) => {
     futureSkillSection.current.classList.add('relative')
   }
 
-  const modal = useRef(null)
+
   const futureSkillSection = useRef(null)
 
   return (
@@ -46,11 +46,9 @@ const Skills = ({ filterCategories, categories, skills }) => {
           return (
             <button
               key={index}
-              className={`categories ${
-                index === 0 ? `md:rounded-l-xl` : null
-              } ${
-                index === categories.length - 1 ? `md:rounded-r-xl` : null
-              }`}
+              className={`categories ${index === 0 ? `md:rounded-l-xl` : null
+                } ${index === categories.length - 1 ? `md:rounded-r-xl` : null
+                }`}
               onClick={() => {
                 filterCategories(type)
               }}
@@ -70,7 +68,7 @@ const Skills = ({ filterCategories, categories, skills }) => {
                   <div className='flex flex-col justify-between items-center '>
                     <button
                       key={id}
-                      onClick={() => openModal(id)}
+                      onClick={() => openSkillModal(id)}
                       className=' focus:outline-none p-3 bg-purple-600 text-white bg-opacity-75 rounded-full ring-8 ring-indigo-300 ring-opacity-50 hover:text-yellow-500'
                       type='button'
                     >
@@ -84,8 +82,8 @@ const Skills = ({ filterCategories, categories, skills }) => {
                 </div>
 
                 <Modal id={id} closeModal={closeModal} modal={modal}>
-                  <h1 className='h1 text-white underline'>{title}</h1>
-                  <p className='text-lg sm:text-2xl text-white max-w-3xl mx-auto'>
+                  <h1 className='h1 underline'>{title}</h1>
+                  <p className='text-lg sm:text-2xl max-w-3xl mx-auto'>
                     {body}
                   </p>
                 </Modal>

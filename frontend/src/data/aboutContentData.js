@@ -25,7 +25,7 @@ export const aboutContentData = [
       `I believe that my diverse background has shaped me to be a open minded individual. I love to learn new ideas and technologies. More recently, I have started to become interested into learning about the stories and journeys of others, no matter what field they are in. If you're reading this, please feel free to tell me your story!`,
       <button
         className='block transform mouse-pointer bg-purple-600  text-white my-6 py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-purple-900 focus:outline-none'
-        // onClick={e => scrollToBottom(e)}
+      // onClick={e => scrollToBottom(e)}
       >
         <a href='mailto:calvyn360@gmail.com' target='_blank' rel='noreferrer'>
           Send me a Message!
@@ -95,7 +95,7 @@ export const aboutContentData = [
         <li>Favourite food: Curry</li>
         <li>Favourite fictions: Berserk, Breaking Bad, Black Mirror, 1984</li>
         <li className='mt-4'>
-          Currently listening to: 
+          Currently listening to:
           <a
             className='highlight-text text-xl'
             href='https://open.spotify.com/show/4FYpq3lSeQMAhqNI81O0Cn?si=CGgUlyOgRD6Oq36Lu9B_Qg'

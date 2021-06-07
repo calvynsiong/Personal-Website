@@ -8,7 +8,7 @@ const Modal = ({ closeModal, children, id, modal }) => {
         ref={modal}
         className='fixed top-0  -left-full  w-0 h-screen flex items-center justify-center bg-black bg-opacity-90 transform transition-all duration-300'
       >
-        <div className='w-4/5 h-4/5 overflow-y-scroll p-16 bg-purple-800'>
+        <div className='w-4/5 h-4/5 overflow-y-scroll p-16 bg-blue-300 dark:bg-gray-900'>
           <button
             onClick={() => closeModal()}
             type='button'
@@ -16,7 +16,7 @@ const Modal = ({ closeModal, children, id, modal }) => {
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='h-12 w-12 text-red-600'
+              className='h-12 w-12 text-red-600 mb-6'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'

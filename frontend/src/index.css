@@ -5,7 +5,7 @@
 
 @layer base {
 	.nav-link {
-		@apply inline-block -mb-1 hover:border-b-2 hover:border-yellow-700 duration-100 hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:-translate-y-1 text-sm xs:text-lg md:text-xl  ;
+		@apply inline-block -mb-1 hover:border-b-2 hover:border-yellow-700 duration-100 hover:text-yellow-700 dark:hover:text-yellow-300 dark:hover:border-yellow-300 transform hover:-translate-y-1 text-sm xs:text-lg md:text-2xl;
 	}
 	,
 	.highlight-text {
@@ -22,5 +22,9 @@
 	,
 	.h1 {
 		@apply text-3xl sm:text-5xl pl-8 self-start  font-bold mb-6;
+	}
+	,
+	.backdrop {
+		backdrop-filter: blur(5px);
 	}
 }

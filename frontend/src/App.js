@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import useDarkMode from './useDarkMode'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './components/Home'
@@ -9,8 +9,9 @@ import Journal from './components/Journal'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import { skills, sideProjects } from './data/data'
+import { JournalContent } from "./data/JournalContentData"
 
-function App () {
+function App() {
   const allCategories = [
     'All',
     ...new Set(skills.map(skill => [...skill.category]).flat())
@@ -20,9 +21,17 @@ function App () {
     ...new Set(sideProjects.map(project => [...project.category]).flat())
   ]
 
+  const allJournals = [
+    "All Journals",
+    ...new Set(JournalContent.map(entry => entry.period))
+  ]
+
+  console.log(allJournals)
+
   const [setTheme, currentTheme, theme] = useDarkMode()
   const [skill, setSkill] = useState(skills)
   const [projects, setProjects] = useState(sideProjects)
+  const [journals, setJournals] = useState(allJournals)
 
   const filterCategories = category => {
     if (category.includes('All')) {
@@ -44,6 +53,18 @@ function App () {
     )
     setProjects(newProjects)
   }
+  // const filterJournals = entry => {
+  //   if (entry === ('All Journals')) {
+  //     setProjects(JournalContent)
+  //     return
+  //   }
+  //   const newProjects = sideProjects.filter(project =>
+  //     project.category.includes(category)
+  //   )
+  //   setProjects(newProjects)
+  // }
+
+  const modal = useRef(null)
 
   return (
     <Router>
@@ -72,9 +93,12 @@ function App () {
               filterCategories={filterCategories}
               categories={allCategories}
               skills={skill}
+              modal={modal}
             ></Skills>
           </Route>
-          <Route exact path='/journal' component={Journal} />
+          <Route exact path='/journal'>
+            <Journal modal={modal}></Journal>
+          </Route>
         </Switch>
       </div>
     </Router>

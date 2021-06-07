@@ -7,23 +7,23 @@ const Home = ({ theme }) => {
     <section className='flex flex-grow justify-start items-center mt-8 px-8 flex-col gap-4 '>
       <div className='flex flex-col md:flex-row items-center'>
         <div className='flex flex-col'>
-          <p className='text-xl mb-4'>
+          <p className='text-xl md:text-2xl mb-4'>
             Welcome to my personal website! This is the second version of it,
             built with{' '}
             <span className='highlight-text'>
               React
             </span>{' '}
             and styled with{' '}
-            <span className='highlight-text'>
+            <span className='highlight-text'>md:text-2xl 
               Tailwind CSS
             </span>
             .
           </p>
-          <p className='text-xl mb-4'>
+          <p className='text-xl md:text-2xl mb-4'>
             Currently in my sophomore year in McMaster University studying
             <span className="highlight-text"> Software Engineering</span>. Focused on learning full stack development.
           </p>
-          <p className='text-xl mb-4'>
+          <p className='text-xl md:text-2xl mb-4'>
             Reach out to me on{' '}
             <a
               href='https://www.instagram.com/calvynsg'
