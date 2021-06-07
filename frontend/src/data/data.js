@@ -349,7 +349,7 @@ export const experiences = [
   {
     role: 'Tim Hortons Supervisor',
     start: '25.10.2018',
-    end: `present`,
+    end: `30.01.2020`,
     desc: [
       `Practised interpersonal and communication skills by
                         working collaboratively with team members in a fast paced environment`,
