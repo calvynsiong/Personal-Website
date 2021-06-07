@@ -1,6 +1,6 @@
 # Personal website
 
-## Made with React and Tailwind
+### Made with React and Tailwind
 
 Current version: [Take a look here!](https://calvynsiongv2.netlify.app/) 
 
