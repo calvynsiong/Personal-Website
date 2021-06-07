@@ -136,7 +136,7 @@ export const sideProjects = [
     desc:
       'A project to practise MERN stack and using web sockets for real time updates. WIP.',
     stack: 'React, Node.js, Express.js, MongoDB, Pusher',
-    img: 'https://github.com/calvynsiong/MERN-chatapp.git'
+    img: 'https://lh3.googleusercontent.com/Ez0bB-z2_r1dgzbbQnaN-nyrKReRV14QryS-k9MQxYjk1DrvmmN1G6QwbVX0EIvIawNf1g=s85'
   }
 ]
 

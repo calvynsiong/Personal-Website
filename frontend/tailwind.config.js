@@ -12,13 +12,13 @@ module.exports = {
   },
   variants: {
     extend: {
-      padding: ['hover'],
-      borderRadius: ['hover'],
-      borderWidth: ['hover'],
-      borderStyle: ['hover'],
-      borderColor: ['hover'],
-      fontWeight: ['hover'],
-      animation: ['hover'],
+      padding: ['hover', "focus"],
+      borderRadius: ['hover', "focus"],
+      borderWidth: ['hover', "focus"],
+      borderStyle: ['hover', "focus"],
+      borderColor: ['hover', "focus"],
+      fontWeight: ['hover', "focus"],
+      animation: ['hover', "focus"],
     }
   },
   plugins: []

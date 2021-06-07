@@ -47,9 +47,9 @@ const Home = ({ theme }) => {
         </h1>
         <div className='flex flex-wrap min-w-full'>
           <ul className='flex justify-around items-center w-full flex-col gap-4 '>
-            {socialIcons.map(({ icon, desc, username, link }) => {
+            {socialIcons.map(({ icon, desc, username, link },index) => {
               return (
-                <a href={link} target='blank'>
+                <a href={link} key={index} target='blank'>
                   <li
                     className={`group flex  hover:animate-bounce relative list-none mb-6 cursor-pointer gap-3 hover:${
                       theme === 'light' ? `text-purple-900` : `text-black`

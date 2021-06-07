@@ -92,7 +92,7 @@ export const aboutContentData = [
             See more
           </a>
         </li>
-        <li>Favourite food: Curry</li>
+        <li>Favourite food: Curry 🍛 </li>
         <li>Favourite fictions: Berserk, Breaking Bad, Black Mirror, 1984</li>
         <li className='mt-4'>
           Currently listening to:
