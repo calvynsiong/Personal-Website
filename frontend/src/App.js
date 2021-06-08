@@ -69,7 +69,7 @@ function App() {
 
   return (
     <Router>
-      <div className='flex flex-col bg-gradient-to-r from-green-500 to-blue-500 dark:from-blue-900 dark:to-purple-500 dark:text-white  min-h-screen duration-500 overflow-hidden'>
+      <div className='flex flex-col bg-gradient-to-r from-blue-400 to-blue-500  dark:from-gray-800 dark:via-gray-900 dark:to-black dark:text-white  min-h-screen  overflow-hidden duration-200 '>
         <Header
           currentTheme={currentTheme}
           theme={theme}

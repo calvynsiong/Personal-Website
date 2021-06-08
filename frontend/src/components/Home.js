@@ -28,7 +28,7 @@ const Home = ({ theme }) => {
             <a
               href='https://www.instagram.com/calvynsg'
               target="blank"
-              className='dark:hover:text-yellow-300 dark:hover:border-yellow-300 underline'
+              className='dark:hover:text-yellow-300 hover:text-white dark:hover:border-yellow-300 underline duration-200'
             >
               Instagram
             </a>

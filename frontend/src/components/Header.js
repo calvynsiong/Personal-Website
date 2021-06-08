@@ -37,7 +37,7 @@ const Header = ({ currentTheme, setTheme, theme }) => {
       <ScrollButton></ScrollButton>
 
       <Link
-        className='flex flex-wrap gap-4 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 hover:text-yellow-700 dark:hover:text-yellow-300 '
+        className='flex flex-wrap gap-4 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 hover:text-white dark:hover:text-yellow-300 '
         to='/'
       >
         <h1 className='text-4xl text-center font-semibold dark:hover:border-yellow-300  break-word'>
