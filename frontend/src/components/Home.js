@@ -1,33 +1,74 @@
-import React from 'react'
-import photo from '../assets/personalPhoto.jpg'
-import { socialIcons } from '../data/data'
+import React from 'react';
+import photo from '../assets/personalPhoto.jpg';
+import { socialIcons } from '../data/data';
+import Sketch from 'react-p5';
 
 const Home = ({ theme }) => {
+  // let x = 50;
+  // let y = 50;
+  const setup = (p5, canvasParentRef) => {
+    // use parent to render the canvas in this ref
+    // (without that p5 will render the canvas outside of your component)
+    p5.createCanvas(350, 350, p5.WEBGL).parent(canvasParentRef);
+    p5.angleMode(p5.DEGREES);
+  };
+  const resize = (p5, canvasParentRef) => {
+    p5.resizeCanvas(
+      window.innerWidth / 2,
+      window.innerHeight / 2,
+      p5.WEBGL
+    ).parent(canvasParentRef);
+  };
+
+  const draw = (p5) => {
+    // p5.background(0);
+    // p5.ellipse(x, y, 70, 70);
+    // NOTE: Do not use setState in the draw function or in functions that are executed
+    // in the draw function...
+    // please use normal variables or class properties for these purposes
+    // x++;
+    p5.background(30);
+    p5.rotateX(60);
+    p5.noFill();
+    p5.stroke(255);
+
+    for (var i = 0; i < 50; i++) {
+      const r = p5.map(p5.sin(p5.frameCount / 2), -1, 1, 100, 200);
+      const g = p5.map(i, 0, 50, 100, 200);
+      const b = p5.map(p5.cos(p5.frameCount), -1, 1, 200, 100);
+      p5.stroke(r, g, b);
+
+      p5.rotate(p5.frameCount / 50);
+      p5.beginShape();
+      for (var j = 0; j < 360; j += 90) {
+        var rad = i * 3;
+        var x = rad * p5.cos(j);
+        var y = rad * p5.sin(j);
+        var z = p5.sin * (p5.frameCount * 2 + i * 5) * 50;
+        p5.vertex(x, y, z);
+      }
+      p5.endShape(p5.CLOSE);
+    }
+  };
   return (
     <section className='flex flex-grow justify-start items-center mt-8 px-8 flex-col gap-4 '>
       <div className='flex flex-col md:flex-row items-center'>
         <div className='flex flex-col'>
           <p className='text-xl md:text-2xl mb-4'>
             Welcome to my personal website! This is the second version of it,
-            built with{' '}
-            <span className='highlight-text '>
-              React
-            </span>{' '}
-            and styled with{' '}
-            <span className='highlight-text'>
-              Tailwind CSS
-            </span>
-            .
+            built with <span className='highlight-text '>React</span> and styled
+            with <span className='highlight-text'>Tailwind CSS</span>.
           </p>
           <p className='text-xl md:text-2xl mb-4'>
             Currently in my sophomore year in McMaster University studying
-            <span className="highlight-text"> Software Engineering</span>. Focused on learning full stack development.
+            <span className='highlight-text'> Software Engineering</span>.
+            Focused on learning full stack development.
           </p>
           <p className='text-xl md:text-2xl mb-4'>
             Reach out to me on{' '}
             <a
               href='https://www.instagram.com/calvynsg'
-              target="blank"
+              target='blank'
               className='dark:hover:text-yellow-300 hover:text-white dark:hover:border-yellow-300 underline duration-200'
             >
               Instagram
@@ -41,13 +82,24 @@ const Home = ({ theme }) => {
           className='w-40 rounded-3xl ml-4 mt-4'
         />
       </div>
+      <article className='flex flex-col gap-2 mt-8 max-w-full '>
+        <Sketch
+          setup={setup}
+          draw={draw}
+          resize={resize}
+          className='mx-auto rounded-3xl overflow-hidden'
+        ></Sketch>
+        <p className='text-xl mt-4 text-center'>
+          Rendered drawing made from p5.js that I'm working on!
+        </p>
+      </article>
       <div className='flex-grow min-w-full'>
         <h1 className='text-3xl font-semibold text-center my-12'>
           Check these out!
         </h1>
         <div className='flex flex-wrap min-w-full'>
           <ul className='flex justify-around items-center w-full flex-col gap-4 '>
-            {socialIcons.map(({ icon, desc, username, link },index) => {
+            {socialIcons.map(({ icon, desc, username, link }, index) => {
               return (
                 <a href={link} key={index} target='blank'>
                   <li
@@ -64,13 +116,13 @@ const Home = ({ theme }) => {
                     </span>
                   </li>
                 </a>
-              )
+              );
             })}
           </ul>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
