@@ -39,12 +39,13 @@ const Home = ({ theme }) => {
       p5.stroke(r, g, b);
 
       p5.rotate(p5.frameCount / 50);
+
       p5.beginShape();
       for (var j = 0; j < 360; j += 90) {
         var rad = i * 3;
         var x = rad * p5.cos(j);
         var y = rad * p5.sin(j);
-        var z = p5.sin * (p5.frameCount * 2 + i * 5) * 50;
+        var z = p5.sin(p5.frameCount * 2 + i * 5) * 50;
         p5.vertex(x, y, z);
       }
       p5.endShape(p5.CLOSE);
