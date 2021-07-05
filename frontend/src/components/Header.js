@@ -1,36 +1,52 @@
-import React, { useEffect, useState } from 'react'
-import { IoSunnyOutline } from 'react-icons/io5'
-import { IoPartlySunny } from 'react-icons/io5'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { IoSunnyOutline } from 'react-icons/io5';
+import { IoPartlySunny } from 'react-icons/io5';
+import { BsCodeSlash } from 'react-icons/bs';
+import { HiDesktopComputer } from 'react-icons/hi';
+import { CgWorkAlt } from 'react-icons/cg';
 
-import ScrollButton from './ScrollButton'
+import { Link } from 'react-router-dom';
+
+import ScrollButton from './ScrollButton';
+import { AiFillBook, AiOutlineInfoCircle } from 'react-icons/ai';
 
 const Header = ({ currentTheme, setTheme, theme }) => {
-  const [title, setTitle] = useState('')
-  const [title2, setTitle2] = useState('')
+  const [title, setTitle] = useState('');
+  const [title2, setTitle2] = useState('');
 
-  const text = 'Calvyn Siong'
-  const text2 = ' 常家颖'
+  const text = 'Calvyn Siong';
+  const text2 = ' 常家颖';
 
-  const [index, setIndex] = useState(0)
-  const [index2, setIndex2] = useState(0)
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 620;
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleWindowResize);
+
+    // Return a function from the effect that removes the event listener
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
+
+  const [index, setIndex] = useState(0);
+  const [index2, setIndex2] = useState(0);
   useEffect(() => {
     if (index < text.length) {
       setTimeout(() => {
-        setTitle(title + text[index])
-        setIndex(index + 1)
-      }, 300)
+        setTitle(title + text[index]);
+        setIndex(index + 1);
+      }, 300);
     }
-  }, [index])
+  }, [index]);
 
   useEffect(() => {
     if (index2 < text2.length) {
       setTimeout(() => {
-        setTitle2(title2 + text2[index2])
-        setIndex2(index2 + 1)
-      }, 1000)
+        setTitle2(title2 + text2[index2]);
+        setIndex2(index2 + 1);
+      }, 1000);
     }
-  }, [index2])
+  }, [index2]);
 
   return (
     <div className='flex justify-center items-center p-8 px-6 mb-7  flex-wrap gap-6 '>
@@ -48,7 +64,7 @@ const Header = ({ currentTheme, setTheme, theme }) => {
         </h1>
       </Link>
       <button
-        className='focus:outline-none p-2 sm:ml-auto text-center hover:text-purple-700 dark:hover:text-yellow-300'
+        className='focus:outline-none p-2 sm:ml-auto text-center hover:text-yellow-600 transform hover:rotate-12 dark:hover:text-yellow-300'
         onClick={() => setTheme(currentTheme)}
       >
         {theme === 'light' ? (
@@ -58,46 +74,61 @@ const Header = ({ currentTheme, setTheme, theme }) => {
         )}
       </button>
       <nav className='min-w-full -mt-2'>
-        <ul className='flex flex-wrap'>
-          <li className='relative ml-2'>
-            <Link to='/about' className="flex gap-2 items-end">
-              <span className="nav-span">||</span>
-              <p className='nav-link flex gap-2'>About </p>
-              <span className="nav-span">||</span>
-            </Link>{' '}
-
-          </li>
-          <li className='ml-2'>
-            <Link to='/skills' className="flex gap-2 items-end">
-              <p className='nav-link'>Skills</p>
-              <span className="nav-span">|| </span>
-            </Link>{' '}
-          </li>
-          <li className='ml-2'>
-            <Link to='/projects' className="flex gap-2 items-end">
-              {' '}
-              <p className='nav-link'>Projects</p>{' '}
-              <span className="nav-span">||</span>
-            </Link>{' '}
-          </li>
-          <li className='ml-2'>
-            <Link to='/experiences' className="flex gap-2 items-end">
-              {' '}
-              <p className='nav-link'>Experiences</p>
-              <span className="nav-span">||</span>
-            </Link>{' '}
-          </li>
-          <li className='ml-2'>
-            <Link to='/journal' className="flex gap-2 items-end">
-              {' '}
-              <p className='nav-link'>Journal </p>
-              <span className="nav-span"> ||</span>
-            </Link>
-          </li>
+        <ul className='flex flex-wrap justify-center'>
+          {(width > breakpoint
+            ? [
+                { title: 'About' },
+                { title: 'Skills' },
+                { title: 'Projects' },
+                { title: 'Experiences' },
+                { title: 'Journal' },
+              ]
+            : [
+                { title: 'About', icon: <AiOutlineInfoCircle size={30} /> },
+                { title: 'Skills', icon: <BsCodeSlash size={30} /> },
+                {
+                  title: 'Projects',
+                  icon: (
+                    <HiDesktopComputer
+                      className='text-white'
+                      size={30}
+                    ></HiDesktopComputer>
+                  ),
+                },
+                {
+                  title: 'Experiences',
+                  icon: <CgWorkAlt size={30}></CgWorkAlt>,
+                },
+                { title: 'Journal', icon: <AiFillBook size={30} /> },
+              ]
+          ).map((section) => {
+            return (
+              <li className='relative ml-2'>
+                <Link
+                  title={`${section.title}`}
+                  to={`/${section.title.toLowerCase()}`}
+                  className={`flex gap-2`}
+                >
+                  <h1
+                    className={`nav-link text-sm xs:text-2xl md:text-3xl lg:text-4xl pt-4 flex gap-2 ${
+                      width > breakpoint ? `mr-5` : `mr-3`
+                    }`}
+                  >
+                    {section?.icon ?? section.title}{' '}
+                  </h1>
+                  {/* {index === 4 ? null : (
+                    <span className='nav-span text-sm xs:text-2xl md:text-4xl'>
+                      ||
+                    </span>
+                  )} */}
+                </Link>{' '}
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

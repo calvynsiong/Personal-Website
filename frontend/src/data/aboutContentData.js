@@ -1,6 +1,6 @@
-import KualaLumpur from '../assets/KualaLumpur.jpg'
-import studying from '../assets/studying.png'
-import music from '../assets/music.png'
+import KualaLumpur from '../assets/KualaLumpur.jpg';
+import studying from '../assets/studying.png';
+import music from '../assets/music.png';
 
 // const scrollToBottom = e => {
 //   e.preventDefault()
@@ -19,19 +19,19 @@ export const aboutContentData = [
       <span className='highlight-text'> discipline </span>,
       `and`,
       <span className='highlight-text'> curiosity </span>,
-      `are the biggest factors of self progress.`
+      `are the biggest factors of self progress.`,
     ],
     hidden: [
       `I believe that my diverse background has shaped me to be a open minded individual. I love to learn new ideas and technologies. More recently, I have started to become interested into learning about the stories and journeys of others, no matter what field they are in. If you're reading this, please feel free to tell me your story!`,
       <button
         className='block transform mouse-pointer bg-purple-600  text-white my-6 py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-purple-900 focus:outline-none'
-      // onClick={e => scrollToBottom(e)}
+        // onClick={e => scrollToBottom(e)}
       >
         <a href='mailto:calvyn360@gmail.com' target='_blank' rel='noreferrer'>
           Send me a Message!
         </a>
-      </button>
-    ]
+      </button>,
+    ],
   },
   {
     id: Math.floor(Math.random() * 100000000),
@@ -46,7 +46,7 @@ export const aboutContentData = [
       <span className='highlight-text'> machine learning </span>,
       `and`,
       <span className='highlight-text'> computer vision</span>,
-      `.`
+      `.`,
     ],
     hidden: [
       `I recognize that I have a lot of learning to do to pursue my interests. To be honest, my most important revelation in the first year of university was the importance of teaching yourself, rather than solely relying on school. To achieve my goals, I know that I'd have to work hard and independently pursue learning resources. Some of my favourite coding resources are `,
@@ -68,15 +68,15 @@ export const aboutContentData = [
       >
         Udemy
       </a>,
-      '.'
-    ]
+      '.',
+    ],
   },
   {
     id: Math.floor(Math.random() * 100000000),
     title: 'Personal',
     img: music,
     desc: [
-      `My personal hobbies involve finance, personal health, listening to podcasts, music and enjoying food. Here are some memorable things I enjoy.`
+      `My personal hobbies involve finance, personal health, listening to podcasts, music and enjoying food. Here are some memorable things I enjoy.`,
     ],
     hidden: [
       <ul className='text-xl'>
@@ -104,7 +104,8 @@ export const aboutContentData = [
           >
             {' '}
             Planet Money
-          </a>,
+          </a>
+          ,
           <a
             className='highlight-text text-xl'
             href='https://open.spotify.com/show/1cF9PxVsRAjihHFAI1VI8s'
@@ -113,7 +114,8 @@ export const aboutContentData = [
           >
             {' '}
             The Next Iteration
-          </a>,
+          </a>
+          ,
           <a
             className='highlight-text text-xl'
             href='https://open.spotify.com/show/6i9SWtZPb30xVXWVHSKCqq?si=F4eetWCFTpCQlxgrdolqsw'
@@ -124,8 +126,8 @@ export const aboutContentData = [
             Trash Taste
           </a>
         </li>
-        <li>Currently reading: Jujutsu Kaisen</li>
-      </ul>
-    ]
-  }
-]
+        <li>Currently reading/ watching: Jujutsu Kaisen, The Wire</li>
+      </ul>,
+    ],
+  },
+];
