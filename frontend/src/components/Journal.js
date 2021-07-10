@@ -38,12 +38,12 @@ const Journal = ({ modal, filterJournals, categories, journals }) => {
           share.
         </p>
 
-        <ul class=' list-reset flex flex-wrap my-6 self-center'>
+        <ul className=' list-reset flex flex-wrap my-6 self-center'>
           {categories.map((type, index) => {
             return (
               <li
                 key={index}
-                class={` ${index === 0 ? `rounded-l` : null} ${
+                className={` ${index === 0 ? `rounded-l` : null} ${
                   index === categories.length - 1 ? `rounded-r` : null
                 }   -mb-px block border p-2 border-gray-900 text-3xl hover:shadow-2xl backdrop  hover:bg-white hover:bg-opacity-10`}
                 onClick={() => filterJournals(type)}

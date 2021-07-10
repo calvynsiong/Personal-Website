@@ -18,7 +18,7 @@ const Header = ({ currentTheme, setTheme, theme }) => {
   const text2 = ' 常家颖';
 
   const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 620;
+  const breakpoint = 800;
 
   useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
@@ -53,7 +53,7 @@ const Header = ({ currentTheme, setTheme, theme }) => {
       <ScrollButton></ScrollButton>
 
       <Link
-        className='flex flex-wrap gap-4 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 hover:text-white dark:hover:text-yellow-300 '
+        className='flex gap-4 transform hover:scale-110 translate-x-0 sm:hover:translate-x-8 duration-200 hover:text-white dark:hover:text-yellow-300 '
         to='/'
       >
         <h1 className='text-4xl text-center font-semibold dark:hover:border-yellow-300  break-word'>
@@ -101,27 +101,27 @@ const Header = ({ currentTheme, setTheme, theme }) => {
                 },
                 { title: 'Journal', icon: <AiFillBook size={30} /> },
               ]
-          ).map((section) => {
+          ).map((section, index) => {
             return (
-              <li className='relative ml-2'>
+              <li key={index} className='relative ml-2'>
                 <Link
                   title={`${section.title}`}
                   to={`/${section.title.toLowerCase()}`}
                   className={`flex gap-2`}
                 >
                   <h1
-                    className={`nav-link text-sm xs:text-2xl md:text-3xl lg:text-4xl pt-4 flex gap-2 ${
-                      width > breakpoint ? `mr-5` : `mr-3`
+                    className={`nav-link outline- hover:border-4 focus:border-4 hover:border-white focus:border-white duration-100 hover:text-white focus:text-white dark:hover:text-yellow-300 dark:focus:text-yellow-300 dark:hover:border-yellow-300 text-sm xs:text-2xl md:text-3xl lg:text-4xl p-3 flex gap-2 rounded-xl ${
+                      width < breakpoint && `p-2`
                     }`}
                   >
                     {section?.icon ?? section.title}{' '}
                   </h1>
-                  {/* {index === 4 ? null : (
-                    <span className='nav-span text-sm xs:text-2xl md:text-4xl'>
-                      ||
+                  {index === 4 || width < breakpoint ? null : (
+                    <span className='text-sm xs:text-2xl md:text-3xl lg:text-4xl pt-3'>
+                      ⋅
                     </span>
-                  )} */}
-                </Link>{' '}
+                  )}
+                </Link>
               </li>
             );
           })}

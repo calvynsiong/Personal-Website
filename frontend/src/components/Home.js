@@ -9,15 +9,17 @@ const Home = ({ theme }) => {
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
-    p5.createCanvas(350, 350, p5.WEBGL).parent(canvasParentRef);
-    p5.angleMode(p5.DEGREES);
-  };
-  const resize = (p5, canvasParentRef) => {
-    p5.resizeCanvas(
-      window.innerWidth / 2,
-      window.innerHeight / 2,
+    p5.createCanvas(
+      Math.min(window.innerWidth / 2, 700),
+      Math.min(window.innerWidth / 2, 700),
       p5.WEBGL
     ).parent(canvasParentRef);
+    p5.angleMode(p5.DEGREES);
+  };
+  let size = window.innerWidth / 20;
+  const resize = (p5) => {
+    p5.resizeCanvas(window.innerWidth / 2, window.innerWidth / 2);
+    size = window.innerWidth / 20;
   };
 
   const draw = (p5) => {
@@ -32,7 +34,7 @@ const Home = ({ theme }) => {
     p5.noFill();
     p5.stroke(255);
 
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < size; i++) {
       const r = p5.map(p5.sin(p5.frameCount / 2), -1, 1, 100, 200);
       const g = p5.map(i, 0, 50, 100, 200);
       const b = p5.map(p5.cos(p5.frameCount), -1, 1, 200, 100);
@@ -52,7 +54,7 @@ const Home = ({ theme }) => {
     }
   };
   return (
-    <section className='flex flex-grow justify-start items-center mt-8 px-8 flex-col gap-4 '>
+    <section className='flex flex-grow justify-start items-center mt-8 px-14 flex-col gap-4 '>
       <div className='flex flex-col md:flex-row items-center'>
         <div className='flex flex-col'>
           <p className='text-xl md:text-2xl mb-4'>
@@ -87,10 +89,10 @@ const Home = ({ theme }) => {
         <Sketch
           setup={setup}
           draw={draw}
-          resize={resize}
-          className='mx-auto rounded-3xl overflow-hidden'
+          windowResized={resize}
+          className='mx-auto  max-w-full rounded-3xl overflow-hidden'
         ></Sketch>
-        <p className='text-xl mt-4 text-center'>
+        <p className='text-xl md:text-2xl mt-4 text-center'>
           Rendered drawing made from p5.js that I'm working on!
         </p>
       </article>
@@ -111,7 +113,7 @@ const Home = ({ theme }) => {
                     {icon}
                     <span className='text-xl relative'>
                       {desc}
-                      <div class='opacity-0 w-28 min-w-min bg-black text-white text-center text-xs rounded-lg py-1 absolute z-10 group-hover:opacity-75 bottom-full mb-1 right-1/2 px-1 duration-200'>
+                      <div className='opacity-0 w-28 min-w-min bg-black text-white text-center text-xs rounded-lg py-1 absolute z-10 group-hover:opacity-75 bottom-full mb-1 right-1/2 px-1 duration-200'>
                         {username}
                       </div>
                     </span>

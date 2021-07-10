@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const Cards = ({ project }) => {
   return (
     <div className=' z-40 p-3 mt-10 w-full xs:w-96  grid grid-cols-1 auto-rows-auto cursor-default select-none rounded bg-blue-400 dark:bg-gray-900 shadow-lg min-h-full xs:h-96'>
-      <div className='font-semibold row-span-1 text-xl mb-2 ml-2 text-gray-900 dark:text-white'>
+      <div className='font-semibold row-span-1 text-2xl md:text-3xl mb-2 ml-2 text-gray-900 dark:text-white'>
         {project.name}
       </div>
       <div className='row-span-1'>
@@ -38,7 +38,7 @@ const Cards = ({ project }) => {
         alt={project.name}
       ></img>
     </div>
-  )
-}
+  );
+};
 
-export default Cards
+export default Cards;

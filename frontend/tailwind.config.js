@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -6,20 +6,20 @@ module.exports = {
   theme: {
     screens: {
       xs: '475px',
-      ...defaultTheme.screens
+      ...defaultTheme.screens,
     },
-    extend: {}
+    extend: {},
   },
   variants: {
     extend: {
-      padding: ['hover', "focus"],
-      borderRadius: ['hover', "focus"],
-      borderWidth: ['hover', "focus"],
-      borderStyle: ['hover', "focus"],
-      borderColor: ['hover', "focus"],
-      fontWeight: ['hover', "focus"],
-      animation: ['hover', "focus"],
-    }
+      padding: ['hover', 'focus'],
+      borderRadius: ['hover', 'focus'],
+      borderWidth: ['hover', 'focus'],
+      borderStyle: ['hover', 'focus'],
+      borderColor: ['hover', 'focus'],
+      fontWeight: ['hover', 'focus'],
+      animation: ['hover', 'focus'],
+    },
   },
-  plugins: []
-}
+  plugins: [],
+};

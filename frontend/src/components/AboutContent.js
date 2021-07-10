@@ -1,32 +1,29 @@
-import React, { useState } from 'react'
-import { aboutContentData } from '../data/aboutContentData'
+import React, { useState } from 'react';
+import { aboutContentData } from '../data/aboutContentData';
 
 const AboutContent = () => {
-  const [visible, setVisible] = useState(false)
-  const [id, setId] = useState(null)
+  const [visible, setVisible] = useState(false);
+  const [id, setId] = useState(null);
 
-  const toggleHidden = newId => {
-
+  const toggleHidden = (newId) => {
     //   Checks if the id of the section matches the stored id, if not then show that section
-      
+
     if (newId !== id) {
-      setVisible(true)
-      setId(newId)
-      return
+      setVisible(true);
+      setId(newId);
+      return;
     }
 
     //   If it's the same section, simply toggle it on or off
-    setVisible(!visible)
-  }
+    setVisible(!visible);
+  };
 
   return (
     <>
       {aboutContentData.map((section, index) => {
         return (
           <section>
-            <h1 className='h1'>
-              {section.title}
-            </h1>
+            <h1 className='h1'>{section.title}</h1>
             <article
               key={section.id}
               className={`flex ${
@@ -42,7 +39,7 @@ const AboutContent = () => {
                   className='block transform mouse-pointer bg-gray-900  text-white mt-8  py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600 hover:shadow-2xl focus:outline-none'
                   onClick={() => toggleHidden(section.id)}
                 >
-                  {visible 
+                  {visible
                     ? section.id === id
                       ? 'Hide'
                       : 'Read More'
@@ -56,10 +53,10 @@ const AboutContent = () => {
               />
             </article>
           </section>
-        )
+        );
       })}
     </>
-  )
-}
+  );
+};
 
-export default AboutContent
+export default AboutContent;

@@ -5,7 +5,7 @@
 
 @layer base {
   .nav-link {
-    @apply inline-block -mb-1 hover:border-b-4 focus:border-b-4 hover:border-white focus:border-white duration-100 hover:text-white focus:text-white dark:hover:text-yellow-300 dark:focus:text-yellow-300 dark:hover:border-yellow-300 transform hover:translate-y-1 focus:translate-y-1;
+    @apply inline-block -mb-1  transform hover:translate-y-1 focus:translate-y-1;
   }
   ,
   .nav-span {
