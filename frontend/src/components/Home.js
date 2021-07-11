@@ -16,6 +16,7 @@ const Home = ({ theme }) => {
     ).parent(canvasParentRef);
     p5.angleMode(p5.DEGREES);
   };
+
   let size = window.innerWidth / 20;
   const resize = (p5) => {
     p5.resizeCanvas(window.innerWidth / 2, window.innerWidth / 2);
@@ -23,13 +24,7 @@ const Home = ({ theme }) => {
   };
 
   const draw = (p5) => {
-    // p5.background(0);
-    // p5.ellipse(x, y, 70, 70);
-    // NOTE: Do not use setState in the draw function or in functions that are executed
-    // in the draw function...
-    // please use normal variables or class properties for these purposes
-    // x++;
-    p5.background(30);
+    p5.background('rgba(00%,0%,100%,0)');
     p5.rotateX(60);
     p5.noFill();
     p5.stroke(255);
