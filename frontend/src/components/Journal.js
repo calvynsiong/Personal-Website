@@ -94,7 +94,7 @@ const Journal = ({ modal, filterJournals, categories, journals }) => {
             {modalContent.date}
           </p>
           <article className='flex flex-wrap gap-8 pl-8'>
-            <div className='flex gap-6'>
+            <div className='flex flex-wrap gap-3'>
               <p
                 className={`text-lg sm:text-2xl ${
                   modalContent.img ? `max-w-3xl` : null
@@ -106,7 +106,7 @@ const Journal = ({ modal, filterJournals, categories, journals }) => {
                 <img
                   src={modalContent.img}
                   className='w-3/4 max-w-xs rounded-lg'
-                  alt='Test'
+                  alt={modalContent.title}
                 />
               ) : null}
             </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Modal = ({ closeModal, children, id, modal }) => {
   return (
@@ -7,8 +7,18 @@ const Modal = ({ closeModal, children, id, modal }) => {
         key={id}
         ref={modal}
         className='fixed top-0  -left-full  w-0 h-screen flex items-center justify-center bg-black bg-opacity-90 transform transition-all duration-300'
+        style={{
+          scrollbarWidth: 'thin',
+          scrollbarColor: 'rgba(17, 24, 39, var(1))',
+        }}
       >
-        <div className='w-4/5 h-4/5 overflow-y-scroll p-16 bg-blue-300 dark:bg-gray-900'>
+        <div
+          className='w-4/5 h-4/5 overflow-auto p-16 bg-blue-300 dark:bg-gray-900 rounded-3xl'
+          style={{
+            scrollbarWidth: 'thin',
+            scrollbarColor: 'rgba(17, 24, 39, var(1))',
+          }}
+        >
           <button
             onClick={() => closeModal()}
             type='button'
@@ -33,7 +43,7 @@ const Modal = ({ closeModal, children, id, modal }) => {
         </div>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

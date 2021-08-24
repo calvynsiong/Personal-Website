@@ -27,6 +27,9 @@ import {
   SiJava,
   SiPostgresql,
   SiVisualstudiocode,
+  SiSpring,
+  SiMysql,
+  SiCsharp,
 } from 'react-icons/si';
 import { CgWebsite } from 'react-icons/cg';
 import matlab from '../assets/matlab.png';
@@ -35,10 +38,30 @@ import hand from '../assets/hand.png';
 import roboticarm from '../assets/roboticarm.jpg';
 import birthday from '../assets/birthday.webp';
 
+const categoryEnums = {
+  WEB_DEV: '💻 Web',
+  COLLABORATIVE: '🤝 Collaborative',
+  PYTHON: '🐍 Python',
+  LANGUAGES: '🔣 Languages',
+  FRAMEWORK_LIBRARIES: '📚 Framework/Libraries',
+  TOOLS: '⚙️ Tools',
+  OTHER: 'Other',
+};
+
+const {
+  WEB_DEV,
+  COLLABORATIVE,
+  PYTHON,
+  LANGUAGES,
+  FRAMEWORK_LIBRARIES,
+  TOOLS,
+  OTHER,
+} = categoryEnums;
+
 export const sideProjects = [
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Development', '🤝 Collaborative'],
+    category: [WEB_DEV, COLLABORATIVE],
     name: 'VaccineInfo',
     url: 'https://github.com/calvynsiong/CovidInfo.git',
     live: 'https://vaccine-info.herokuapp.com/',
@@ -49,7 +72,16 @@ export const sideProjects = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Development'],
+    category: [OTHER],
+    name: 'My Internship Tracker',
+    url: 'https://github.com/calvynsiong/InternshipTracker',
+    desc: 'A Java GUI application that is able to track internship applications, stored and updated in MySQL',
+    stack: 'Java, MySQL',
+    img: 'https://i.imgur.com/sSKtH3A.png',
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: [WEB_DEV],
     name: 'Ecommerce site',
     url: 'https://github.com/calvynsiong/Ecommerce.git',
     live: 'https://eccommercebycalvyn.herokuapp.com/',
@@ -60,7 +92,7 @@ export const sideProjects = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🐍 Python'],
+    category: [PYTHON],
     name: 'Finger Tracker',
     url: 'https://github.com/calvynsiong/FingerTracker.git',
     live: 'https://drive.google.com/file/d/1bRurwnWMewoY-uSxBFS12-bWIdWHRbTb/view?usp=sharing',
@@ -71,7 +103,7 @@ export const sideProjects = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🐍 Python', '🤝 Collaborative'],
+    category: [PYTHON, COLLABORATIVE],
     name: 'Automated robotic arm',
     url: 'https://github.com/calvynsiong/Automated-sensing-system-for-robotic-arm.git',
     desc: 'A Python program that allows for a virtual robotic arm in the Qlabs environment to transfer items in an automated manner.',
@@ -80,7 +112,7 @@ export const sideProjects = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Development'],
+    category: [WEB_DEV],
     name: 'To Do List',
     url: 'https://github.com/calvynsiong/To-Do-List.git',
     live: 'https://checklistbycalvyn.netlify.app/ ',
@@ -90,7 +122,7 @@ export const sideProjects = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Development'],
+    category: [WEB_DEV],
     name: 'Basic Reddit Clone',
     url: 'https://github.com/calvynsiong/Reddit-Clone.git',
     live: 'https://simpleredditclone.netlify.app/ ',
@@ -100,7 +132,7 @@ export const sideProjects = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Development'],
+    category: [WEB_DEV],
     name: 'Birthday Reminders',
     url: 'https://github.com/calvynsiong/BirthdayReminderWebsite.git',
     live: 'https://macengbdayreminders.netlify.app/ ',
@@ -110,7 +142,7 @@ export const sideProjects = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Development'],
+    category: [WEB_DEV],
     name: 'Menu website',
     url: 'https://github.com/calvynsiong/BirthdayReminderWebsite.git',
     live: 'https://myheritagerestaurant.netlify.app/ ',
@@ -118,63 +150,63 @@ export const sideProjects = [
     stack: 'React, Tailwind',
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYAXy-rKS_1RjEH6CjpNjKuJdmEf-66m44cg&usqp=CAU',
   },
-  {
-    id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Development'],
-    name: 'Chatting app',
-    url: 'https://github.com/calvynsiong/BirthdayReminderWebsite.git',
-    desc: 'A project to practise MERN stack and using web sockets for real time updates. WIP.',
-    stack: 'React, Node.js, Express.js, MongoDB, Pusher',
-    img: 'https://lh3.googleusercontent.com/Ez0bB-z2_r1dgzbbQnaN-nyrKReRV14QryS-k9MQxYjk1DrvmmN1G6QwbVX0EIvIawNf1g=s85',
-  },
+  // {
+  //   id: Math.floor(Math.random() * 100000000),
+  //   category: [WEB_DEV],
+  //   name: 'Chatting app',
+  //   url: 'https://github.com/calvynsiong/BirthdayReminderWebsite.git',
+  //   desc: 'A project to practise MERN stack and using web sockets for real time updates. WIP.',
+  //   stack: 'React, Node.js, Express.js, MongoDB, Pusher',
+  //   img: 'https://lh3.googleusercontent.com/Ez0bB-z2_r1dgzbbQnaN-nyrKReRV14QryS-k9MQxYjk1DrvmmN1G6QwbVX0EIvIawNf1g=s85',
+  // },
 ];
 
 export const skills = [
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🔣 Languages'],
+    category: [LANGUAGES],
     name: 'Python',
     icon: <FaPython size={30} />,
-    desc: `As my first programming language, I am most experienced in Python. I am knowledgable with concepts such as simple data structures (dictionaries, lists, tuples), list comprehension, functions, error handling and object oriented programming. I have also utilised different Python packages such as OpenCV, Matplotlib, NumPy and Mediapipe. I plan to learn Django and Flask for 🌐 web development, as well as learn web scraping for future purposes.`,
+    desc: `As my first programming language, I am most experienced in Python. I am knowledgable with concepts such as simple data structures (dictionaries, lists, tuples), list comprehension, functions, error handling and object oriented programming. I have also utilised different Python packages such as OpenCV, Matplotlib, NumPy and Mediapipe. I plan to learn Django and Flask for 🌐 Web, as well as learn web scraping for future purposes.`,
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['📚 Framework/Libraries', '🌐 Web Dev'],
+    category: [FRAMEWORK_LIBRARIES, WEB_DEV],
     name: 'React',
     icon: <FaReact size={30} />,
     desc: 'Learned how to create functional components with ES6 Javascript, alongside hooks to create scalable websites and applications. I have also had experience building React components that are able to connect with the backend (Node.js) to send HTTP requests for interactive experiences. Currently trying to learn and incorporate Redux for better state management. I have also used Postman to test requests to APIs.',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Dev'],
+    category: [WEB_DEV],
     name: 'HTML',
     icon: <FaHtml5 size={30} />,
     desc: 'Proficient in using the markup language to create structured websites for web design and layouts. Able to create a layout that can be structured to display different elements and features, as well as create forms that accept user-input.',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Dev'],
+    category: [WEB_DEV],
     name: 'CSS',
     icon: <FaCss3Alt size={30} />,
     desc: 'Proficient in styling websites with CSS in conjunction with HTML with classes, ids, and element selectors. I understand the methods for dealing with responsive design, and tend to style from a mobile first experience. Also experienced with using flexbox and grid to structure content layout.',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Dev'],
+    category: [WEB_DEV],
     name: 'SASS',
     icon: <FaSass size={30} />,
     desc: 'I strongly enjoy using this preprocessor for CSS styling, due to its different features that allow for much more maintanable and scalable methods for styling. Utitlized mixins, partials, functions and nesting for more efficient and readable styling in my personal projects. I ensure to use BEM notation when writing class names for readability and accessibility purposes.',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🔣 Languages', '🌐 Web Dev'],
+    category: [LANGUAGES, WEB_DEV],
     name: 'JavaScript',
     icon: <SiJavascript size={30} />,
     desc: 'Proficient in ES6+ Javascript. Javascript is my most used programming language and my favourite as well. I understand different array methods, ternary/nullish operators, scope, DOM manipulation/events, callback/HO functions, error handling, promises and async/await concepts. Aiming to learn and implement Typescript in my own projects for better type safety and maintainability.Proficient in ES6+ Javascript. Javascript is my most used programming language and my favourite as well. I understand different array methods, ternary/nullish operators, scope, DOM manipulation/events, callback/HO functions, error handling, promises and async/await concepts. Aiming to learn and implement Typescript in my own projects for better type safety and maintainability.',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🔣 Languages'],
+    category: [LANGUAGES],
     name: 'MATLAB',
     icon: (
       <img
@@ -187,21 +219,21 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['⚙️ Tools', '🌐 Web Dev'],
+    category: [TOOLS, WEB_DEV],
     name: 'MongoDB',
     icon: <SiMongodb size={30} />,
     desc: 'I used the BSON based database with backend with the mongoose module in Node.js. Understand how to navigate collections and sort/process documents. Learned how to fetch, update, add and delete data with defined schemas connected to the backend server with HTTP requests, as well as used web sockets with Pusher to update data in realtime. ',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['📚 Framework/Libraries', '🌐 Web Dev'],
+    category: [FRAMEWORK_LIBRARIES, WEB_DEV],
     name: 'Node.js',
     icon: <FaNodeJs size={30} />,
     desc: 'Understand how to create backend server with routes to handle HTTP requests that connect to the frontend and database. Knowledgeable with using the npm package management tool to download and handle dependencies.',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['📚 Framework/Libraries', '🌐 Web Dev'],
+    category: [FRAMEWORK_LIBRARIES, WEB_DEV],
     name: 'Express.js',
     icon: (
       <img
@@ -214,75 +246,96 @@ export const skills = [
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['⚙️ Tools'],
+    category: [TOOLS],
     name: 'Git',
     icon: <FaGit size={30} />,
     desc: 'Confident in using the version control tool to commit and stash changes to local and remote repositories. Proficient in using different commands to checkout to different branches, merge changes, fork/clone repos and collaborating with pull requests.',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['⚙️ Tools'],
+    category: [TOOLS],
     name: 'Netlify',
     icon: <SiNetlify size={30} />,
     desc: 'Knowledgable in using the Netlify platform to automatically deploy production build of websites and applications, connected to my Github. Allows me to update these builds with a simple commit and push procedure.',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['⚙️ Tools'],
+    category: [TOOLS],
     name: 'Heroku',
     icon: <SiHeroku size={30} />,
     desc: 'Used the platform to deploy larger and more complex projects (MERN stack) with the Heroku CLI.',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Dev', '📚 Framework/Libraries'],
+    category: [WEB_DEV, FRAMEWORK_LIBRARIES],
     name: 'Material UI',
     icon: <SiMaterialUi size={30} />,
     desc: 'Used Material UI in React for styling components in a quick and scalable manner. Also utilized custom styling with JSS for customizing components.',
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Dev', '📚 Framework/Libraries'],
+    category: [WEB_DEV, FRAMEWORK_LIBRARIES],
     name: 'Tailwind CSS',
     icon: <SiTailwindcss size={30} />,
     desc: `Proficient in using Tailwind utility classes and custom configurations to for styling, especially when needed for larger scale projects. I enjoy the clarity of the class names as well as the simplicity of having the styling and the elements all in 1 location  (😅 though it was hard to get used to at first). It's the reason I picked it to style this website!`,
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['⚙️ Tools'],
+    category: [TOOLS],
     name: 'VS Code',
     icon: <SiVisualstudiocode size={30} />,
     desc: `My primary IDE for coding. I am comfortable with using different extensions and the integrated terminal to work efficiently.`,
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Dev', '📚 Framework/Libraries'],
+    category: [WEB_DEV, FRAMEWORK_LIBRARIES],
     name: 'Bootstrap',
     icon: <FaBootstrap size={30} />,
-    desc: ``,
+    desc: `Learnt how to utilize UI components in adjunction with utility classes with HTML elements, as well as developing React components with this framework.`,
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: [LANGUAGES],
+    name: 'Java',
+    icon: <SiJava size={30} />,
+    desc: `Understand key concepts such as object oriented programming, encapsulation,inheritance, abstract classes, generics, access modifiers, static typing and more. Created GUI interfaces with the Java Swing library.`,
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: [TOOLS],
+    name: 'MySQl',
+    icon: <SiMysql size={30} />,
+    desc: `Able to perform CRUD operations through queries and filter data based on certain conditions. Also learnt how to create aggregate functions, triggers, and transactions with rollbacks.`,
   },
 ];
 
 export const futureSkills = [
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Dev', '🔣 Languages', '⚙️ Tools'],
+    category: [WEB_DEV, LANGUAGES, TOOLS],
     name: 'TypeScript',
     icon: <SiTypescript size={30} />,
     desc: ``,
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🌐 Web Dev', '📚 Framework/Libraries'],
+    category: [WEB_DEV, FRAMEWORK_LIBRARIES],
     name: 'Postgresql',
     icon: <SiPostgresql size={30} />,
     desc: ``,
   },
   {
     id: Math.floor(Math.random() * 100000000),
-    category: ['🔣 Languages'],
-    name: 'Java',
-    icon: <SiJava size={30} />,
+    category: [WEB_DEV, FRAMEWORK_LIBRARIES],
+    name: 'Spring/Spring Boot',
+    icon: <SiSpring size={30} />,
+    desc: ``,
+  },
+  {
+    id: Math.floor(Math.random() * 100000000),
+    category: [LANGUAGES],
+    name: 'C#',
+    icon: <SiCsharp size={30} />,
     desc: ``,
   },
 ];
@@ -365,7 +418,7 @@ export const experiences = [
       >
         Peernet
       </a>,
-      ` Web Developer Intern`,
+      ` Software Developer Intern`,
     ],
     start: '07.06.2021',
     end: `Present`,

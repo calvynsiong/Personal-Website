@@ -110,7 +110,7 @@ const Header = ({ currentTheme, setTheme, theme }) => {
                   className={`flex gap-2`}
                 >
                   <h1
-                    className={`nav-link outline- hover:border-4 focus:border-4 hover:border-white focus:border-white duration-100 hover:text-white focus:text-white dark:hover:text-yellow-300 dark:focus:text-yellow-300 dark:hover:border-yellow-300 text-sm xs:text-2xl md:text-3xl lg:text-4xl p-3 flex gap-2 rounded-xl ${
+                    className={`nav-link hover:border-b-4 focus:border-b-4 hover:border-white focus:border-white duration-100 hover:text-white focus:text-white dark:hover:text-yellow-300 dark:focus:text-yellow-300 dark:hover:border-yellow-300 text-sm xs:text-2xl md:text-3xl lg:text-4xl p-3 flex gap-2  ${
                       width < breakpoint && `p-2`
                     }`}
                   >

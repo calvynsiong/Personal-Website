@@ -33,7 +33,7 @@ const Cards = ({ project }) => {
         </div>
       </div>
       <img
-        className='rounded-full object-contain w-24 h-24 self-center mx-auto row-span-5'
+        className='object-contain w-full h-28 self-center mx-auto row-span-5'
         src={project.img}
         alt={project.name}
       ></img>
