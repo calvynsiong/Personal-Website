@@ -71,7 +71,6 @@ const Header = ({ currentTheme, setTheme, theme, speed, setSpeed }) => {
                 className='focus:outline-none p-2 text-center hover:text-yellow-600 transform dark:hover:text-yellow-300 cursor-pointer'
                 onClick={() => {
                   setSpeed((prevSpeed) => prevSpeed * 1.3);
-                  console.log(speed);
                 }}
               >
                 Speed up

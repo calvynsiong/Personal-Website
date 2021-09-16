@@ -26,7 +26,6 @@ const RotatingStars = ({ speed }) => {
 };
 
 const StarsCanvas = ({ currentTheme, speed }) => {
-  console.log(currentTheme);
   return (
     // I know, this is confusing
     <>
