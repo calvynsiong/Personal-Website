@@ -86,7 +86,6 @@ const Home = ({ theme }) => {
           setup={setup}
           draw={draw}
           windowResized={resize}
-          style={{ height: 300, width: 300 }}
           className='mx-auto  max-w-full rounded-3xl overflow-hidden'
         ></Sketch>
         <p className='text-xl md:text-2xl mt-4 text-center'>
