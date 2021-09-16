@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import ScrollButton from './ScrollButton';
 import { AiFillBook, AiOutlineInfoCircle } from 'react-icons/ai';
 
-const Header = ({ currentTheme, setTheme, theme }) => {
+const Header = ({ currentTheme, setTheme, theme, speed, setSpeed }) => {
   const [title, setTitle] = useState('');
   const [title2, setTitle2] = useState('');
 
@@ -63,16 +63,42 @@ const Header = ({ currentTheme, setTheme, theme }) => {
           {title2}
         </h1>
       </Link>
-      <button
-        className='focus:outline-none p-2 sm:ml-auto text-center hover:text-yellow-600 transform hover:rotate-12 dark:hover:text-yellow-300'
-        onClick={() => setTheme(currentTheme)}
-      >
-        {theme === 'light' ? (
-          <IoSunnyOutline size={30} />
-        ) : (
-          <IoPartlySunny size={30} />
+      <div className='flex flex-wrap gap-4 sm:ml-auto '>
+        {currentTheme !== 'dark' && (
+          <>
+            {speed < 0.001 * 1.3 * 7 ? (
+              <button
+                className='focus:outline-none p-2 text-center hover:text-yellow-600 transform dark:hover:text-yellow-300 cursor-pointer'
+                onClick={() => {
+                  setSpeed((prevSpeed) => prevSpeed * 1.3);
+                  console.log(speed);
+                }}
+              >
+                Speed up
+              </button>
+            ) : (
+              <p className='p-3'>Ok, that's enough</p>
+            )}
+            <p className='p-3'>Current speed: {speed.toFixed(4)}</p>
+            <button
+              className='focus:outline-none p-2 text-center hover:text-yellow-600 transform dark:hover:text-yellow-300 cursor-pointer'
+              onClick={() => setSpeed((prevSpeed) => (prevSpeed * 2) / 3)}
+            >
+              Slow Motion
+            </button>
+          </>
         )}
-      </button>
+        <button
+          className='focus:outline-none p-2 text-center hover:text-yellow-600 transform hover:rotate-12 dark:hover:text-yellow-300 cursor-pointer'
+          onClick={() => setTheme(currentTheme)}
+        >
+          {theme === 'light' ? (
+            <IoSunnyOutline size={30} />
+          ) : (
+            <IoPartlySunny size={30} />
+          )}
+        </button>
+      </div>
       <nav className='min-w-full -mt-2'>
         <ul className='flex flex-wrap justify-center'>
           {(width > breakpoint

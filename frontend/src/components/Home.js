@@ -2,6 +2,7 @@ import React from 'react';
 import photo from '../assets/personalPhoto.jpg';
 import { socialIcons } from '../data/data';
 import Sketch from 'react-p5';
+import StarsCanvas from '../utils/animateBackground';
 
 const Home = ({ theme }) => {
   // let x = 50;
@@ -85,6 +86,7 @@ const Home = ({ theme }) => {
           setup={setup}
           draw={draw}
           windowResized={resize}
+          style={{ height: 300, width: 300 }}
           className='mx-auto  max-w-full rounded-3xl overflow-hidden'
         ></Sketch>
         <p className='text-xl md:text-2xl mt-4 text-center'>

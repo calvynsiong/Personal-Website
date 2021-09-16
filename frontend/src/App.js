@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
-import useDarkMode from './useDarkMode';
+import { useState, useRef, useEffect } from 'react';
+import useDarkMode from './utils/useDarkMode';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Experiences from './components/Experiences';
@@ -10,6 +10,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import { skills, sideProjects } from './data/data';
 import { JournalContent } from './data/JournalContentData';
+import StarsCanvas from './utils/animateBackground';
 
 function App() {
   const allCategories = [
@@ -31,6 +32,7 @@ function App() {
   ];
 
   const [setTheme, currentTheme, theme] = useDarkMode();
+  const [speed, setSpeed] = useState(0.001);
   const [skill, setSkill] = useState(skills);
   const [projects, setProjects] = useState(sideProjects);
   const [journals, setJournals] = useState(JournalContent);
@@ -74,17 +76,22 @@ function App() {
   return (
     <Router>
       <div className='flex flex-col bg-gradient-to-r from-blue-400 to-blue-500  dark:from-gray-800 dark:via-gray-900 dark:to-black dark:text-white  min-h-screen  overflow-y-hidden duration-200 '>
+        <StarsCanvas currentTheme={currentTheme} speed={speed} />
         <Header
           currentTheme={currentTheme}
           theme={theme}
           setTheme={setTheme}
+          speed={speed}
+          setSpeed={setSpeed}
         ></Header>
         <Switch>
           <Route exact path='/'>
             {' '}
             <Home theme={theme} />{' '}
           </Route>
-          <Route exact path='/about' component={About} />
+          <Route exact path='/about'>
+            <About></About>
+          </Route>
           <Route exact path='/experiences' component={Experiences} />
           <Route exact path='/projects'>
             <Projects
