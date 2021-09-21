@@ -3,6 +3,7 @@ import photo from '../assets/personalPhoto.jpg';
 import { socialIcons } from '../data/data';
 import Sketch from 'react-p5';
 import StarsCanvas from '../utils/animateBackground';
+import { Link } from 'react-router-dom';
 
 const Home = ({ theme }) => {
   // let x = 50;
@@ -31,7 +32,7 @@ const Home = ({ theme }) => {
     p5.stroke(255);
 
     for (var i = 0; i < size; i++) {
-      const r = p5.map(p5.sin(p5.frameCount / 2), -1, 1, 100, 200);
+      const r = p5.map(p5.sin(p5.frameCount / 4), -1, 1, 100, 200);
       const g = p5.map(i, 0, 50, 100, 200);
       const b = p5.map(p5.cos(p5.frameCount), -1, 1, 200, 100);
       p5.stroke(r, g, b);
@@ -63,14 +64,14 @@ const Home = ({ theme }) => {
             <span className='highlight-text'> Software Engineering</span>.
             Focused on learning full stack development.
           </p>
-          <p className='text-xl md:text-2xl mb-4'>
-            Reach out to me on{' '}
+          <p className='z-50 text-xl md:text-2xl mb-4'>
+            {'Reach out to me on '}
             <a
               href='https://www.instagram.com/calvynsg'
               target='blank'
-              className='dark:hover:text-yellow-300 hover:text-white dark:hover:border-yellow-300 underline duration-200'
+              className=' dark:hover:text-yellow-300 hover:text-white dark:hover:border-yellow-300 underline duration-200'
             >
-              Instagram
+              {' Instagram'}
             </a>
             !
           </p>

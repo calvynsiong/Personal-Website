@@ -75,7 +75,7 @@ function App() {
 
   return (
     <Router>
-      <div className='flex flex-col bg-gradient-to-r from-blue-400 to-blue-500  dark:from-gray-800 dark:via-gray-900 dark:to-black dark:text-white  min-h-screen  overflow-y-hidden duration-200 '>
+      <div className='flex flex-col bg-gradient-to-r from-blue-500 to-blue-500  dark:from-gray-800 dark:via-gray-900 dark:to-black dark:text-white  min-h-screen  overflow-y-hidden duration-200 '>
         <StarsCanvas currentTheme={currentTheme} speed={speed} />
         <Header
           currentTheme={currentTheme}

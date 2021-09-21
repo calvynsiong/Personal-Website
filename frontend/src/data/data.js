@@ -365,12 +365,12 @@ export const socialIcons = [
     username: 'calvyn360@gmail.com',
     link: 'mailto:calvyn360@gmail.com?Subject=Reaching Out',
   },
-  {
-    icon: <FaWix size={30} />,
-    desc: 'First Year Portfolio',
-    username: 'School projects',
-    link: 'https://calvyn360.wixsite.com/website',
-  },
+  // {
+  //   icon: <FaWix size={30} />,
+  //   desc: 'First Year Portfolio',
+  //   username: 'School projects',
+  //   link: 'https://calvyn360.wixsite.com/website',
+  // },
 ];
 
 export const experiences = [
