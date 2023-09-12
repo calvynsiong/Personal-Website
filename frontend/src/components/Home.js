@@ -60,7 +60,7 @@ const Home = ({ theme }) => {
             with <span className='highlight-text'>Tailwind CSS</span>.
           </p>
           <p className='text-xl md:text-2xl mb-4'>
-            Currently in my sophomore year in McMaster University studying
+            Currently in my third year of McMaster University studying
             <span className='highlight-text'> Software Engineering</span>.
             Focused on learning full stack development.
           </p>
